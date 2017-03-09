@@ -1,9 +1,9 @@
-import React from 'react';
+const React = require('react');
 
-export default class Badge extends React.Component {
+module.exports = class Badge extends React.Component {
 
   render () {
-    return <h1>HELLO</h1>
+    return <button>HELLO</button>
   }
 
 }

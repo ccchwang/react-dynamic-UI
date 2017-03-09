@@ -3,7 +3,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname,
-    filename: './examples/bundle.js'
+    filename: './lib/index.js'
   },
   devtool: 'source-map',
   module: {
