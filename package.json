@@ -1,6 +1,6 @@
 {
-  "name": "react-interact-ui",
-  "version": "0.0.4",
+  "name": "react-dynamic-ui",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chloehwang/react-interact-UI.git"
+    "url": "git+https://github.com/chloehwang/react-dynamic-UI.git"
   },
   "author": "Chloe Hwang <c.chloeh@gmail.com> (https://github.com/chloehwang/my-react-UI)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chloehwang/react-interact-UI/issues"
+    "url": "https://github.com/chloehwang/react-dynamic-UI/issues"
   },
-  "homepage": "https://github.com/chloehwang/react-interact-UI#readme",
+  "homepage": "https://github.com/chloehwang/react-dynamic-UI#readme",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
