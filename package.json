@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack -w & http-server ./",
+    "build-watch": "npm run build -- -w",
     "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src"
   },
   "repository": {

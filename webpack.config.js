@@ -1,9 +1,9 @@
 module.exports = {
   context: __dirname,
-  entry: './src/index.js',
+  entry: './examples/app.js',
   output: {
     path: __dirname,
-    filename: './lib/index.js'
+    filename: './examples/bundle.js'
   },
   devtool: 'source-map',
   module: {
