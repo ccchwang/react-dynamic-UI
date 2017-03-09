@@ -1,4 +1,4 @@
+import Button from './components/Button';
 
-var Badge = require('./components/Badge');
 
-module.exports = {Badge}
+module.exports = {Button}

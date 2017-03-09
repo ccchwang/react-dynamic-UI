@@ -1,8 +1,8 @@
 {
   "name": "react-dynamic-ui",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack -w & http-server ./",
     "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src"
