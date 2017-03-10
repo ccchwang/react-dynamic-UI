@@ -9755,8 +9755,7 @@ var JumbotronFadeUp = function (_React$Component) {
           className = _props.className,
           children = _props.children,
           style = _props.style,
-          fadeIn = _props.fadeIn,
-          fixedBg = _props.fixedBg;
+          fadeIn = _props.fadeIn;
 
 
       var styledChildren = children && children.map(function (child, i) {

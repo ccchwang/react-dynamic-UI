@@ -36,7 +36,7 @@ export default class JumbotronFadeUp extends React.Component {
     //children = whatever user has typed inside tags
     //PUT BACK AUTOPLAY FOR VIDEO
 
-  const { className, children, style, fadeIn, fixedBg } = this.props;
+  const { className, children, style, fadeIn } = this.props;
 
   const styledChildren = children && children.map((child, i) => {
     const fadeStyle = jumbotronFadeUpStyle.fadeInUp;
