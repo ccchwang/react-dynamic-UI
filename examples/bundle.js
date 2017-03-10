@@ -9719,42 +9719,72 @@ var JumbotronFadeUp = function (_React$Component) {
   }
 
   _createClass(JumbotronFadeUp, [{
+    key: 'createColumns',
+    value: function createColumns(fadeIn, styledChildren) {
+      if (fadeIn === "right") {
+        return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('div', { style: _jumbotronFadeUp2.default.column }),
+          _react2.default.createElement(
+            'div',
+            { style: _jumbotronFadeUp2.default.column },
+            styledChildren
+          )
+        );
+      } else {
+        return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'div',
+            { style: _jumbotronFadeUp2.default.column },
+            styledChildren
+          ),
+          _react2.default.createElement('div', { style: _jumbotronFadeUp2.default.column })
+        );
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
-
       //children = whatever user has typed inside tags
       //PUT BACK AUTOPLAY FOR VIDEO
 
       var _props = this.props,
-          leftImage = _props.leftImage,
-          rightText = _props.rightText,
           className = _props.className,
           children = _props.children,
-          style = _props.style;
+          style = _props.style,
+          fadeIn = _props.fadeIn,
+          fixedBg = _props.fixedBg;
 
 
       var styledChildren = children && children.map(function (child, i) {
-        var style = Object.assign({}, child.props.style, _jumbotronFadeUp2.default.fadeInUp);
+        var fadeStyle = _jumbotronFadeUp2.default.fadeInUp;
+        var fadeClass = "fade-in-up ";
+
+        if (typeof child === "string") {
+          return _react2.default.cloneElement(_react2.default.createElement(
+            'p',
+            null,
+            'child'
+          ), { style: fadeStyle, className: fadeClass, key: i });
+        }
+
+        var mergedStyle = Object.assign({}, child.props.style, fadeStyle);
         var ownClassName = child.props.className || "";
-        var className = "fade-in-up " + ownClassName;
-        return _react2.default.cloneElement(child, { style: style, className: className, key: i });
+        var mergedClassName = fadeClass + ownClassName;
+
+        return _react2.default.cloneElement(child, { style: mergedStyle, className: mergedClassName, key: i });
       });
 
       var mergedStyle = Object.assign({}, style, _jumbotronFadeUp2.default.style);
+      var columns = this.createColumns(fadeIn, styledChildren);
 
       return _react2.default.createElement(
         'div',
         { className: className, style: mergedStyle },
-        _react2.default.createElement(
-          'div',
-          { style: _jumbotronFadeUp2.default.column },
-          'sdgs'
-        ),
-        _react2.default.createElement(
-          'div',
-          { style: _jumbotronFadeUp2.default.column },
-          styledChildren
-        )
+        columns
       );
     }
   }]);
@@ -9853,13 +9883,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 var jumbotronFadeUpStyle = {
   style: {
-    width: '95%',
-    margin: '15px auto'
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    content: "",
+    display: 'table',
+    clear: 'both',
+    padding: '3%'
   },
   column: {
     boxSizing: 'border-box',
     width: '50%',
-    height: '1000px',
     float: 'left',
     padding: '15px',
     fontFamily: 'Helvetica'
@@ -22462,7 +22496,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   ),
   _react2.default.createElement(
     _index.JumbotronFadeUp,
-    { style: { fontSize: '1.5em' } },
+    {
+      fadeIn: 'right',
+      style: { fontSize: '1.5em', backgroundImage: "url('./public/sea-waves.jpg')" }
+    },
     _react2.default.createElement(
       'h1',
       { style: { color: '#25baf8', fontWeight: '700' } },
@@ -22477,6 +22514,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       'p',
       { style: { lineHeight: '1.5' } },
       'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+    ),
+    _react2.default.createElement(
+      'h2',
+      { style: { color: '#25baf8', fontWeight: '700' } },
+      'Playlists'
+    ),
+    _react2.default.createElement(
+      'p',
+      { style: { lineHeight: '1.5' } },
+      'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+    ),
+    _react2.default.createElement(
+      'h2',
+      { style: { color: '#25baf8', fontWeight: '700' } },
+      'New Releases'
+    ),
+    _react2.default.createElement(
+      'p',
+      { style: { lineHeight: '1.5' } },
+      'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
     )
   )
 ), document.getElementById('app'));

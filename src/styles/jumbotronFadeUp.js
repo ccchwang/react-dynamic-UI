@@ -1,12 +1,16 @@
 const jumbotronFadeUpStyle = {
   style: {
-    width: '95%',
-    margin: '15px auto'
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    content: "",
+    display: 'table',
+    clear: 'both',
+    padding: '3%'
   },
   column: {
     boxSizing: 'border-box',
     width: '50%',
-    height: '1000px',
     float: 'left',
     padding: '15px',
     fontFamily: 'Helvetica',

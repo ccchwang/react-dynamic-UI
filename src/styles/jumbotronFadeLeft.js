@@ -1,9 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var jumbotronFadeUpStyle = {
+const jumbotronFadeUpStyle = {
   style: {
     width: '95%',
     margin: '15px auto'
@@ -14,7 +9,7 @@ var jumbotronFadeUpStyle = {
     height: '1000px',
     float: 'left',
     padding: '15px',
-    fontFamily: 'Helvetica'
+    fontFamily: 'Helvetica',
   },
   fadeInUp: {
     transition: '2s',
@@ -26,6 +21,7 @@ var jumbotronFadeUpStyle = {
     animationDirection: 'normal',
     animationFillMode: 'forwards'
   }
-};
+}
 
-exports.default = jumbotronFadeUpStyle;
+
+export default jumbotronFadeUpStyle;
