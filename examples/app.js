@@ -1,7 +1,7 @@
 import '../public/stylesheets/main.scss';
 import React from 'react';
 import {render} from 'react-dom';
-import { HeroVideo, JumbotronFadeUp } from '../src/index';
+import { HeroVideo, JumbotronFadeUp, HoverGrid, HoverCol } from '../src/index';
 
 render(
   <div>
@@ -22,6 +22,13 @@ render(
     <h2 style={{color: '#25baf8', fontWeight: '700'}}>New Releases</h2>
     <p style={{lineHeight: '1.5'}}>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
    </JumbotronFadeUp>
+
+
+   <HoverGrid>
+    <HoverCol size={2} imgSrc="./public/sea-waves.jpg" >sdgdsgdsgds <p className="class" style={{color: 'red'}}>sdgsd</p></HoverCol>
+    <HoverCol size={2} imgSrc="./public/sea-waves.jpg" />
+    <HoverCol size={2} imgSrc="./public/sea-waves.jpg" />
+  </HoverGrid>
 
   </div>
 

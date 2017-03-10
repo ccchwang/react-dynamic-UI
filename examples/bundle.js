@@ -9455,9 +9455,17 @@ var _JumbotronFadeUp = __webpack_require__(86);
 
 var _JumbotronFadeUp2 = _interopRequireDefault(_JumbotronFadeUp);
 
+var _HoverGrid = __webpack_require__(190);
+
+var _HoverGrid2 = _interopRequireDefault(_HoverGrid);
+
+var _HoverCol = __webpack_require__(192);
+
+var _HoverCol2 = _interopRequireDefault(_HoverCol);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, JumbotronFadeUp: _JumbotronFadeUp2.default };
+module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, JumbotronFadeUp: _JumbotronFadeUp2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default };
 
 /***/ }),
 /* 81 */
@@ -22534,8 +22542,274 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       { style: { lineHeight: '1.5' } },
       'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
     )
+  ),
+  _react2.default.createElement(
+    _index.HoverGrid,
+    null,
+    _react2.default.createElement(
+      _index.HoverCol,
+      { size: 2, imgSrc: './public/sea-waves.jpg' },
+      'sdgdsgdsgds ',
+      _react2.default.createElement(
+        'p',
+        { className: 'class', style: { color: 'red' } },
+        'sdgsd'
+      )
+    ),
+    _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' })
   )
 ), document.getElementById('app'));
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hoverGrid = __webpack_require__(191);
+
+var _hoverGrid2 = _interopRequireDefault(_hoverGrid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import animation from '../animations/jumbotron'
+
+
+var HoverGrid = function (_React$Component) {
+  _inherits(HoverGrid, _React$Component);
+
+  function HoverGrid() {
+    _classCallCheck(this, HoverGrid);
+
+    return _possibleConstructorReturn(this, (HoverGrid.__proto__ || Object.getPrototypeOf(HoverGrid)).apply(this, arguments));
+  }
+
+  _createClass(HoverGrid, [{
+    key: 'render',
+    value: function render() {
+      //children = whatever user has typed inside tags
+      //PUT BACK AUTOPLAY FOR VIDEO
+
+      var _props = this.props,
+          className = _props.className,
+          children = _props.children,
+          style = _props.style;
+
+      // const styledChildren = children && children.map((child, i) => {
+      //   const fadeStyle = jumbotronFadeUpStyle.fadeInUp;
+      //   const fadeClass = "fade-in-up ";
+
+      //   if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
+
+      //   const mergedStyle = Object.assign({}, child.props.style, fadeStyle);
+      //   const ownClassName = child.props.className || ""
+      //   const mergedClassName = fadeClass + ownClassName;
+
+      //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
+      // })
+
+      var mergedStyle = Object.assign({}, style, _hoverGrid2.default.style);
+      //const columns = this.createColumns(fadeIn, styledChildren)
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: className, style: mergedStyle },
+        children
+      );
+    }
+  }]);
+
+  return HoverGrid;
+}(_react2.default.Component);
+
+// <div className="fullscreen-bg">
+//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
+//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
+//             </video>
+//         </div>
+
+
+exports.default = HoverGrid;
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var hoverGridStyle = {
+  style: {
+    width: '100%',
+    content: "",
+    display: 'table',
+    clear: 'both',
+    padding: '5px'
+  }
+};
+
+exports.default = hoverGridStyle;
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hoverCol = __webpack_require__(193);
+
+var _hoverCol2 = _interopRequireDefault(_hoverCol);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import animation from '../animations/jumbotron'
+
+
+var HoverCol = function (_React$Component) {
+  _inherits(HoverCol, _React$Component);
+
+  function HoverCol() {
+    _classCallCheck(this, HoverCol);
+
+    var _this = _possibleConstructorReturn(this, (HoverCol.__proto__ || Object.getPrototypeOf(HoverCol)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(HoverCol, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      console.log('hi');
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          className = _props.className,
+          style = _props.style,
+          size = _props.size,
+          imgSrc = _props.imgSrc,
+          children = _props.children;
+
+      var mergedStyle = Object.assign({}, style, _hoverCol2.default[size], _hoverCol2.default.column);
+
+      if (this.state.isHover) {
+        mergedStyle = Object.assign({}, mergedStyle, _hoverCol2.default.hoverStyle);
+      }
+
+      return _react2.default.createElement(
+        'div',
+        {
+          className: className,
+          style: mergedStyle,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
+        _react2.default.createElement('img', { src: imgSrc, style: _hoverCol2.default.imgStyle }),
+        _react2.default.createElement(
+          'div',
+          { style: { position: 'absolute', top: '0' } },
+          children
+        )
+      );
+    }
+  }]);
+
+  return HoverCol;
+}(_react2.default.Component);
+
+exports.default = HoverCol;
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var hoverColStyle = {
+  column: {
+    position: 'relative',
+    boxSizing: 'border-box',
+    borderRadius: '2px',
+    float: 'left',
+    padding: '5px',
+    fontFamily: 'Helvetica',
+    transition: '0.3s ease-in'
+  },
+  hoverStyle: {
+    transform: 'scale(1.05)'
+  },
+  1: {
+    width: '100%'
+  },
+  2: {
+    width: '50%'
+  },
+  3: {
+    width: '33.3333333333333%'
+  },
+  4: {
+    width: '25%'
+  },
+  imgStyle: {
+    width: '100%',
+    borderRadius: '3px'
+  }
+};
+
+exports.default = hoverColStyle;
 
 /***/ })
 /******/ ]);
