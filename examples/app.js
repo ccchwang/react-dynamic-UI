@@ -1,7 +1,7 @@
 import '../public/stylesheets/main.scss';
 import React from 'react';
 import {render} from 'react-dom';
-import { HeroVideo, JumbotronFadeUp, HoverGrid, HoverCol } from '../src/index';
+import { HeroVideo, JumbotronFadeUp, JumbotronFadeIn, HoverGrid, HoverCol } from '../src/index';
 
 render(
   <div>

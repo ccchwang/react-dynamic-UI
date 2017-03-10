@@ -1,6 +1,5 @@
 import React from 'react';
 import jumbotronFadeInStyle from '../styles/jumbotronFadeIn'
-import animation from '../animations/jumbotronFadeIn'
 
 
 export default class JumbotronFadeIn extends React.Component {
@@ -63,10 +62,3 @@ export default class JumbotronFadeIn extends React.Component {
   }
 
 }
-
-
-// <div className="fullscreen-bg">
-//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
-//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
-//             </video>
-//         </div>
