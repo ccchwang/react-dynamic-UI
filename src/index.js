@@ -1,5 +1,5 @@
 import Button from './components/Button';
 import HeroVideo from './components/HeroVideo'
-//import css??
+import JumbotronFadeUp from './components/JumbotronFadeUp'
 
-module.exports = {Button, HeroVideo}
+module.exports = {Button, HeroVideo, JumbotronFadeUp}

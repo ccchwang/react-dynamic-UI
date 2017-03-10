@@ -11,7 +11,7 @@ const heroVideoStyle = {
     width: '40%',
     color: 'white',
     zIndex: '2',
-    top: '45%',
+    top: '250px',
     right: '8%',
     fontFamily: 'Helvetica',
     fontSize: '2em',
