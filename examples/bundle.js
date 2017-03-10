@@ -22557,7 +22557,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       )
     ),
     _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' })
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' })
   )
 ), document.getElementById('app'));
 
@@ -22666,7 +22669,7 @@ var hoverGridStyle = {
     content: "",
     display: 'table',
     clear: 'both',
-    padding: '5px'
+    padding: '15px'
   }
 };
 
@@ -22721,7 +22724,6 @@ var HoverCol = function (_React$Component) {
   _createClass(HoverCol, [{
     key: 'handleMouseEnter',
     value: function handleMouseEnter() {
-      console.log('hi');
       this.setState({ isHover: true });
     }
   }, {
@@ -22784,9 +22786,9 @@ var hoverColStyle = {
     boxSizing: 'border-box',
     borderRadius: '2px',
     float: 'left',
-    padding: '5px',
+    padding: '15px',
     fontFamily: 'Helvetica',
-    transition: '0.3s ease-in'
+    transition: '0.2s ease-out'
   },
   hoverStyle: {
     transform: 'scale(1.05)'

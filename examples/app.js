@@ -27,7 +27,10 @@ render(
    <HoverGrid>
     <HoverCol size={2} imgSrc="./public/sea-waves.jpg" >sdgdsgdsgds <p className="class" style={{color: 'red'}}>sdgsd</p></HoverCol>
     <HoverCol size={2} imgSrc="./public/sea-waves.jpg" />
-    <HoverCol size={2} imgSrc="./public/sea-waves.jpg" />
+    <HoverCol size={4} imgSrc="./public/sea-waves.jpg" />
+    <HoverCol size={4} imgSrc="./public/sea-waves.jpg" />
+    <HoverCol size={4} imgSrc="./public/sea-waves.jpg" />
+    <HoverCol size={4} imgSrc="./public/sea-waves.jpg" />
   </HoverGrid>
 
   </div>

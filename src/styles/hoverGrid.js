@@ -4,7 +4,7 @@ const hoverGridStyle = {
     content: "",
     display: 'table',
     clear: 'both',
-    padding: '5px'
+    padding: '15px'
   }
 }
 

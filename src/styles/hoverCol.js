@@ -4,9 +4,9 @@ const hoverColStyle = {
     boxSizing: 'border-box',
     borderRadius: '2px',
     float: 'left',
-    padding: '5px',
+    padding: '15px',
     fontFamily: 'Helvetica',
-    transition: '0.3s ease-in'
+    transition: '0.2s ease-out'
   },
   hoverStyle: {
     transform: 'scale(1.05)'
