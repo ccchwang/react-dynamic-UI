@@ -1,18 +1,18 @@
 import React from 'react';
-import jumbotronFadeUpStyle from '../styles/jumbotronFadeUp'
-import animation from '../animations/jumbotronFadeUp'
+import jumbotronFadeInStyle from '../styles/jumbotronFadeIn'
+import animation from '../animations/jumbotronFadeIn'
 
 
-export default class JumbotronFadeUp extends React.Component {
+export default class JumbotronFadeIn extends React.Component {
 
   createColumns (fadeIn, styledChildren) {
     if (fadeIn === "right") {
       return (
         <div>
-          <div style={jumbotronFadeUpStyle.column}>
+          <div style={jumbotronFadeInStyle.column}>
           </div>
 
-          <div style={jumbotronFadeUpStyle.column}>
+          <div style={jumbotronFadeInStyle.column}>
             { styledChildren }
           </div>
         </div>
@@ -21,11 +21,11 @@ export default class JumbotronFadeUp extends React.Component {
     else {
       return (
         <div>
-          <div style={jumbotronFadeUpStyle.column}>
+          <div style={jumbotronFadeInStyle.column}>
             { styledChildren }
           </div>
 
-          <div style={jumbotronFadeUpStyle.column}>
+          <div style={jumbotronFadeInStyle.column}>
           </div>
         </div>
       )
@@ -39,8 +39,8 @@ export default class JumbotronFadeUp extends React.Component {
   const { className, children, style, fadeIn } = this.props;
 
   const styledChildren = children && children.map((child, i) => {
-    const fadeStyle = jumbotronFadeUpStyle.fadeUp;
-    const fadeClass = "fade-up ";
+    const fadeStyle = jumbotronFadeInStyle.fadeIn;
+    const fadeClass = "fade-in ";
 
     if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
 
@@ -51,7 +51,7 @@ export default class JumbotronFadeUp extends React.Component {
     return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
   })
 
-  const mergedStyle = Object.assign({}, style, jumbotronFadeUpStyle.style);
+  const mergedStyle = Object.assign({}, style, jumbotronFadeInStyle.style);
   const columns = this.createColumns(fadeIn, styledChildren)
 
 

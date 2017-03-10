@@ -15,9 +15,9 @@ const jumbotronFadeUpStyle = {
     padding: '15px',
     fontFamily: 'Helvetica',
   },
-  fadeUp: {
+  fadeIn: {
     transition: '2s',
-    animationName: 'fadeUp',
+    animationName: 'fadeIn',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
     animationDuration: '1s',
