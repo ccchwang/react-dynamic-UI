@@ -9508,19 +9508,19 @@ window.onload = function () {
 
   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
-  console.log(styleSheet);
+  var elementsToFadeUp = document.getElementsByClassName('fade-in-up');
 
-  var fadeUpText = document.getElementById('jumbotronRightText');
-  var objectBottom = (fadeUpText.offsetHeight + fadeUpText.offsetTop) / 1.9;
-  var windowBottom = void 0;
+  for (var i = 0; i < elementsToFadeUp.length; i++) {
 
-  window.onscroll = function () {
-    windowBottom = window.innerHeight + window.scrollY;
+    window.addEventListener('scroll', function () {
+      var objectBottom = (this.offsetHeight + this.offsetTop) / 1.9;
+      var windowBottom = window.innerHeight + window.scrollY;
 
-    if (windowBottom > objectBottom) {
-      fadeUpText.style.animationName = 'fadeInUp';
-    }
-  };
+      if (windowBottom > objectBottom) {
+        this.style.animationPlayState = 'running';
+      }
+    }.bind(elementsToFadeUp[i]));
+  }
 };
 
 //console.log(window.innerHeight). INNER HEIGHT
@@ -9723,6 +9723,13 @@ var JumbotronFadeUp = function (_React$Component) {
           children = _props.children;
 
 
+      var styledChildren = children && children.map(function (child, i) {
+        var style = Object.assign({}, child.props.style, _jumbotronFadeUp2.default.fadeInUp);
+        var ownClassName = child.props.className || "";
+        var className = "fade-in-up " + ownClassName;
+        return _react2.default.cloneElement(child, { style: style, className: className, key: i });
+      });
+
       return _react2.default.createElement(
         'div',
         { className: className, style: _jumbotronFadeUp2.default.style },
@@ -9734,7 +9741,7 @@ var JumbotronFadeUp = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { id: 'jumbotronRightText', style: _jumbotronFadeUp2.default.column },
-          'sdgs'
+          styledChildren
         )
       );
     }
@@ -9835,23 +9842,25 @@ Object.defineProperty(exports, "__esModule", {
 var jumbotronFadeUpStyle = {
   style: {
     width: '95%',
-    margin: '0 auto'
+    margin: '15px auto'
   },
   column: {
     boxSizing: 'border-box',
     width: '50%',
     height: '1000px',
     float: 'left',
-    padding: '15px',
-    opacity: '0',
+    padding: '15px'
+  },
+  fadeInUp: {
     transition: '2s',
-    backgroundColor: 'pink',
+    color: 'red',
+    animationName: 'fadeInUp',
+    animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
     animationDuration: '1s',
-    animationDelay: '0.0s',
     animationIterationCount: 1,
     animationDirection: 'normal',
-    animationFillMode: 'both'
+    animationFillMode: 'forwards'
   }
 };
 
@@ -22439,8 +22448,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     },
     'Sample Heading Goes Here'
   ),
-  _react2.default.createElement(_index.JumbotronFadeUp, null),
-  'dd'
+  _react2.default.createElement(
+    _index.JumbotronFadeUp,
+    { className: 'hihi' },
+    _react2.default.createElement(
+      'h1',
+      { className: 'moop' },
+      'dsgdsgsdgs'
+    ),
+    _react2.default.createElement(
+      'h2',
+      { style: { color: 'blue' } },
+      'aaa'
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: { height: '300px', backgroundColor: 'red' } },
+      'dsgdsgdsgsd'
+    )
+  ),
+  _react2.default.createElement(
+    'h1',
+    null,
+    'dd'
+  )
 ), document.getElementById('app'));
 
 /***/ })

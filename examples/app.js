@@ -10,8 +10,11 @@ render(
     videoType="video/mp4"
   >Sample Heading Goes Here</HeroVideo>
 
-   <JumbotronFadeUp />
-    dd
+   <JumbotronFadeUp className="hihi"><h1 className="moop">dsgdsgsdgs</h1>
+    <h2 style={{color: 'blue'}}>aaa</h2><div style={{height: '300px', backgroundColor:
+    'red'}}>dsgdsgdsgsd</div>
+   </JumbotronFadeUp>
+    <h1>dd</h1>
   </div>
 
   ,

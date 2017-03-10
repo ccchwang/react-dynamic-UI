@@ -1,7 +1,7 @@
 const jumbotronFadeUpStyle = {
   style: {
     width: '95%',
-    margin: '0 auto'
+    margin: '15px auto'
   },
   column: {
     boxSizing: 'border-box',
@@ -9,16 +9,19 @@ const jumbotronFadeUpStyle = {
     height: '1000px',
     float: 'left',
     padding: '15px',
-    opacity: '0',
+  },
+  fadeInUp: {
     transition: '2s',
-    backgroundColor: 'pink',
+    color: 'red',
+    animationName: 'fadeInUp',
+    animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
     animationDuration: '1s',
-    animationDelay: '0.0s',
     animationIterationCount: 1,
     animationDirection: 'normal',
-    animationFillMode: 'both'
+    animationFillMode: 'forwards'
   }
 }
+
 
 export default jumbotronFadeUpStyle;

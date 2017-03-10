@@ -7,22 +7,21 @@ window.onload = function() {
 
   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
-  console.log(styleSheet)
 
 
+  let elementsToFadeUp = document.getElementsByClassName('fade-in-up');
 
-  let fadeUpText = document.getElementById('jumbotronRightText');
-  let objectBottom = (fadeUpText.offsetHeight + fadeUpText.offsetTop) / 1.9;
-  let windowBottom;
+  for (var i = 0; i < elementsToFadeUp.length; i++) {
 
-  window.onscroll = function() {
-    windowBottom = window.innerHeight + window.scrollY;
+    window.addEventListener('scroll', function(){
+      let objectBottom = (this.offsetHeight + this.offsetTop) / 1.9;
+      let windowBottom = window.innerHeight + window.scrollY;
 
-    if (windowBottom > objectBottom) {
-      fadeUpText.style.animationName = 'fadeInUp';
-    }
+      if (windowBottom > objectBottom) {
+        this.style.animationPlayState = 'running';
+      }
+    }.bind(elementsToFadeUp[i]))
   }
-
 }
 
 //console.log(window.innerHeight). INNER HEIGHT

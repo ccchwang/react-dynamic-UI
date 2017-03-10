@@ -14,6 +14,13 @@ export default class JumbotronFadeUp extends React.Component {
 
     const { leftImage, rightText, className, children } = this.props
 
+    const styledChildren = children && children.map((child, i) => {
+      const style = Object.assign({}, child.props.style, jumbotronFadeUpStyle.fadeInUp);
+      const ownClassName = child.props.className || ""
+      const className = "fade-in-up " + ownClassName;
+      return React.cloneElement(child, {style, className, key: i})
+    })
+
 
     return (
       <div className={className} style={jumbotronFadeUpStyle.style}>
@@ -22,7 +29,7 @@ export default class JumbotronFadeUp extends React.Component {
         </div>
 
         <div id="jumbotronRightText" style={jumbotronFadeUpStyle.column}>
-        sdgs
+          { styledChildren }
         </div>
 
       </div>
