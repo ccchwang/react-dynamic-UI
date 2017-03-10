@@ -8,13 +8,12 @@ window.onload = function() {
   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
 
-
   let elementsToFadeUp = document.getElementsByClassName('fade-in-up');
 
   for (var i = 0; i < elementsToFadeUp.length; i++) {
 
     window.addEventListener('scroll', function(){
-      let objectBottom = (this.offsetHeight + this.offsetTop) / 1.9;
+      let objectBottom = (this.offsetHeight + this.offsetTop);
       let windowBottom = window.innerHeight + window.scrollY;
 
       if (windowBottom > objectBottom) {

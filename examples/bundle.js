@@ -9513,7 +9513,7 @@ window.onload = function () {
   for (var i = 0; i < elementsToFadeUp.length; i++) {
 
     window.addEventListener('scroll', function () {
-      var objectBottom = (this.offsetHeight + this.offsetTop) / 1.9;
+      var objectBottom = this.offsetHeight + this.offsetTop;
       var windowBottom = window.innerHeight + window.scrollY;
 
       if (windowBottom > objectBottom) {
@@ -9720,7 +9720,8 @@ var JumbotronFadeUp = function (_React$Component) {
           leftImage = _props.leftImage,
           rightText = _props.rightText,
           className = _props.className,
-          children = _props.children;
+          children = _props.children,
+          style = _props.style;
 
 
       var styledChildren = children && children.map(function (child, i) {
@@ -9730,9 +9731,11 @@ var JumbotronFadeUp = function (_React$Component) {
         return _react2.default.cloneElement(child, { style: style, className: className, key: i });
       });
 
+      var mergedStyle = Object.assign({}, style, _jumbotronFadeUp2.default.style);
+
       return _react2.default.createElement(
         'div',
-        { className: className, style: _jumbotronFadeUp2.default.style },
+        { className: className, style: mergedStyle },
         _react2.default.createElement(
           'div',
           { style: _jumbotronFadeUp2.default.column },
@@ -9740,7 +9743,7 @@ var JumbotronFadeUp = function (_React$Component) {
         ),
         _react2.default.createElement(
           'div',
-          { id: 'jumbotronRightText', style: _jumbotronFadeUp2.default.column },
+          { style: _jumbotronFadeUp2.default.column },
           styledChildren
         )
       );
@@ -9849,11 +9852,11 @@ var jumbotronFadeUpStyle = {
     width: '50%',
     height: '1000px',
     float: 'left',
-    padding: '15px'
+    padding: '15px',
+    fontFamily: 'Helvetica'
   },
   fadeInUp: {
     transition: '2s',
-    color: 'red',
     animationName: 'fadeInUp',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
@@ -22450,27 +22453,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   ),
   _react2.default.createElement(
     _index.JumbotronFadeUp,
-    { className: 'hihi' },
+    { style: { fontSize: '1.5em' } },
     _react2.default.createElement(
       'h1',
-      { className: 'moop' },
-      'dsgdsgsdgs'
+      { style: { color: '#25baf8' } },
+      'What\'s New?'
     ),
     _react2.default.createElement(
       'h2',
-      { style: { color: 'blue' } },
-      'aaa'
+      { style: { color: '#25baf8' } },
+      'Category'
     ),
     _react2.default.createElement(
-      'div',
-      { style: { height: '300px', backgroundColor: 'red' } },
-      'dsgdsgdsgsd'
+      'p',
+      null,
+      'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
     )
-  ),
-  _react2.default.createElement(
-    'h1',
-    null,
-    'dd'
   )
 ), document.getElementById('app'));
 

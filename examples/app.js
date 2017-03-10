@@ -10,11 +10,14 @@ render(
     videoType="video/mp4"
   >Sample Heading Goes Here</HeroVideo>
 
-   <JumbotronFadeUp className="hihi"><h1 className="moop">dsgdsgsdgs</h1>
-    <h2 style={{color: 'blue'}}>aaa</h2><div style={{height: '300px', backgroundColor:
-    'red'}}>dsgdsgdsgsd</div>
+   <JumbotronFadeUp style={{fontSize: '1.5em'}}>
+    <h1 style={{color: '#25baf8'}}>What's New?</h1>
+    <h2 style={{color: '#25baf8'}}>Category</h2>
+    <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
    </JumbotronFadeUp>
-    <h1>dd</h1>
+
+
+
   </div>
 
   ,

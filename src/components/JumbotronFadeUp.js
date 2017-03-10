@@ -12,7 +12,7 @@ export default class JumbotronFadeUp extends React.Component {
     //children = whatever user has typed inside tags
     //PUT BACK AUTOPLAY FOR VIDEO
 
-    const { leftImage, rightText, className, children } = this.props
+    const { leftImage, rightText, className, children, style } = this.props
 
     const styledChildren = children && children.map((child, i) => {
       const style = Object.assign({}, child.props.style, jumbotronFadeUpStyle.fadeInUp);
@@ -21,14 +21,15 @@ export default class JumbotronFadeUp extends React.Component {
       return React.cloneElement(child, {style, className, key: i})
     })
 
+  const mergedStyle = Object.assign({}, style, jumbotronFadeUpStyle.style);
 
     return (
-      <div className={className} style={jumbotronFadeUpStyle.style}>
+      <div className={className} style={mergedStyle}>
         <div style={jumbotronFadeUpStyle.column}>
         sdgs
         </div>
 
-        <div id="jumbotronRightText" style={jumbotronFadeUpStyle.column}>
+        <div style={jumbotronFadeUpStyle.column}>
           { styledChildren }
         </div>
 

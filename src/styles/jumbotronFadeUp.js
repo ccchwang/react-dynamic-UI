@@ -9,10 +9,10 @@ const jumbotronFadeUpStyle = {
     height: '1000px',
     float: 'left',
     padding: '15px',
+    fontFamily: 'Helvetica',
   },
   fadeInUp: {
     transition: '2s',
-    color: 'red',
     animationName: 'fadeInUp',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
