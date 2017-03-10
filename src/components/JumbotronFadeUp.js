@@ -1,6 +1,6 @@
 import React from 'react';
 import jumbotronFadeUpStyle from '../styles/jumbotronFadeUp'
-import animation from '../animations/jumbotronFadeUp'
+// import animation from '../animations/jumbotronFadeUp'
 
 
 export default class JumbotronFadeUp extends React.Component {

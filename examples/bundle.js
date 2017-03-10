@@ -9455,6 +9455,10 @@ var _JumbotronFadeUp = __webpack_require__(86);
 
 var _JumbotronFadeUp2 = _interopRequireDefault(_JumbotronFadeUp);
 
+var _JumbotronFadeIn = __webpack_require__(196);
+
+var _JumbotronFadeIn2 = _interopRequireDefault(_JumbotronFadeIn);
+
 var _HoverGrid = __webpack_require__(190);
 
 var _HoverGrid2 = _interopRequireDefault(_HoverGrid);
@@ -9463,26 +9467,13 @@ var _HoverCol = __webpack_require__(192);
 
 var _HoverCol2 = _interopRequireDefault(_HoverCol);
 
+var _allAnimations = __webpack_require__(199);
+
+var _allAnimations2 = _interopRequireDefault(_allAnimations);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var styleSheets = document.styleSheets;
-var ownerStyleSheet = void 0;
-
-for (var i = 0; i < styleSheets.length; i++) {
-  if (styleSheets[i].ownerNode.nodeName === "STYLE") {
-    ownerStyleSheet = styleSheets[i];
-  }
-}
-
-var keyframeFadeUp = '@-webkit-keyframes fadeUp {\n  0% {-webkit-transform:translate3d(0,40px,0) }\n  100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n}';
-
-var keyframeFadeIn = '@-webkit-keyframes fadeUp {\n  0% {-webkit-transform:translate3d(0,40px,0) }\n  100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n}';
-
-ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
-
-ownerStyleSheet.insertRule(keyframeFadeIn, ownerStyleSheet.cssRules.length);
-
-module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, JumbotronFadeUp: _JumbotronFadeUp2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default };
+module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, JumbotronFadeUp: _JumbotronFadeUp2.default, JumbotronFadeIn: _JumbotronFadeIn2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default };
 
 /***/ }),
 /* 81 */
@@ -9683,10 +9674,6 @@ var _jumbotronFadeUp = __webpack_require__(89);
 
 var _jumbotronFadeUp2 = _interopRequireDefault(_jumbotronFadeUp);
 
-var _jumbotronFadeUp3 = __webpack_require__(194);
-
-var _jumbotronFadeUp4 = _interopRequireDefault(_jumbotronFadeUp3);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9694,6 +9681,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import animation from '../animations/jumbotronFadeUp'
+
 
 var JumbotronFadeUp = function (_React$Component) {
   _inherits(JumbotronFadeUp, _React$Component);
@@ -22792,13 +22782,156 @@ var hoverColStyle = {
 exports.default = hoverColStyle;
 
 /***/ }),
-/* 194 */
+/* 194 */,
+/* 195 */,
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _jumbotronFadeIn = __webpack_require__(197);
+
+var _jumbotronFadeIn2 = _interopRequireDefault(_jumbotronFadeIn);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var JumbotronFadeIn = function (_React$Component) {
+  _inherits(JumbotronFadeIn, _React$Component);
+
+  function JumbotronFadeIn() {
+    _classCallCheck(this, JumbotronFadeIn);
+
+    return _possibleConstructorReturn(this, (JumbotronFadeIn.__proto__ || Object.getPrototypeOf(JumbotronFadeIn)).apply(this, arguments));
+  }
+
+  _createClass(JumbotronFadeIn, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        'sdkghdskgksd'
+      );
+    }
+  }]);
+
+  return JumbotronFadeIn;
+}(_react2.default.Component);
+
+// <div className="fullscreen-bg">
+//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
+//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
+//             </video>
+//         </div>
+
+
+exports.default = JumbotronFadeIn;
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var jumbotronFadeInStyle = {
+  style: {
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    content: "",
+    display: 'table',
+    clear: 'both',
+    padding: '3%'
+  },
+  column: {
+    boxSizing: 'border-box',
+    width: '50%',
+    float: 'left',
+    padding: '15px',
+    fontFamily: 'Helvetica'
+  },
+  fadeIn: {
+    transition: '2s',
+    animationName: 'fadeIn',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-in-out',
+    animationDuration: '1s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'forwards'
+  }
+};
+
+exports.default = jumbotronFadeInStyle;
+
+/***/ }),
+/* 198 */,
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 window.onload = function () {
+
+  var styleSheets = document.styleSheets;
+  var ownerStyleSheet = void 0;
+
+  for (var i = 0; i < styleSheets.length; i++) {
+    if (styleSheets[i].ownerNode.nodeName === "STYLE") {
+      ownerStyleSheet = styleSheets[i];
+    }
+  }
+
+  var keyframeFadeUp = '@-webkit-keyframes fadeUp {\n    0% {-webkit-transform:translate3d(0,40px,0) }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
+
+  var keyframeFadeIn = '@-webkit-keyframes fadeIn {\n    0% {-webkit-transform:translate3d(0,40px,0) }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
+
+  ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeFadeIn, ownerStyleSheet.cssRules.length);
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+  //******** FADE IN ********//
+  var elementsToFadeIn = document.getElementsByClassName('fade-in');
+
+  for (var i = 0; i < elementsToFadeIn.length; i++) {
+
+    window.addEventListener('scroll', function () {
+      var objectBottom = this.offsetHeight + this.offsetTop;
+      var windowBottom = window.innerHeight + window.scrollY;
+
+      if (windowBottom > objectBottom) {
+        this.style.animationPlayState = 'running';
+      }
+    }.bind(elementsToFadeIn[i]));
+  }
+
+  //******** FADE UP ********//
+
   var elementsToFadeUp = document.getElementsByClassName('fade-up');
 
   for (var i = 0; i < elementsToFadeUp.length; i++) {
