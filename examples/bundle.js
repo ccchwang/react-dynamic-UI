@@ -9503,10 +9503,12 @@ if(false) {
 
 
 window.onload = function () {
-
   var styleSheet = document.styleSheets[0];
-  var keyframes = '@-webkit-keyframes kaka {\n      10% {-webkit-transform:translate(' + Math.random() * 300 + 'px, ' + Math.random() * 300 + 'px)}\n      90% {-webkit-transform:translate(' + Math.random() * 300 + 'px, ' + Math.random() * 300 + 'px)}\n      100% {-webkit-transform:translate(' + Math.random() * 300 + 'px, ' + Math.random() * 300 + 'px)}\n  }';
+  var keyframes = '@-webkit-keyframes fadeInUp {\n    0% {-webkit-transform:translate3d(0,40px,0) }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
+
   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+
+  console.log(styleSheet);
 
   var fadeUpText = document.getElementById('jumbotronRightText');
   var objectBottom = (fadeUpText.offsetHeight + fadeUpText.offsetTop) / 1.9;
@@ -9516,7 +9518,7 @@ window.onload = function () {
     windowBottom = window.innerHeight + window.scrollY;
 
     if (windowBottom > objectBottom) {
-      fadeUpText.style.opacity = 1;
+      fadeUpText.style.animationName = 'fadeInUp';
     }
   };
 };
@@ -9646,7 +9648,7 @@ var HeroVideo = function (_React$Component) {
         ),
         _react2.default.createElement(
           'video',
-          { loop: true, muted: true, autoPlay: true, style: _heroVideo2.default.video },
+          { loop: true, muted: true, style: _heroVideo2.default.video },
           _react2.default.createElement('source', { src: videoSrc, type: videoType })
         )
       );
@@ -9841,16 +9843,15 @@ var jumbotronFadeUpStyle = {
     height: '1000px',
     float: 'left',
     padding: '15px',
-    backgroundColor: "red",
     opacity: '0',
-    transition: '2s'
-    // animationName: 'kaka',
-    // animationTimingFunction: 'ease-in-out',
-    // animationDuration: '0.6s',
-    // animationDelay: '0.0s',
-    // animationIterationCount: 1,
-    // animationDirection: 'normal',
-    // animationFillMode: 'forwards'
+    transition: '2s',
+    backgroundColor: 'pink',
+    animationTimingFunction: 'ease-in-out',
+    animationDuration: '1s',
+    animationDelay: '0.0s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'both'
   }
 };
 
