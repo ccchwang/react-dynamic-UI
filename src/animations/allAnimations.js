@@ -10,13 +10,13 @@ window.onload = function() {
   }
 
   let keyframeFadeUp = `@-webkit-keyframes fadeUp {
-    0% {-webkit-transform:translate3d(0,40px,0) }
+    0% {-webkit-transform:translate3d(0,40px,0); opacity: 0 }
     100% {-webkit-transform:translate3d(0,0,0); opacity: 1}
   }`;
 
   let keyframeFadeIn = `@-webkit-keyframes fadeIn {
-    0% {-webkit-transform:translate3d(0,40px,0) }
-    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}
+    0% {opacity: 0}
+    100% {opacity: 1}
   }`;
 
 

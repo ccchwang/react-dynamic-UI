@@ -1,4 +1,4 @@
-const jumbotronFadeInStyle = {
+const jumbotronStyle = {
   style: {
     width: '100%',
     backgroundSize: 'cover',
@@ -15,12 +15,20 @@ const jumbotronFadeInStyle = {
     padding: '15px',
     fontFamily: 'Helvetica',
   },
-  fadeIn: {
-    transition: '2s',
-    animationName: 'fadeIn',
+  fadeUp: {
+    animationName: 'fadeUp',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
     animationDuration: '1s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'forwards'
+  },
+  fadeIn: {
+    animationName: 'fadeIn',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-in',
+    animationDuration: '0.6s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
@@ -28,4 +36,4 @@ const jumbotronFadeInStyle = {
 }
 
 
-export default jumbotronFadeInStyle;
+export default jumbotronStyle;
