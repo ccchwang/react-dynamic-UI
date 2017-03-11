@@ -21,7 +21,7 @@ export default class HeroVideo extends React.Component {
         </div>
 
 
-          <video loop muted  style={heroVideoStyle.video}>
+          <video loop muted autoPlay style={heroVideoStyle.video}>
               <source src={videoSrc} type={videoType} />
           </video>
 
