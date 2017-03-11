@@ -4,14 +4,14 @@ const jumbotronStyle = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     content: "",
-    display: 'table',
-    clear: 'both',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     padding: '3%'
   },
   column: {
     boxSizing: 'border-box',
     width: '50%',
-    float: 'left',
     padding: '15px',
     fontFamily: 'Helvetica',
   },
@@ -24,16 +24,27 @@ const jumbotronStyle = {
     animationDirection: 'normal',
     animationFillMode: 'forwards'
   },
-  fadeIn: {
-    animationName: 'fadeIn',
+  fadeAppear: {
+    animationName: 'fadeAppear',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in',
     animationDuration: '0.6s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
+  },
+  fadeInLeft: {
+    animationName: 'fadeInLeft',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-out',
+    animationDuration: '0.7s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'both'
   }
 }
 
+jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, {animationName: 'fadeInRight'})
 
+console.log(jumbotronStyle)
 export default jumbotronStyle;

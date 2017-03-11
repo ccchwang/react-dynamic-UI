@@ -22312,19 +22312,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     { style: { fontSize: '1.5em' } },
     _react2.default.createElement(
       _index.JumbotronCol,
-      null,
+      { fadeEffect: 'fadeUp' },
       _react2.default.createElement(
         'h1',
-        { style: { color: '#25baf8', fontWeight: '700' } },
-        'What\'s New?'
-      )
-    ),
-    _react2.default.createElement(
-      _index.JumbotronCol,
-      { fadeUp: true },
-      _react2.default.createElement(
-        'h1',
-        { style: { color: '#25baf8', fontWeight: '700' } },
+        { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
         'What\'s New?'
       ),
       _react2.default.createElement(
@@ -22357,39 +22348,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         { style: { lineHeight: '1.5' } },
         'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
       )
-    )
-  ),
-  _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(
-      _index.HoverCol,
-      { size: 2, imgSrc: './public/sea-waves.jpg' },
-      'sdgdsgdsgds ',
-      _react2.default.createElement(
-        'p',
-        { className: 'class', style: { color: 'red' } },
-        'sdgsd'
-      )
     ),
-    _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' })
-  ),
-  _react2.default.createElement(
-    _index.Jumbotron,
-    { style: { fontSize: '1.5em', backgroundImage: "url('./public/sea-waves.jpg')" } },
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeIn: true },
+      { fadeEffect: 'fadeAppear' },
       _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'h1',
-          { style: { color: '#25baf8', fontWeight: '700' } },
+          { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
           'What\'s New?'
         ),
         _react2.default.createElement(
@@ -22424,6 +22392,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         )
       )
     )
+  ),
+  _react2.default.createElement(
+    _index.HoverGrid,
+    null,
+    _react2.default.createElement(
+      _index.HoverCol,
+      { size: 2, imgSrc: './public/sea-waves.jpg' },
+      'sdgdsgdsgds ',
+      _react2.default.createElement(
+        'p',
+        { className: 'class', style: { color: 'red' } },
+        'sdgsd'
+      )
+    ),
+    _react2.default.createElement(_index.HoverCol, { size: 2, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' }),
+    _react2.default.createElement(_index.HoverCol, { size: 4, imgSrc: './public/sea-waves.jpg' })
   )
 ), document.getElementById('app'));
 
@@ -22688,6 +22675,8 @@ exports.default = hoverColStyle;
 "use strict";
 
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 window.onload = function () {
 
   var styleSheets = document.styleSheets;
@@ -22701,21 +22690,26 @@ window.onload = function () {
 
   var keyframeFadeUp = '@-webkit-keyframes fadeUp {\n    0% {-webkit-transform:translate3d(0,40px,0); opacity: 0 }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
 
-  var keyframeFadeIn = '@-webkit-keyframes fadeIn {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
+  var keyframeFadeAppear = '@-webkit-keyframes fadeAppear {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
+
+  var keyframeFadeInLeft = '@-webkit-keyframes fadeInLeft {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(40px); opacity: 1}\n  }';
+
+  var keyframeFadeInRight = '@-webkit-keyframes fadeInRight {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(keyframeFadeIn, ownerStyleSheet.cssRules.length);
-
+  ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeFadeInLeft, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-  //******** FADE IN ********//
-  var elementsToFadeIn = document.getElementsByClassName('fade-in');
+  //******** FADE IN && APPEAR ********//
+  var elementsToFadeIn = [].concat(_toConsumableArray(document.getElementsByClassName('fadeInLeft')), _toConsumableArray(document.getElementsByClassName('fadeInRight')), _toConsumableArray(document.getElementsByClassName('fadeAppear')));
 
   for (var i = 0; i < elementsToFadeIn.length; i++) {
 
     window.addEventListener('scroll', function () {
-      var objectBottom = this.offsetHeight + this.offsetTop;
+      var objectBottom = (this.offsetHeight + this.offsetTop) / 1.13;
       var windowBottom = window.innerHeight + window.scrollY;
 
       if (windowBottom > objectBottom) {
@@ -22726,7 +22720,7 @@ window.onload = function () {
 
   //******** FADE UP ********//
 
-  var elementsToFadeUp = document.getElementsByClassName('fade-up');
+  var elementsToFadeUp = document.getElementsByClassName('fadeUp');
 
   for (var i = 0; i < elementsToFadeUp.length; i++) {
 
@@ -22792,14 +22786,13 @@ var JumbotronCol = function (_React$Component) {
           className = _props.className,
           children = _props.children,
           style = _props.style,
-          fadeUp = _props.fadeUp,
-          fadeIn = _props.fadeIn;
-
+          fadeEffect = _props.fadeEffect;
 
       var childrenArray = !children.length ? [children] : children;
       var mergedStyle = Object.assign({}, style, _jumbotron2.default.column);
-      var fadeStyle = fadeUp ? _jumbotron2.default.fadeUp : fadeIn ? _jumbotron2.default.fadeIn : {};
-      var fadeClass = fadeUp ? "fade-up " : fadeIn ? "fade-in " : "";
+
+      var fadeStyle = _jumbotron2.default[fadeEffect];
+      var fadeClass = fadeEffect + " ";
 
       var styledChildren = childrenArray && childrenArray.map(function (child, i) {
         if (typeof child === "string") {
@@ -22853,14 +22846,14 @@ var jumbotronStyle = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     content: "",
-    display: 'table',
-    clear: 'both',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     padding: '3%'
   },
   column: {
     boxSizing: 'border-box',
     width: '50%',
-    float: 'left',
     padding: '15px',
     fontFamily: 'Helvetica'
   },
@@ -22873,17 +22866,29 @@ var jumbotronStyle = {
     animationDirection: 'normal',
     animationFillMode: 'forwards'
   },
-  fadeIn: {
-    animationName: 'fadeIn',
+  fadeAppear: {
+    animationName: 'fadeAppear',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in',
     animationDuration: '0.6s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
+  },
+  fadeInLeft: {
+    animationName: 'fadeInLeft',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-out',
+    animationDuration: '0.7s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'both'
   }
 };
 
+jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, { animationName: 'fadeInRight' });
+
+console.log(jumbotronStyle);
 exports.default = jumbotronStyle;
 
 /***/ }),

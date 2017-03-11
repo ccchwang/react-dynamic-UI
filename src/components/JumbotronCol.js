@@ -6,12 +6,12 @@ import jumbotronStyle from '../styles/jumbotron'
 export default class JumbotronCol extends React.Component {
 
   render () {
-    const { className, children, style, fadeUp, fadeIn } = this.props;
-
+    const { className, children, style, fadeEffect } = this.props;
     const childrenArray = !children.length ? [children] : children;
     const mergedStyle = Object.assign({}, style, jumbotronStyle.column);
-    const fadeStyle = fadeUp ? jumbotronStyle.fadeUp : fadeIn ? jumbotronStyle.fadeIn : {};
-    const fadeClass = fadeUp ? "fade-up " : fadeIn ? "fade-in " : "";
+
+    const fadeStyle = jumbotronStyle[fadeEffect];
+    const fadeClass = fadeEffect + " ";
 
     const styledChildren = childrenArray && childrenArray.map((child, i) => {
       if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
