@@ -1,7 +1,7 @@
 const navbarStyle = {
   nav: {
     width: '100%',
-    height: '80px',
+    height: '70px',
     position: 'fixed',
     top: '0',
     zIndex: '200',
@@ -24,9 +24,7 @@ const navbarStyle = {
   item: {
     display: 'inline-block',
     padding: '20px',
-    fontSize: '1.2em',
-    transition: '0.3s',
-    letterSpacing: '1px'
+    transition: '0.3s'
   }
 
 }

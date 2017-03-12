@@ -1,9 +1,9 @@
 import React from 'react';
-import hoverGridStyle from '../styles/hoverGrid'
+import hoverRowStyle from '../styles/hoverRow'
 // import animation from '../animations/jumbotron'
 
 
-export default class HoverGrid extends React.Component {
+export default class HoverRow extends React.Component {
 
   render () {
     //children = whatever user has typed inside tags
@@ -24,7 +24,7 @@ export default class HoverGrid extends React.Component {
   //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
   // })
 
-  const mergedStyle = Object.assign({}, hoverGridStyle.style, style);
+  const mergedStyle = Object.assign({}, hoverRowStyle.style, style);
   //const columns = this.createColumns(fadeIn, styledChildren)
 
 

@@ -1,12 +1,12 @@
 import '../public/stylesheets/main.scss';
 import React from 'react';
 import {render} from 'react-dom';
-import { HeroVideo, Jumbotron, JumbotronCol, HoverGrid, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem } from '../src/index';
+import { HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem, Button } from '../src/index';
 
 
 render(
   <div>
-  <Navbar style={{backgroundColor: 'rgba(135, 205, 218, 0.8)'}}>
+  <Navbar>
     <NavItem className="nav-item">ABOUT US</NavItem>
     <NavItem className="nav-item"><a>OUR BRAND</a></NavItem>
   </Navbar>
@@ -18,8 +18,11 @@ render(
   </HeroVideo>
 
   <Jumbotron>
-    <JumbotronCol fadeEffect="fadeAppear" style={{display: 'flex', padding: '110px', justifyContent: 'center'}}>
-    <img src="./public/graphic-waves.png" className="waves-graphic" />
+    <JumbotronCol
+      fadeEffect="fadeAppear"
+      style={{display: 'flex', padding: '120px', justifyContent: 'center'}}
+    >
+      <img src="./public/graphic-waves.png" className="waves-graphic" />
     </JumbotronCol>
    </Jumbotron>
 
@@ -40,20 +43,16 @@ render(
    </Jumbotron>
 
 
-   <HoverGrid>
-    <HoverCol imgSrc="" />
-    <HoverCol imgSrc="" />
-    </HoverGrid>
+  <HoverRow className="hover-row1">
+    <HoverCol imgSrc="./public/waves1.png" />
+    <HoverCol imgSrc="./public/waves7.png" />
+  </HoverRow>
 
-    <HoverGrid>
-    <HoverCol imgSrc="" />
-    <HoverCol imgSrc="" />
-    <HoverCol imgSrc="" />
-  </HoverGrid>
-  <HoverGrid>
-    <HoverCol imgSrc="" />
-    <HoverCol imgSrc="" />
-    </HoverGrid>
+  <HoverRow className="hover-row2">
+    <HoverCol imgSrc="./public/waves3.png" />
+    <HoverCol imgSrc="./public/waves4.png" />
+    <HoverCol imgSrc="./public/waves9.png" />
+  </HoverRow>
 
     <Jumbotron className="jumbo-bg">
     <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp">
@@ -62,8 +61,7 @@ render(
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
       <h2>Playlists</h2>
       <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
-      <h2>New Releases</h2>
-      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
+      <button className="btn">CLICK ME</button>
     </JumbotronCol>
 
     <JumbotronCol >

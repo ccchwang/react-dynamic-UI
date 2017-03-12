@@ -43,5 +43,39 @@ body {
 }
 
 .nav-item {
-  color: white
+  color: white;
+  font-size: 1em;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.hover-row1 {
+  width: 65%;
+  padding-top: 180px;
+}
+
+.hover-row2 {
+  width: 65%;
+  padding-bottom: 180px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em
+}
+
+.btn {
+  background-color: red;
+  letter-spacing: 1px;
+  font-weight: 600;
+  width: 250px;
+  border-radius: 24px;
+  border: none;
+  color: #616161;
+  font-size: 17 !important;
+  line-height: 26px;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: bottom
 }

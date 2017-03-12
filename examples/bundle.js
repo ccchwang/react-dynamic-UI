@@ -9459,9 +9459,9 @@ var _JumbotronCol = __webpack_require__(200);
 
 var _JumbotronCol2 = _interopRequireDefault(_JumbotronCol);
 
-var _HoverGrid = __webpack_require__(190);
+var _HoverRow = __webpack_require__(227);
 
-var _HoverGrid2 = _interopRequireDefault(_HoverGrid);
+var _HoverRow2 = _interopRequireDefault(_HoverRow);
 
 var _HoverCol = __webpack_require__(192);
 
@@ -9489,7 +9489,7 @@ var _allAnimations2 = _interopRequireDefault(_allAnimations);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default, Navbar: _Navbar2.default, NavItem: _NavItem2.default };
+module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverRow: _HoverRow2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default, Navbar: _Navbar2.default, NavItem: _NavItem2.default };
 
 /***/ }),
 /* 81 */
@@ -9570,18 +9570,21 @@ var Button = function (_React$Component) {
   }
 
   _createClass(Button, [{
-    key: 'toggleDrawer',
-    value: function toggleDrawer() {
-      Drawer.setState({ openDrawer: !this.state.openDrawer }).bind(Drawer);
-    }
-  }, {
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          style = _props.style,
+          className = _props.className;
+
+
+      var ownStyle = style || {};
+      var ownClassName = className;
+      var mergedStyle = Object.assign({}, _button2.default, ownStyle);
 
       return _react2.default.createElement(
         'button',
         { style: _button2.default },
-        'HELddLO'
+        this.props.children
       );
     }
   }]);
@@ -9690,18 +9693,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var buttonStyle = {
-  background: '#EEEEEE',
-  border: 0,
-  borderTop: '1px solid #EEEEEE',
-  borderBottom: '1px solid #BDBDBD',
-  borderRadius: 2,
+  background: 'red',
+  letterSpacing: '1px',
+  fontWeight: '600',
+  width: '250px',
+  borderRadius: '24px',
+  border: 'none',
   boxSizing: 'border-box',
   color: '#616161',
   cursor: 'pointer',
   display: 'inline-block',
   fontSize: 17,
   lineHeight: '26px',
-  padding: '8px 14px 6px 14px',
+  padding: '10px 14px',
   textAlign: 'center',
   textDecoration: 'none',
   verticalAlign: 'bottom'
@@ -9758,7 +9762,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-bg, .jumbo-fadeIn {\n  font-size: 1.5em; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp {\n  padding: 75px; }\n  .jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n    color: #F25C5E;\n    font-weight: 700; }\n  .jumbo-fadeUp p {\n    line-height: 1.5; }\n\n.jumbo-fadeUp.left {\n  padding-left: 0; }\n\n.jumbo-fadeUp.right {\n  padding-right: 0; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-bg, .jumbo-fadeIn {\n  font-size: 1.5em; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp {\n  padding: 75px; }\n  .jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n    color: #F25C5E;\n    font-weight: 700; }\n  .jumbo-fadeUp p {\n    line-height: 1.5; }\n\n.jumbo-fadeUp.left {\n  padding-left: 0; }\n\n.jumbo-fadeUp.right {\n  padding-right: 0; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: red;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: #616161;\n  font-size: 17 !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom; }\n", ""]);
 
 // exports
 
@@ -22325,7 +22329,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   null,
   _react2.default.createElement(
     _index.Navbar,
-    { style: { backgroundColor: 'rgba(135, 205, 218, 0.8)' } },
+    null,
     _react2.default.createElement(
       _index.NavItem,
       { className: 'nav-item' },
@@ -22353,7 +22357,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     null,
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeAppear', style: { display: 'flex', padding: '110px', justifyContent: 'center' } },
+      {
+        fadeEffect: 'fadeAppear',
+        style: { display: 'flex', padding: '120px', justifyContent: 'center' }
+      },
       _react2.default.createElement('img', { src: './public/graphic-waves.png', className: 'waves-graphic' })
     )
   ),
@@ -22412,23 +22419,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     )
   ),
   _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
+    _index.HoverRow,
+    { className: 'hover-row1' },
+    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/waves1.png' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/waves7.png' })
   ),
   _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
-  ),
-  _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
+    _index.HoverRow,
+    { className: 'hover-row2' },
+    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/waves3.png' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/waves4.png' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/waves9.png' })
   ),
   _react2.default.createElement(
     _index.Jumbotron,
@@ -22462,14 +22463,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
       ),
       _react2.default.createElement(
-        'h2',
-        null,
-        'New Releases'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        'button',
+        { className: 'btn' },
+        'CLICK ME'
       )
     ),
     _react2.default.createElement(_index.JumbotronCol, null)
@@ -22632,118 +22628,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 ), document.getElementById('app'));
 
 /***/ }),
-/* 190 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(25);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _hoverGrid = __webpack_require__(191);
-
-var _hoverGrid2 = _interopRequireDefault(_hoverGrid);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// import animation from '../animations/jumbotron'
-
-
-var HoverGrid = function (_React$Component) {
-  _inherits(HoverGrid, _React$Component);
-
-  function HoverGrid() {
-    _classCallCheck(this, HoverGrid);
-
-    return _possibleConstructorReturn(this, (HoverGrid.__proto__ || Object.getPrototypeOf(HoverGrid)).apply(this, arguments));
-  }
-
-  _createClass(HoverGrid, [{
-    key: 'render',
-    value: function render() {
-      //children = whatever user has typed inside tags
-      //PUT BACK AUTOPLAY FOR VIDEO
-
-      var _props = this.props,
-          className = _props.className,
-          children = _props.children,
-          style = _props.style;
-
-      // const styledChildren = children && children.map((child, i) => {
-      //   const fadeStyle = jumbotronFadeUpStyle.fadeInUp;
-      //   const fadeClass = "fade-in-up ";
-
-      //   if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
-
-      //   const mergedStyle = Object.assign({}, child.props.style, fadeStyle);
-      //   const ownClassName = child.props.className || ""
-      //   const mergedClassName = fadeClass + ownClassName;
-
-      //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
-      // })
-
-      var mergedStyle = Object.assign({}, _hoverGrid2.default.style, style);
-      //const columns = this.createColumns(fadeIn, styledChildren)
-
-
-      return _react2.default.createElement(
-        'div',
-        { className: className, style: mergedStyle },
-        children
-      );
-    }
-  }]);
-
-  return HoverGrid;
-}(_react2.default.Component);
-
-// <div className="fullscreen-bg">
-//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
-//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
-//             </video>
-//         </div>
-
-
-exports.default = HoverGrid;
-
-/***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var hoverGridStyle = {
-  style: {
-    width: '75%',
-    margin: '0 auto',
-    content: "",
-    display: 'flex',
-    flexDirection: 'row'
-
-  }
-};
-
-exports.default = hoverGridStyle;
-
-/***/ }),
+/* 190 */,
+/* 191 */,
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22901,7 +22787,7 @@ window.onload = function () {
 
   var keyframeDrawerOpen = '@-webkit-keyframes drawerOpen {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
 
-  var keyframeNavbarFadeIn = '@-webkit-keyframes navbarFadeIn {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
+  var keyframeNavbarFadeIn = '@-webkit-keyframes navbarFadeIn {\n    0% {}\n    100% {background-color: rgba(135, 205, 218, 0.8)}\n  }';
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
@@ -22950,7 +22836,7 @@ window.onload = function () {
     var navbarToFadeIn = document.getElementById('navbarFadeIn');
     var scrollPos = window.scrollY;
 
-    if (scrollPos > 100) {
+    if (scrollPos > 60) {
       navbarToFadeIn.style.animationPlayState = 'running';
     }
   });
@@ -25612,7 +25498,7 @@ Object.defineProperty(exports, "__esModule", {
 var navbarStyle = {
   nav: {
     width: '100%',
-    height: '80px',
+    height: '70px',
     position: 'fixed',
     top: '0',
     zIndex: '200',
@@ -25635,9 +25521,7 @@ var navbarStyle = {
   item: {
     display: 'inline-block',
     padding: '20px',
-    fontSize: '1.2em',
-    transition: '0.3s',
-    letterSpacing: '1px'
+    transition: '0.3s'
   }
 
 };
@@ -25731,6 +25615,117 @@ var NavItem = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = NavItem;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hoverRow = __webpack_require__(228);
+
+var _hoverRow2 = _interopRequireDefault(_hoverRow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import animation from '../animations/jumbotron'
+
+
+var HoverRow = function (_React$Component) {
+  _inherits(HoverRow, _React$Component);
+
+  function HoverRow() {
+    _classCallCheck(this, HoverRow);
+
+    return _possibleConstructorReturn(this, (HoverRow.__proto__ || Object.getPrototypeOf(HoverRow)).apply(this, arguments));
+  }
+
+  _createClass(HoverRow, [{
+    key: 'render',
+    value: function render() {
+      //children = whatever user has typed inside tags
+      //PUT BACK AUTOPLAY FOR VIDEO
+
+      var _props = this.props,
+          className = _props.className,
+          children = _props.children,
+          style = _props.style;
+
+      // const styledChildren = children && children.map((child, i) => {
+      //   const fadeStyle = jumbotronFadeUpStyle.fadeInUp;
+      //   const fadeClass = "fade-in-up ";
+
+      //   if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
+
+      //   const mergedStyle = Object.assign({}, child.props.style, fadeStyle);
+      //   const ownClassName = child.props.className || ""
+      //   const mergedClassName = fadeClass + ownClassName;
+
+      //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
+      // })
+
+      var mergedStyle = Object.assign({}, _hoverRow2.default.style, style);
+      //const columns = this.createColumns(fadeIn, styledChildren)
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: className, style: mergedStyle },
+        children
+      );
+    }
+  }]);
+
+  return HoverRow;
+}(_react2.default.Component);
+
+// <div className="fullscreen-bg">
+//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
+//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
+//             </video>
+//         </div>
+
+
+exports.default = HoverRow;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var hoverRowStyle = {
+  style: {
+    margin: '0 auto',
+    content: "",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  }
+};
+
+exports.default = hoverRowStyle;
 
 /***/ })
 /******/ ]);

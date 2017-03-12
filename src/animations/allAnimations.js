@@ -35,8 +35,8 @@ window.onload = function() {
   }`;
 
   let keyframeNavbarFadeIn = `@-webkit-keyframes navbarFadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {}
+    100% {background-color: rgba(135, 205, 218, 0.8)}
   }`;
 
 
@@ -93,7 +93,7 @@ window.onload = function() {
     let navbarToFadeIn = document.getElementById('navbarFadeIn');
     let scrollPos = window.scrollY;
 
-    if (scrollPos > 100) {
+    if (scrollPos > 60) {
       navbarToFadeIn.style.animationPlayState = 'running';
     }
   })

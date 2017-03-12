@@ -6,14 +6,15 @@ import buttonStyle from '../styles/button'
 
 export default class Button extends React.Component {
 
-
-  toggleDrawer() {
-    Drawer.setState({openDrawer: !this.state.openDrawer}).bind(Drawer)
-  }
-
   render () {
+    const { style, className } = this.props
 
-    return (<button style={buttonStyle}>HELddLO</button>)
+    const ownStyle = style || {};
+    const ownClassName = className;
+    const mergedStyle = Object.assign({}, buttonStyle, ownStyle)
+
+
+    return (<button style={buttonStyle}>{this.props.children}</button>)
   }
 
 }
