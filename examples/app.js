@@ -20,7 +20,7 @@ render(
   <Jumbotron>
     <JumbotronCol
       fadeEffect="fadeAppear"
-      style={{display: 'flex', padding: '120px', justifyContent: 'center'}}
+      style={{display: 'flex', padding: '130px', justifyContent: 'center'}}
     >
       <img src="./public/graphic-waves.png" className="waves-graphic" />
     </JumbotronCol>
@@ -56,7 +56,7 @@ render(
 
     <Jumbotron className="jumbo-bg">
     <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp left">
-      <h1 className="hello">What's New?</h1>
+      <h1>What's New?</h1>
       <h2>Category</h2>
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
       <h2>Playlists</h2>
@@ -72,20 +72,14 @@ render(
 
    <Jumbotron className="jumbo-fadeIn">
     <JumbotronCol fadeEffect="fadeInRight">
-      <div>
-        <h1 className="hello">What's New?</h1>
-        <h2>Category</h2>
-        <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
-        <h2>Playlists</h2>
-        <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
-        <h2>New Releases</h2>
-        <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
+      <div style={{height: '650px'}}>
+        <img src="./public/faderight.jpg" />
       </div>
     </JumbotronCol>
 
-    <JumbotronCol fadeEffect="fadeInLeft">
-      <div>
-        <h1 className="hello">What's New?</h1>
+    <JumbotronCol fadeEffect="fadeInLeft" style={{width: '50%'}}>
+      <div style={{height: '650px', paddingTop: '125px'}}>
+        <h1>What's New?</h1>
         <h2>Category</h2>
         <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
         <h2>Playlists</h2>
@@ -96,9 +90,9 @@ render(
     </JumbotronCol>
    </Jumbotron>
 
-   <Jumbotron className="jumbo-fadeIn" style={{backgroundColor: 'lightblue'}}>
+   <Jumbotron className="jumbo-fadeIn fade-stagger">
     <JumbotronCol fadeEffect="fadeInRight">
-      <h1 className="hello">What's New?</h1>
+      <h1>What's New?</h1>
       <h2>Category</h2>
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
       <h2>Playlists</h2>
@@ -108,10 +102,10 @@ render(
     </JumbotronCol>
    </Jumbotron>
 
-    <div style={{height: '50px'}}>
+    <div style={{height: '300px'}}>
       <DrawerContainer>
-        <MenuItem>sdgsd</MenuItem>
-        <MenuItem className="bobo"><a>sdgsdgsdsdgdsss</a></MenuItem>
+        <MenuItem>Menu Item 1</MenuItem>
+        <MenuItem className="bobo"><a>Menu Item 2</a></MenuItem>
       </DrawerContainer>
     </div>
 

@@ -74,12 +74,13 @@ window.onload = function() {
     ];
 
   for (var i = 0; i < elementsToFadeIn.length; i++) {
-    let divider = 1;
-    //elementsToFadeIn[i].className.startsWith('fadeUp') ? 1 : 1.13; => might need later
+    let divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 0 : 50;
 
     window.addEventListener('scroll', function(){
-      let objectBottom = (this.offsetHeight + this.offsetTop) / divider;
+      let objectBottom = (this.offsetHeight + this.offsetTop) - divider;
       let windowBottom = window.innerHeight + window.scrollY;
+
+
 
       if (windowBottom > objectBottom) {
         this.style.animationPlayState = 'running';

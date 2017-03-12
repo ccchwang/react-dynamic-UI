@@ -7,7 +7,7 @@ body {
   margin: 0
 }
 
-.jumbo-fadeUp, .jumbo-fadeIn {
+.jumbo-fadeUp {
   font-size: 1.5em;
   padding-top: 111px;
   padding-bottom: 111px;
@@ -28,6 +28,30 @@ body {
     line-height: 1.5
   }
 }
+
+.jumbo-fadeIn {
+  padding-top: 80px;
+  padding-bottom: 111px;
+  margin-bottom: 250px;
+  font-size: 1.5em;
+
+  h1, h2 {
+    color: darken(#FFA566,10);
+    font-weight: 700
+  }
+
+  p {
+    line-height: 1.5
+  }
+}
+
+.jumbo-fadeIn.fade-stagger {
+  h1, h2 {
+    color: #437f91;
+  }
+}
+
+
 
 .jumbo-fadeUp.right {
   padding-right: 111px
@@ -99,4 +123,14 @@ p {
 
 .btn:hover {
   background-color: darken(#FFA566,9)
+}
+
+.fade-stagger {
+  background-color: lightblue;
+}
+
+.btn.drawer-btn {
+  background-color: #F25C5E;
+  margin: 0px auto;
+  display: block
 }

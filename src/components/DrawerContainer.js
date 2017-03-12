@@ -31,8 +31,8 @@ export default class TodoList extends React.Component {
 
     return (
       <div>
+        <button className="btn drawer-btn" onClick={this.toggle}>Open Drawer</button>
 
-        <button style={{marginLeft: '300px'}} onClick={this.toggle}>Open Drawer</button>
         <ReactCSSTransitionGroup
           transitionName="drawer"
           transitionEnterTimeout={450}
