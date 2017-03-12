@@ -34,15 +34,21 @@ window.onload = function() {
     100% {-webkit-transform:translate(-40px); opacity: 1}
   }`;
 
+  let keyframeNavbarFadeIn = `@-webkit-keyframes navbarFadeIn {
+    0% {}
+    100% {background-color: rgba(40,202,200,.8)}
+  }`;
+
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInLeft, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeNavbarFadeIn, ownerStyleSheet.cssRules.length);
 
 
-  ownerStyleSheet.insertRule(`* {font-family: Helvetica}`, ownerStyleSheet.cssRules.length);
+  // ownerStyleSheet.insertRule(`* {font-family: Helvetica}`, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(`.react-dynamic-drawer {position: fixed;
   width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}`, ownerStyleSheet.cssRules.length);
 
@@ -59,10 +65,7 @@ window.onload = function() {
   ownerStyleSheet.insertRule(`.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}`, ownerStyleSheet.cssRules.length);
 
 
-
-  console.log(ownerStyleSheet)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
 
 
   let elementsToFadeIn = [
@@ -83,6 +86,20 @@ window.onload = function() {
       }
     }.bind(elementsToFadeIn[i]))
   }
+
+
+
+  window.addEventListener('scroll', function(){
+    let navbarToFadeIn = document.getElementById('navbarFadeIn');
+    let scrollPos = window.scrollY;
+
+    if (scrollPos > 100) {
+      navbarToFadeIn.style.animationPlayState = 'running';
+    }
+  })
+
 }
+
+
 
 

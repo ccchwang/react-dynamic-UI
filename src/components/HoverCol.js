@@ -21,7 +21,7 @@ export default class HoverCol extends React.Component {
 
   render() {
     const { className, style, size, imgSrc, children } = this.props;
-    let mergedStyle = Object.assign({}, style, hoverColStyle.column);
+    let mergedStyle = Object.assign({}, hoverColStyle.column, style);
     let imgStyle = hoverColStyle.imgStyle
 
     if (this.state.isHover) {imgStyle = Object.assign({}, imgStyle, hoverColStyle.hoverStyle)}

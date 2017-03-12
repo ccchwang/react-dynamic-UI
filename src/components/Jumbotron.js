@@ -7,7 +7,7 @@ export default class Jumbotron extends React.Component {
 
   render () {
     const { className, children, style } = this.props;
-    const mergedStyle = Object.assign({}, style, jumbotronStyle.style);
+    const mergedStyle = Object.assign({}, jumbotronStyle.style, style);
 
     return (
       <div className={className} style={mergedStyle}>

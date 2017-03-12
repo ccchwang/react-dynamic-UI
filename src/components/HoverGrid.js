@@ -24,7 +24,7 @@ export default class HoverGrid extends React.Component {
   //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
   // })
 
-  const mergedStyle = Object.assign({}, style, hoverGridStyle.style);
+  const mergedStyle = Object.assign({}, hoverGridStyle.style, style);
   //const columns = this.createColumns(fadeIn, styledChildren)
 
 

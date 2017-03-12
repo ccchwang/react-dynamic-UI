@@ -9443,7 +9443,7 @@ module.exports = ReactPropTypesSecret;
 "use strict";
 
 
-var _Button = __webpack_require__(208);
+var _Button = __webpack_require__(84);
 
 var _Button2 = _interopRequireDefault(_Button);
 
@@ -9475,13 +9475,21 @@ var _MenuItem = __webpack_require__(223);
 
 var _MenuItem2 = _interopRequireDefault(_MenuItem);
 
+var _Navbar = __webpack_require__(224);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _NavItem = __webpack_require__(226);
+
+var _NavItem2 = _interopRequireDefault(_NavItem);
+
 var _allAnimations = __webpack_require__(199);
 
 var _allAnimations2 = _interopRequireDefault(_allAnimations);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = { Button1: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default };
+module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default, Navbar: _Navbar2.default, NavItem: _NavItem2.default };
 
 /***/ }),
 /* 81 */
@@ -9521,7 +9529,69 @@ if(false) {
 
 /***/ }),
 /* 83 */,
-/* 84 */,
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _button = __webpack_require__(87);
+
+var _button2 = _interopRequireDefault(_button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//import Drawer from './Drawer'
+
+
+var Button = function (_React$Component) {
+  _inherits(Button, _React$Component);
+
+  function Button() {
+    _classCallCheck(this, Button);
+
+    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+  }
+
+  _createClass(Button, [{
+    key: 'toggleDrawer',
+    value: function toggleDrawer() {
+      Drawer.setState({ openDrawer: !this.state.openDrawer }).bind(Drawer);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'button',
+        { style: _button2.default },
+        'HELddLO'
+      );
+    }
+  }]);
+
+  return Button;
+}(_react2.default.Component);
+
+exports.default = Button;
+
+/***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9688,7 +9758,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Libre Franklin', sans-serif !important; }\n\nbody {\n  margin: 0; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Libre Franklin', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.my-jumbo {\n  font-size: 1.5em; }\n\n.nav-item {\n  color: white; }\n", ""]);
 
 // exports
 
@@ -22254,6 +22324,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   'div',
   null,
   _react2.default.createElement(
+    _index.Navbar,
+    null,
+    _react2.default.createElement(
+      _index.NavItem,
+      { className: 'nav-item' },
+      'ABOUT US'
+    ),
+    _react2.default.createElement(
+      _index.NavItem,
+      { className: 'nav-item' },
+      _react2.default.createElement(
+        'a',
+        null,
+        'OUR BRAND'
+      )
+    )
+  ),
+  _react2.default.createElement(
     _index.HeroVideo,
     {
       videoSrc: './public/video/ocean-vid.mp4',
@@ -22261,7 +22349,92 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     },
     'Sample Heading Goes Here'
   ),
-  _react2.default.createElement(_index.Jumbotron, { style: { fontSize: '1.5em' } }),
+  _react2.default.createElement(
+    _index.Jumbotron,
+    { className: 'my-jumbo' },
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeUp' },
+      _react2.default.createElement(
+        'h1',
+        { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
+        'What\'s New?'
+      ),
+      _react2.default.createElement(
+        'h2',
+        { style: { color: '#25baf8', fontWeight: '700' } },
+        'Category'
+      ),
+      _react2.default.createElement(
+        'p',
+        { style: { lineHeight: '1.5' } },
+        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        { style: { color: '#25baf8', fontWeight: '700' } },
+        'Playlists'
+      ),
+      _react2.default.createElement(
+        'p',
+        { style: { lineHeight: '1.5' } },
+        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        { style: { color: '#25baf8', fontWeight: '700' } },
+        'New Releases'
+      ),
+      _react2.default.createElement(
+        'p',
+        { style: { lineHeight: '1.5' } },
+        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+      )
+    ),
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeInRight' },
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
+          'What\'s New?'
+        ),
+        _react2.default.createElement(
+          'h2',
+          { style: { color: '#25baf8', fontWeight: '700' } },
+          'Category'
+        ),
+        _react2.default.createElement(
+          'p',
+          { style: { lineHeight: '1.5' } },
+          'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+        ),
+        _react2.default.createElement(
+          'h2',
+          { style: { color: '#25baf8', fontWeight: '700' } },
+          'Playlists'
+        ),
+        _react2.default.createElement(
+          'p',
+          { style: { lineHeight: '1.5' } },
+          'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+        ),
+        _react2.default.createElement(
+          'h2',
+          { style: { color: '#25baf8', fontWeight: '700' } },
+          'New Releases'
+        ),
+        _react2.default.createElement(
+          'p',
+          { style: { lineHeight: '1.5' } },
+          'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        )
+      )
+    )
+  ),
   _react2.default.createElement(
     _index.HoverGrid,
     null,
@@ -22385,7 +22558,7 @@ var HoverGrid = function (_React$Component) {
       //   return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
       // })
 
-      var mergedStyle = Object.assign({}, style, _hoverGrid2.default.style);
+      var mergedStyle = Object.assign({}, _hoverGrid2.default.style, style);
       //const columns = this.createColumns(fadeIn, styledChildren)
 
 
@@ -22498,7 +22671,7 @@ var HoverCol = function (_React$Component) {
           imgSrc = _props.imgSrc,
           children = _props.children;
 
-      var mergedStyle = Object.assign({}, style, _hoverCol2.default.column);
+      var mergedStyle = Object.assign({}, _hoverCol2.default.column, style);
       var imgStyle = _hoverCol2.default.imgStyle;
 
       if (this.state.isHover) {
@@ -22590,13 +22763,16 @@ window.onload = function () {
 
   var keyframeDrawerOpen = '@-webkit-keyframes drawerOpen {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
 
+  var keyframeNavbarFadeIn = '@-webkit-keyframes navbarFadeIn {\n    0% {}\n    100% {background-color: rgba(40,202,200,.8)}\n  }';
+
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInLeft, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeNavbarFadeIn, ownerStyleSheet.cssRules.length);
 
-  ownerStyleSheet.insertRule('* {font-family: Helvetica}', ownerStyleSheet.cssRules.length);
+  // ownerStyleSheet.insertRule(`* {font-family: Helvetica}`, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule('.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}', ownerStyleSheet.cssRules.length);
 
   ownerStyleSheet.insertRule('.drawer-enter {left: -256px}', ownerStyleSheet.cssRules.length);
@@ -22609,7 +22785,6 @@ window.onload = function () {
   ownerStyleSheet.insertRule('.backdrop-leave {opacity:1}', ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule('.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}', ownerStyleSheet.cssRules.length);
 
-  console.log(ownerStyleSheet);
   //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -22632,6 +22807,15 @@ window.onload = function () {
   for (var i = 0; i < elementsToFadeIn.length; i++) {
     _loop();
   }
+
+  window.addEventListener('scroll', function () {
+    var navbarToFadeIn = document.getElementById('navbarFadeIn');
+    var scrollPos = window.scrollY;
+
+    if (scrollPos > 100) {
+      navbarToFadeIn.style.animationPlayState = 'running';
+    }
+  });
 };
 
 /***/ }),
@@ -22843,7 +23027,7 @@ var Jumbotron = function (_React$Component) {
           children = _props.children,
           style = _props.style;
 
-      var mergedStyle = Object.assign({}, style, _jumbotron2.default.style);
+      var mergedStyle = Object.assign({}, _jumbotron2.default.style, style);
 
       return _react2.default.createElement(
         'div',
@@ -22887,69 +23071,7 @@ exports.default = drawerStyle;
 /* 205 */,
 /* 206 */,
 /* 207 */,
-/* 208 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(25);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _button = __webpack_require__(87);
-
-var _button2 = _interopRequireDefault(_button);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-//import Drawer from './Drawer'
-
-
-var Button = function (_React$Component) {
-  _inherits(Button, _React$Component);
-
-  function Button() {
-    _classCallCheck(this, Button);
-
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
-  }
-
-  _createClass(Button, [{
-    key: 'toggleDrawer',
-    value: function toggleDrawer() {
-      Drawer.setState({ openDrawer: !this.state.openDrawer }).bind(Drawer);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'button',
-        { style: _button2.default },
-        'HELddLO'
-      );
-    }
-  }]);
-
-  return Button;
-}(_react2.default.Component);
-
-exports.default = Button;
-
-/***/ }),
+/* 208 */,
 /* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23027,7 +23149,7 @@ var TodoList = function (_React$Component) {
         _react2.default.createElement(
           'button',
           { style: { marginLeft: '300px' }, onClick: this.toggle },
-          'Add Item'
+          'Open Drawer'
         ),
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
@@ -25254,6 +25376,219 @@ var MenuItem = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = MenuItem;
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _navbar = __webpack_require__(225);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import animation from '../animations/jumbotronFadeUp'
+
+
+var Navbar = function (_React$Component) {
+  _inherits(Navbar, _React$Component);
+
+  function Navbar() {
+    _classCallCheck(this, Navbar);
+
+    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+  }
+
+  _createClass(Navbar, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          className = _props.className,
+          children = _props.children,
+          style = _props.style;
+
+
+      var mergedStyle = Object.assign({}, _navbar2.default.nav, style);
+
+      return _react2.default.createElement(
+        'div',
+        { className: className, style: mergedStyle, id: 'navbarFadeIn' },
+        _react2.default.createElement(
+          'div',
+          { style: _navbar2.default.column },
+          children
+        ),
+        _react2.default.createElement(
+          'div',
+          { style: Object.assign({ justifyContent: 'flex-end' }, _navbar2.default.column) },
+          children
+        )
+      );
+    }
+  }]);
+
+  return Navbar;
+}(_react2.default.Component);
+
+// <div className="fullscreen-bg">
+//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
+//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
+//             </video>
+//         </div>
+
+
+exports.default = Navbar;
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var navbarStyle = {
+  nav: {
+    width: '100%',
+    height: '80px',
+    position: 'fixed',
+    top: '0',
+    zIndex: '200',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    animationName: 'navbarFadeIn',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-in-out',
+    animationDuration: '1s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'forwards'
+  },
+  column: {
+    width: '40%',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  item: {
+    display: 'inline-block',
+    padding: '20px',
+    fontSize: '1.2em',
+    transition: '0.3s'
+  }
+
+};
+
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', backgroundColor: 'blue' });
+
+exports.default = navbarStyle;
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _navbar = __webpack_require__(225);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import buttonStyle from '../styles/button'
+//import Drawer from './Drawer'
+
+
+var NavItem = function (_React$Component) {
+  _inherits(NavItem, _React$Component);
+
+  function NavItem() {
+    _classCallCheck(this, NavItem);
+
+    var _this = _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(NavItem, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          style = _props.style,
+          className = _props.className;
+
+
+      var mergedStyle = this.state.isHover ? Object.assign({}, _navbar2.default.itemHover, style) : Object.assign({}, _navbar2.default.item, style);
+
+      return _react2.default.createElement(
+        'div',
+        {
+          style: mergedStyle,
+          className: className,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
+        children
+      );
+    }
+  }]);
+
+  return NavItem;
+}(_react2.default.Component);
+
+exports.default = NavItem;
 
 /***/ })
 /******/ ]);
