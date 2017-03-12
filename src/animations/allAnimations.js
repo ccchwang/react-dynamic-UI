@@ -29,11 +29,32 @@ window.onload = function() {
     100% {-webkit-transform:translate(-40px); opacity: 1}
   }`;
 
+  let keyframeDrawerOpen = `@-webkit-keyframes drawerOpen {
+    0% {-webkit-transform:translate(0px); opacity: 0}
+    100% {-webkit-transform:translate(-40px); opacity: 1}
+  }`;
+
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInLeft, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
+
+
+  ownerStyleSheet.insertRule(`.todo-item {
+  width: 100px;}`, ownerStyleSheet.cssRules.length);
+
+
+
+  ownerStyleSheet.insertRule(`.example-enter {opacity: 0.01;width:0px;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-enter.example-enter-active {opacity: 1;width: 100px; transition: 500ms;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-leave {opacity: 1;width: 100px;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-leave.example-leave-active {opacity: 0.01;width: 0px;transition: 300ms;}`, ownerStyleSheet.cssRules.length);
+
+
+
+  console.log(ownerStyleSheet)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -44,7 +65,8 @@ window.onload = function() {
     ];
 
   for (var i = 0; i < elementsToFadeIn.length; i++) {
-    let divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 1 : 1.13;
+    let divider = 1;
+    //elementsToFadeIn[i].className.startsWith('fadeUp') ? 1 : 1.13; => might need later
 
     window.addEventListener('scroll', function(){
       let objectBottom = (this.offsetHeight + this.offsetTop) / divider;

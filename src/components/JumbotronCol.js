@@ -7,24 +7,35 @@ export default class JumbotronCol extends React.Component {
 
   render () {
     const { className, children, style, fadeEffect } = this.props;
-    const childrenArray = !children.length ? [children] : children;
-    const mergedStyle = Object.assign(jumbotronStyle.column.all, jumbotronStyle.column[fadeEffect], style);
+    const childrenArray = !children.length || typeof children === "string"
+                        ? [children]
+                        : children;
 
+    const mergedColumnStyle = Object.assign(
+      jumbotronStyle.column.all,
+      jumbotronStyle.column[fadeEffect],
+      style
+    );
     const fadeStyle = jumbotronStyle[fadeEffect];
-    const fadeClass = fadeEffect + " ";
+    const fadeClass = fadeEffect ? fadeEffect + " " : "";
+
 
     const styledChildren = childrenArray && childrenArray.map((child, i) => {
-      if (typeof child === "string") {return React.cloneElement(<p>child</p>, {style: fadeStyle, className: fadeClass, key: i})}
+      if (typeof child === "string") {
+        return React.cloneElement(<p>{child}</p>, {style: fadeStyle, className: fadeClass, key: 'strChild'});
+      }
 
-      const mergedStyle = Object.assign({}, child.props.style, fadeStyle);
-      const ownClassName = child.props.className || ""
+      const ownStyle = child.props.style || {};
+      const ownClassName = child.props.className || "";
+
+      const mergedStyle = Object.assign({}, fadeStyle, ownStyle);
       const mergedClassName = fadeClass + ownClassName;
 
       return React.cloneElement(child, {style: mergedStyle, className: mergedClassName, key: i})
-    })
+      })
 
     return (
-      <div className={className} style={mergedStyle}>
+      <div className={className} style={mergedColumnStyle}>
         { styledChildren }
       </div>
     )

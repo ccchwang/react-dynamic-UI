@@ -1,10 +1,11 @@
 const hoverGridStyle = {
   style: {
-    width: '100%',
+    width: '75%',
+    margin: '0 auto',
     content: "",
-    display: 'table',
-    clear: 'both',
-    padding: '15px'
+    display: 'flex',
+    flexDirection: 'row'
+
   }
 }
 
