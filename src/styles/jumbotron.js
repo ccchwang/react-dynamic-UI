@@ -5,8 +5,7 @@ const jumbotronStyle = {
     backgroundAttachment: 'fixed',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: '3%'
+    justifyContent: 'space-around'
   },
   column: {
     all: {

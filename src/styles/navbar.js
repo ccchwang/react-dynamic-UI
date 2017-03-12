@@ -30,7 +30,7 @@ const navbarStyle = {
 }
 
 
-navbarStyle.itemHover = Object.assign({}, navbarStyle.item, {cursor: 'pointer', color: '#FFA566'})
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, {cursor: 'pointer', color: '#3f7882'})
 
 
 export default navbarStyle;

@@ -9762,7 +9762,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-bg, .jumbo-fadeIn {\n  font-size: 1.5em; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp {\n  padding: 75px; }\n  .jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n    color: #F25C5E;\n    font-weight: 700; }\n  .jumbo-fadeUp p {\n    line-height: 1.5; }\n\n.jumbo-fadeUp.left {\n  padding-left: 0; }\n\n.jumbo-fadeUp.right {\n  padding-right: 0; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: red;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: #616161;\n  font-size: 17 !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-fadeUp, .jumbo-fadeIn {\n  font-size: 1.5em;\n  padding-top: 111px;\n  padding-bottom: 111px; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n  color: #F25C5E;\n  font-weight: 700; }\n\n.jumbo-fadeUp p {\n  line-height: 1.5; }\n\n.jumbo-fadeUp.right {\n  padding-right: 111px; }\n\n.jumbo-fadeUp.left {\n  padding-left: 111px; }\n\n.jumbo-fadeUp.img {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .jumbo-fadeUp.img .waves-graphic {\n    width: 300px;\n    height: 300px; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: #FFA566;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: white;\n  font-size: 17px !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom;\n  transition: 0.3s;\n  cursor: pointer; }\n\n.btn:hover {\n  background-color: #ff8a38; }\n", ""]);
 
 // exports
 
@@ -22370,7 +22370,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _react2.default.createElement(_index.JumbotronCol, null),
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp left' },
+      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp right' },
       _react2.default.createElement(
         'h1',
         null,
@@ -22436,7 +22436,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     { className: 'jumbo-bg' },
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp' },
+      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp left' },
       _react2.default.createElement(
         'h1',
         { className: 'hello' },
@@ -22468,7 +22468,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         'CLICK ME'
       )
     ),
-    _react2.default.createElement(_index.JumbotronCol, null)
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { className: 'jumbo-fadeUp right img' },
+      _react2.default.createElement('img', { src: './public/waves8.png', className: 'waves-graphic' })
+    )
   ),
   _react2.default.createElement(
     _index.Jumbotron,
@@ -22957,8 +22961,7 @@ var jumbotronStyle = {
     backgroundAttachment: 'fixed',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: '3%'
+    justifyContent: 'space-around'
   },
   column: {
     all: {
@@ -25526,7 +25529,7 @@ var navbarStyle = {
 
 };
 
-navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', color: '#FFA566' });
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', color: '#3f7882' });
 
 exports.default = navbarStyle;
 

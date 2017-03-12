@@ -29,7 +29,7 @@ render(
   <Jumbotron className="jumbo-bg">
     <JumbotronCol >
     </JumbotronCol>
-    <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp left">
+    <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp right">
       <h1>What's New?</h1>
       <h2>Category</h2>
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
@@ -55,7 +55,7 @@ render(
   </HoverRow>
 
     <Jumbotron className="jumbo-bg">
-    <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp">
+    <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp left">
       <h1 className="hello">What's New?</h1>
       <h2>Category</h2>
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
@@ -64,7 +64,8 @@ render(
       <button className="btn">CLICK ME</button>
     </JumbotronCol>
 
-    <JumbotronCol >
+    <JumbotronCol className="jumbo-fadeUp right img">
+      <img src="./public/waves8.png" className="waves-graphic"/>
     </JumbotronCol>
    </Jumbotron>
 
