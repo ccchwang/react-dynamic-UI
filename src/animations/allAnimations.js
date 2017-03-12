@@ -74,7 +74,7 @@ window.onload = function() {
     ];
 
   for (var i = 0; i < elementsToFadeIn.length; i++) {
-    let divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 0 : 50;
+    let divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 0 : 0;
 
     window.addEventListener('scroll', function(){
       let objectBottom = (this.offsetHeight + this.offsetTop) - divider;
@@ -94,7 +94,7 @@ window.onload = function() {
     let navbarToFadeIn = document.getElementById('navbarFadeIn');
     let scrollPos = window.scrollY;
 
-    if (scrollPos > 60) {
+    if (scrollPos > 40) {
       navbarToFadeIn.style.animationPlayState = 'running';
     }
   })

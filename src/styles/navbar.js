@@ -11,7 +11,7 @@ const navbarStyle = {
     animationName: 'navbarFadeIn',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
-    animationDuration: '1s',
+    animationDuration: '0.7s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
@@ -30,7 +30,7 @@ const navbarStyle = {
 }
 
 
-navbarStyle.itemHover = Object.assign({}, navbarStyle.item, {cursor: 'pointer', color: '#3f7882'})
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, {cursor: 'pointer', color: '#F25C5E'})
 
 
 export default navbarStyle;

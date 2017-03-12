@@ -15,6 +15,7 @@ render(
     videoSrc="./public/video/ocean-vid.mp4"
     videoType="video/mp4">
     Sample Heading Goes Here
+    <button className="btn">CLICK ME</button>
   </HeroVideo>
 
   <Jumbotron>
@@ -97,6 +98,8 @@ render(
       <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
       <h2>Playlists</h2>
       <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
+      <h2>New Releases</h2>
+      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
       <h2>New Releases</h2>
       <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
     </JumbotronCol>
