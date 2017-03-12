@@ -47,10 +47,15 @@ window.onload = function() {
 
 
 
-  ownerStyleSheet.insertRule(`.example-enter {left: -256px}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-enter.example-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-leave {-webkit-transform:translate(0px)}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-leave.example-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.drawer-enter {left: -256px}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.drawer-leave {-webkit-transform:translate(0px)}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}`, ownerStyleSheet.cssRules.length);
+
+  ownerStyleSheet.insertRule(`.backdrop-enter {opacity: 0}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.backdrop-leave {opacity:1}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}`, ownerStyleSheet.cssRules.length);
 
 
 

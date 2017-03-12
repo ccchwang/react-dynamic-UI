@@ -22599,10 +22599,15 @@ window.onload = function () {
 
   ownerStyleSheet.insertRule('.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}', ownerStyleSheet.cssRules.length);
 
-  ownerStyleSheet.insertRule('.example-enter {left: -256px}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-enter.example-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-leave {-webkit-transform:translate(0px)}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-leave.example-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.drawer-enter {left: -256px}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.drawer-leave {-webkit-transform:translate(0px)}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}', ownerStyleSheet.cssRules.length);
+
+  ownerStyleSheet.insertRule('.backdrop-enter {opacity: 0}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.backdrop-leave {opacity:1}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}', ownerStyleSheet.cssRules.length);
 
   console.log(ownerStyleSheet);
   //~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -22856,7 +22861,30 @@ exports.default = Jumbotron;
 
 /***/ }),
 /* 203 */,
-/* 204 */,
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawerStyle = {
+  backdrop: {
+    height: '100vh',
+    width: '100vw',
+    backgroundColor: 'rgba(0, 0, 0, 0.541176)',
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    zIndex: '1300'
+  }
+};
+
+exports.default = drawerStyle;
+
+/***/ }),
 /* 205 */,
 /* 206 */,
 /* 207 */,
@@ -22943,6 +22971,10 @@ var _reactAddonsCssTransitionGroup = __webpack_require__(211);
 
 var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
+var _drawer = __webpack_require__(204);
+
+var _drawer2 = _interopRequireDefault(_drawer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22977,11 +23009,18 @@ var TodoList = function (_React$Component) {
     key: 'render',
     value: function render() {
       // console.log(this.props.children)
-      var items = this.state.openDrawer ? _react2.default.createElement(
-        'div',
-        { key: 'toggle-drawer', className: 'react-dynamic-drawer' },
-        this.props.children
-      ) : null;
+      var drawer = void 0;
+      var backdrop = void 0;
+
+      if (this.state.openDrawer) {
+        drawer = _react2.default.createElement(
+          'div',
+          { key: 'toggle-drawer', className: 'react-dynamic-drawer' },
+          this.props.children
+        );
+
+        backdrop = _react2.default.createElement('div', { style: _drawer2.default.backdrop, onClick: this.toggle });
+      }
 
       return _react2.default.createElement(
         'div',
@@ -22994,10 +23033,18 @@ var TodoList = function (_React$Component) {
         _react2.default.createElement(
           _reactAddonsCssTransitionGroup2.default,
           {
-            transitionName: 'example',
+            transitionName: 'drawer',
             transitionEnterTimeout: 450,
             transitionLeaveTimeout: 450 },
-          items
+          drawer
+        ),
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'backdrop',
+            transitionEnterTimeout: 300,
+            transitionLeaveTimeout: 300 },
+          backdrop
         )
       );
     }
