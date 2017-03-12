@@ -8,33 +8,23 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 export default class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {items: ['hello', 'world', 'click', 'me']};
-    this.handleAdd = this.handleAdd.bind(this);
+    this.state = {openDrawer: false};
+    this.toggle = this.toggle.bind(this);
+
   }
 
-  handleAdd() {
-    const newItems = this.state.items.concat([
-      prompt('Enter some text')
-    ]);
-    this.setState({items: newItems});
+  toggle() {
+    this.setState({openDrawer: !this.state.openDrawer});
   }
 
-  handleRemove(i) {
-    let newItems = this.state.items.slice();
-    newItems.splice(i, 1);
-    this.setState({items: newItems});
-  }
 
   render() {
-    const items = this.state.items.map((item, i) => (
-      <div key={item} className="todo-item" style={{backgroundColor: 'pink', height: '250px', float:'left'}} className='todo-item' onClick={() => this.handleRemove(i)}>
-        {item}
-      </div>
-    ));
+    const items = this.state.openDrawer ? (<div key='toggle-drawer' className='react-dynamic-drawer'/>) : null
+
 
     return (
       <div>
-        <button onClick={this.handleAdd}>Add Item</button>
+        <button style={{marginLeft: '300px'}} onClick={this.toggle}>Add Item</button>
         <ReactCSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}

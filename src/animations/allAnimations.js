@@ -42,8 +42,8 @@ window.onload = function() {
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
 
-  ownerStyleSheet.insertRule(`.todo-item {
-  width: 100px;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.react-dynamic-drawer {
+  width: 100px; height: 100vh; background-color: pink; position: fixed; top: 0; left: 0}`, ownerStyleSheet.cssRules.length);
 
 
 

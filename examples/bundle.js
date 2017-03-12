@@ -22575,7 +22575,7 @@ window.onload = function () {
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
-  ownerStyleSheet.insertRule('.todo-item {\n  width: 100px;}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.react-dynamic-drawer {\n  width: 100px; height: 100vh; background-color: pink; position: fixed; top: 0; left: 0}', ownerStyleSheet.cssRules.length);
 
   ownerStyleSheet.insertRule('.example-enter {opacity: 0.01;width:0px;}', ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule('.example-enter.example-enter-active {opacity: 1;width: 100px; transition: 500ms;}', ownerStyleSheet.cssRules.length);
@@ -22981,8 +22981,6 @@ var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTran
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -23000,47 +22998,28 @@ var TodoList = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).call(this, props));
 
-    _this.state = { items: ['hello', 'world', 'click', 'me'] };
-    _this.handleAdd = _this.handleAdd.bind(_this);
+    _this.state = { openDrawer: false };
+    _this.toggle = _this.toggle.bind(_this);
+
     return _this;
   }
 
   _createClass(TodoList, [{
-    key: 'handleAdd',
-    value: function handleAdd() {
-      var newItems = this.state.items.concat([prompt('Enter some text')]);
-      this.setState({ items: newItems });
-    }
-  }, {
-    key: 'handleRemove',
-    value: function handleRemove(i) {
-      var newItems = this.state.items.slice();
-      newItems.splice(i, 1);
-      this.setState({ items: newItems });
+    key: 'toggle',
+    value: function toggle() {
+      this.setState({ openDrawer: !this.state.openDrawer });
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
-      var items = this.state.items.map(function (item, i) {
-        var _React$createElement;
-
-        return _react2.default.createElement(
-          'div',
-          (_React$createElement = { key: item, className: 'todo-item', style: { backgroundColor: 'pink', height: '250px', float: 'left' } }, _defineProperty(_React$createElement, 'className', 'todo-item'), _defineProperty(_React$createElement, 'onClick', function onClick() {
-            return _this2.handleRemove(i);
-          }), _React$createElement),
-          item
-        );
-      });
+      var items = this.state.openDrawer ? _react2.default.createElement('div', { key: 'toggle-drawer', className: 'react-dynamic-drawer' }) : null;
 
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'button',
-          { onClick: this.handleAdd },
+          { style: { marginLeft: '300px' }, onClick: this.toggle },
           'Add Item'
         ),
         _react2.default.createElement(
