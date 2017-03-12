@@ -1,7 +1,7 @@
 import '../public/stylesheets/main.scss';
 import React from 'react';
 import {render} from 'react-dom';
-import { HeroVideo, Jumbotron, JumbotronCol, HoverGrid, HoverCol, DrawerContainer } from '../src/index';
+import { HeroVideo, Jumbotron, JumbotronCol, HoverGrid, HoverCol, DrawerContainer, MenuItem } from '../src/index';
 
 
 render(
@@ -35,7 +35,11 @@ render(
     </HoverGrid>
 
 
-   <DrawerContainer />
+   <DrawerContainer>
+    <MenuItem>sdgsd</MenuItem>
+    <MenuItem className="bobo"
+    style={{color: 'red'}}><a>sdgsdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdsdgdsgs</a></MenuItem>
+   </DrawerContainer>
 
   </div>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import drawerStyle from '../styles/drawer'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 // import animation from '../animations/jumbotronFadeUp'
@@ -19,7 +18,10 @@ export default class TodoList extends React.Component {
 
 
   render() {
-    const items = this.state.openDrawer ? (<div key='toggle-drawer' className='react-dynamic-drawer'/>) : null
+    // console.log(this.props.children)
+    const items = this.state.openDrawer ?
+      (<div key='toggle-drawer' className='react-dynamic-drawer'>{this.props.children}</div>)
+      : null
 
 
     return (
@@ -27,8 +29,8 @@ export default class TodoList extends React.Component {
         <button style={{marginLeft: '300px'}} onClick={this.toggle}>Add Item</button>
         <ReactCSSTransitionGroup
           transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
+          transitionEnterTimeout={450}
+          transitionLeaveTimeout={450}>
           {items}
         </ReactCSSTransitionGroup>
       </div>

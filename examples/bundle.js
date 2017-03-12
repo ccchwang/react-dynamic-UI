@@ -9471,13 +9471,17 @@ var _DrawerContainer = __webpack_require__(209);
 
 var _DrawerContainer2 = _interopRequireDefault(_DrawerContainer);
 
+var _MenuItem = __webpack_require__(223);
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
 var _allAnimations = __webpack_require__(199);
 
 var _allAnimations2 = _interopRequireDefault(_allAnimations);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = { Button1: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default };
+module.exports = { Button1: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverGrid: _HoverGrid2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default };
 
 /***/ }),
 /* 81 */
@@ -22296,7 +22300,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     ),
     _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' })
   ),
-  _react2.default.createElement(_index.DrawerContainer, null)
+  _react2.default.createElement(
+    _index.DrawerContainer,
+    null,
+    _react2.default.createElement(
+      _index.MenuItem,
+      null,
+      'sdgsd'
+    ),
+    _react2.default.createElement(
+      _index.MenuItem,
+      { className: 'bobo',
+        style: { color: 'red' } },
+      _react2.default.createElement(
+        'a',
+        null,
+        'sdgsdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdsdgdsgs'
+      )
+    )
+  )
 ), document.getElementById('app'));
 
 /***/ }),
@@ -22575,12 +22597,12 @@ window.onload = function () {
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
-  ownerStyleSheet.insertRule('.react-dynamic-drawer {\n  width: 100px; height: 100vh; background-color: pink; position: fixed; top: 0; left: 0}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}', ownerStyleSheet.cssRules.length);
 
-  ownerStyleSheet.insertRule('.example-enter {opacity: 0.01;width:0px;}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-enter.example-enter-active {opacity: 1;width: 100px; transition: 500ms;}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-leave {opacity: 1;width: 100px;}', ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule('.example-leave.example-leave-active {opacity: 0.01;width: 0px;transition: 300ms;}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.example-enter {left: -256px}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.example-enter.example-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.example-leave {-webkit-transform:translate(0px)}', ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule('.example-leave.example-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}', ownerStyleSheet.cssRules.length);
 
   console.log(ownerStyleSheet);
   //~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -22834,61 +22856,7 @@ exports.default = Jumbotron;
 
 /***/ }),
 /* 203 */,
-/* 204 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawerStyle = {
-  style: {
-    height: '100vh',
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    transition: '2s all linear',
-    backgroundColor: 'pink'
-  },
-  new: {
-    width: '100px',
-    height: '100px',
-    backgroundColor: 'red',
-    float: 'left',
-    transition: '0.6s'
-  },
-  // column: {
-  //   all: {
-  //     boxSizing: 'border-box',
-  //     width: '50%',
-  //     padding: '15px',
-  //     fontFamily: 'Helvetica'
-  //   },
-  //   fadeInLeft: {
-  //     width: '40%', padding: '15px 20px'
-  //   },
-  //   fadeInRight: {
-  //     width: '40%', padding: '15px 20px'
-  //   }
-  // },
-  drawerOpen: {
-    animationName: 'drawerOpen',
-    animationPlayState: 'running',
-    animationTimingFunction: 'ease-out',
-    animationDuration: '1s',
-    animationIterationCount: 1,
-    animationDirection: 'normal',
-    animationFillMode: 'forwards'
-  }
-};
-
-drawerStyle.fadeInRight = Object.assign({}, drawerStyle.fadeInLeft, { animationName: 'fadeInRight' });
-
-exports.default = drawerStyle;
-
-/***/ }),
+/* 204 */,
 /* 205 */,
 /* 206 */,
 /* 207 */,
@@ -22971,10 +22939,6 @@ var _react = __webpack_require__(25);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _drawer = __webpack_require__(204);
-
-var _drawer2 = _interopRequireDefault(_drawer);
-
 var _reactAddonsCssTransitionGroup = __webpack_require__(211);
 
 var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
@@ -23012,7 +22976,12 @@ var TodoList = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var items = this.state.openDrawer ? _react2.default.createElement('div', { key: 'toggle-drawer', className: 'react-dynamic-drawer' }) : null;
+      // console.log(this.props.children)
+      var items = this.state.openDrawer ? _react2.default.createElement(
+        'div',
+        { key: 'toggle-drawer', className: 'react-dynamic-drawer' },
+        this.props.children
+      ) : null;
 
       return _react2.default.createElement(
         'div',
@@ -23026,8 +22995,8 @@ var TodoList = function (_React$Component) {
           _reactAddonsCssTransitionGroup2.default,
           {
             transitionName: 'example',
-            transitionEnterTimeout: 500,
-            transitionLeaveTimeout: 300 },
+            transitionEnterTimeout: 450,
+            transitionLeaveTimeout: 450 },
           items
         )
       );
@@ -25163,6 +25132,82 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import buttonStyle from '../styles/button'
+//import Drawer from './Drawer'
+
+
+var MenuItem = function (_React$Component) {
+  _inherits(MenuItem, _React$Component);
+
+  function MenuItem() {
+    _classCallCheck(this, MenuItem);
+
+    var _this = _possibleConstructorReturn(this, (MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(MenuItem, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var children = this.props.children;
+
+
+      return _react2.default.createElement(
+        'div',
+        {
+          style: this.state.isHover ? { padding: '20px', cursor: 'pointer', backgroundColor: 'lightgray', transition: '0.3s' } : { padding: '20px', transition: '0.3s' },
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
+        children
+      );
+    }
+  }]);
+
+  return MenuItem;
+}(_react2.default.Component);
+
+exports.default = MenuItem;
 
 /***/ })
 /******/ ]);

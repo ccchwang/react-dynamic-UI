@@ -42,15 +42,15 @@ window.onload = function() {
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
 
-  ownerStyleSheet.insertRule(`.react-dynamic-drawer {
-  width: 100px; height: 100vh; background-color: pink; position: fixed; top: 0; left: 0}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.react-dynamic-drawer {position: fixed;
+  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}`, ownerStyleSheet.cssRules.length);
 
 
 
-  ownerStyleSheet.insertRule(`.example-enter {opacity: 0.01;width:0px;}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-enter.example-enter-active {opacity: 1;width: 100px; transition: 500ms;}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-leave {opacity: 1;width: 100px;}`, ownerStyleSheet.cssRules.length);
-  ownerStyleSheet.insertRule(`.example-leave.example-leave-active {opacity: 0.01;width: 0px;transition: 300ms;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-enter {left: -256px}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-enter.example-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-leave {-webkit-transform:translate(0px)}`, ownerStyleSheet.cssRules.length);
+  ownerStyleSheet.insertRule(`.example-leave.example-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}`, ownerStyleSheet.cssRules.length);
 
 
 
