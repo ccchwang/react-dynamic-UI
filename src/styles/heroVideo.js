@@ -13,7 +13,6 @@ const heroVideoStyle = {
     zIndex: '2',
     top: '250px',
     right: '8%',
-    fontFamily: 'Helvetica',
     fontSize: '2em',
     textAlign: 'center'
   },

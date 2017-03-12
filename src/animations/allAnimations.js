@@ -42,6 +42,7 @@ window.onload = function() {
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
 
+  ownerStyleSheet.insertRule(`* {font-family: Helvetica}`, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(`.react-dynamic-drawer {position: fixed;
   width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}`, ownerStyleSheet.cssRules.length);
 

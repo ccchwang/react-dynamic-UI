@@ -12,8 +12,7 @@ const jumbotronStyle = {
     all: {
       boxSizing: 'border-box',
       width: '50%',
-      padding: '15px',
-      fontFamily: 'Helvetica'
+      padding: '15px'
     },
     fadeInLeft: {
       width: '40%', padding: '15px 20px'

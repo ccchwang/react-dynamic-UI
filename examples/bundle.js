@@ -9664,7 +9664,6 @@ var heroVideoStyle = {
     zIndex: '2',
     top: '250px',
     right: '8%',
-    fontFamily: 'Helvetica',
     fontSize: '2em',
     textAlign: 'center'
   },
@@ -9689,7 +9688,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Libre Franklin', sans-serif; }\n\nbody {\n  margin: 0; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Libre Franklin', sans-serif !important; }\n\nbody {\n  margin: 0; }\n", ""]);
 
 // exports
 
@@ -22543,7 +22542,6 @@ var hoverColStyle = {
     position: 'relative',
     boxSizing: 'border-box',
     padding: '9px 10px',
-    fontFamily: 'Helvetica',
     transition: '0.2s ease-out'
   },
   hoverStyle: {
@@ -22597,6 +22595,7 @@ window.onload = function () {
   ownerStyleSheet.insertRule(keyframeFadeInRight, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeDrawerOpen, ownerStyleSheet.cssRules.length);
 
+  ownerStyleSheet.insertRule('* {font-family: Helvetica}', ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule('.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}', ownerStyleSheet.cssRules.length);
 
   ownerStyleSheet.insertRule('.drawer-enter {left: -256px}', ownerStyleSheet.cssRules.length);
@@ -22752,8 +22751,7 @@ var jumbotronStyle = {
     all: {
       boxSizing: 'border-box',
       width: '50%',
-      padding: '15px',
-      fontFamily: 'Helvetica'
+      padding: '15px'
     },
     fadeInLeft: {
       width: '40%', padding: '15px 20px'

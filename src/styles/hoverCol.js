@@ -3,7 +3,6 @@ const hoverColStyle = {
     position: 'relative',
     boxSizing: 'border-box',
     padding: '9px 10px',
-    fontFamily: 'Helvetica',
     transition: '0.2s ease-out'
   },
   hoverStyle: {
