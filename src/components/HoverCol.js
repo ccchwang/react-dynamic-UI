@@ -22,8 +22,9 @@ export default class HoverCol extends React.Component {
   render() {
     const { className, style, size, imgSrc, children } = this.props;
     let mergedStyle = Object.assign({}, style, hoverColStyle.column);
+    let imgStyle = hoverColStyle.imgStyle
 
-    if (this.state.isHover) {mergedStyle = Object.assign({}, mergedStyle, hoverColStyle.hoverStyle)}
+    if (this.state.isHover) {imgStyle = Object.assign({}, imgStyle, hoverColStyle.hoverStyle)}
 
     return (
       <div
@@ -32,7 +33,7 @@ export default class HoverCol extends React.Component {
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
-        <img src={imgSrc} style={hoverColStyle.imgStyle} />
+        <img src={imgSrc} style={imgStyle} />
         <div style={{position: 'absolute', top: '0'}}>
         { children }
         </div>

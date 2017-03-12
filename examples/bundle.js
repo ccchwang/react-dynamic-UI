@@ -22499,9 +22499,10 @@ var HoverCol = function (_React$Component) {
           children = _props.children;
 
       var mergedStyle = Object.assign({}, style, _hoverCol2.default.column);
+      var imgStyle = _hoverCol2.default.imgStyle;
 
       if (this.state.isHover) {
-        mergedStyle = Object.assign({}, mergedStyle, _hoverCol2.default.hoverStyle);
+        imgStyle = Object.assign({}, imgStyle, _hoverCol2.default.hoverStyle);
       }
 
       return _react2.default.createElement(
@@ -22512,7 +22513,7 @@ var HoverCol = function (_React$Component) {
           onMouseEnter: this.handleMouseEnter,
           onMouseLeave: this.handleMouseLeave
         },
-        _react2.default.createElement('img', { src: imgSrc, style: _hoverCol2.default.imgStyle }),
+        _react2.default.createElement('img', { src: imgSrc, style: imgStyle }),
         _react2.default.createElement(
           'div',
           { style: { position: 'absolute', top: '0' } },
@@ -22541,14 +22542,14 @@ var hoverColStyle = {
   column: {
     position: 'relative',
     boxSizing: 'border-box',
-    padding: '9px 10px',
-    transition: '0.2s ease-out'
+    padding: '9px 10px'
   },
   hoverStyle: {
-    transform: 'scale(1.05)'
+    transform: 'scale(1.05)',
+    boxShadow: 'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px'
   },
   imgStyle: {
-    width: '100%'
+    width: '100%', transition: '0.2s ease-out'
   }
 };
 

@@ -2,14 +2,14 @@ const hoverColStyle = {
   column: {
     position: 'relative',
     boxSizing: 'border-box',
-    padding: '9px 10px',
-    transition: '0.2s ease-out'
+    padding: '9px 10px'
   },
   hoverStyle: {
-    transform: 'scale(1.05)'
+    transform: 'scale(1.05)',
+    boxShadow: 'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px'
   },
   imgStyle: {
-    width: '100%'
+    width: '100%',    transition: '0.2s ease-out'
   }
 }
 
