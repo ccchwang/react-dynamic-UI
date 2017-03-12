@@ -9758,7 +9758,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Libre Franklin', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.my-jumbo {\n  font-size: 1.5em; }\n\n.nav-item {\n  color: white; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-bg, .jumbo-fadeIn {\n  font-size: 1.5em; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp {\n  padding: 75px; }\n  .jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n    color: #F25C5E;\n    font-weight: 700; }\n  .jumbo-fadeUp p {\n    line-height: 1.5; }\n\n.jumbo-fadeUp.left {\n  padding-left: 0; }\n\n.jumbo-fadeUp.right {\n  padding-right: 0; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white; }\n", ""]);
 
 // exports
 
@@ -22325,7 +22325,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   null,
   _react2.default.createElement(
     _index.Navbar,
-    null,
+    { style: { backgroundColor: 'rgba(135, 205, 218, 0.8)' } },
     _react2.default.createElement(
       _index.NavItem,
       { className: 'nav-item' },
@@ -22345,52 +22345,138 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _index.HeroVideo,
     {
       videoSrc: './public/video/ocean-vid.mp4',
-      videoType: 'video/mp4'
-    },
+      videoType: 'video/mp4' },
     'Sample Heading Goes Here'
   ),
   _react2.default.createElement(
     _index.Jumbotron,
-    { className: 'my-jumbo' },
+    null,
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeUp' },
+      { fadeEffect: 'fadeAppear', style: { display: 'flex', padding: '110px', justifyContent: 'center' } },
+      _react2.default.createElement('img', { src: './public/graphic-waves.png', className: 'waves-graphic' })
+    )
+  ),
+  _react2.default.createElement(
+    _index.Jumbotron,
+    { className: 'jumbo-bg' },
+    _react2.default.createElement(_index.JumbotronCol, null),
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp left' },
       _react2.default.createElement(
         'h1',
-        { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
+        null,
         'What\'s New?'
       ),
       _react2.default.createElement(
         'h2',
-        { style: { color: '#25baf8', fontWeight: '700' } },
+        null,
         'Category'
       ),
       _react2.default.createElement(
         'p',
-        { style: { lineHeight: '1.5' } },
+        null,
         'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
       ),
       _react2.default.createElement(
         'h2',
-        { style: { color: '#25baf8', fontWeight: '700' } },
+        null,
         'Playlists'
       ),
       _react2.default.createElement(
         'p',
-        { style: { lineHeight: '1.5' } },
+        null,
         'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
       ),
       _react2.default.createElement(
         'h2',
-        { style: { color: '#25baf8', fontWeight: '700' } },
+        null,
         'New Releases'
       ),
       _react2.default.createElement(
         'p',
-        { style: { lineHeight: '1.5' } },
+        null,
+        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'New Releases'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+      )
+    )
+  ),
+  _react2.default.createElement(
+    _index.HoverGrid,
+    null,
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
+  ),
+  _react2.default.createElement(
+    _index.HoverGrid,
+    null,
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
+  ),
+  _react2.default.createElement(
+    _index.HoverGrid,
+    null,
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' }),
+    _react2.default.createElement(_index.HoverCol, { imgSrc: '' })
+  ),
+  _react2.default.createElement(
+    _index.Jumbotron,
+    { className: 'jumbo-bg' },
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeUp', className: 'jumbo-fadeUp' },
+      _react2.default.createElement(
+        'h1',
+        { className: 'hello' },
+        'What\'s New?'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'Category'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'Playlists'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'New Releases'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
         'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
       )
     ),
+    _react2.default.createElement(_index.JumbotronCol, null)
+  ),
+  _react2.default.createElement(
+    _index.Jumbotron,
+    { className: 'jumbo-fadeIn' },
     _react2.default.createElement(
       _index.JumbotronCol,
       { fadeEffect: 'fadeInRight' },
@@ -22399,95 +22485,147 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         null,
         _react2.default.createElement(
           'h1',
-          { className: 'hello', style: { color: '#25baf8', fontWeight: '700' } },
+          { className: 'hello' },
           'What\'s New?'
         ),
         _react2.default.createElement(
           'h2',
-          { style: { color: '#25baf8', fontWeight: '700' } },
+          null,
           'Category'
         ),
         _react2.default.createElement(
           'p',
-          { style: { lineHeight: '1.5' } },
+          null,
           'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
         ),
         _react2.default.createElement(
           'h2',
-          { style: { color: '#25baf8', fontWeight: '700' } },
+          null,
           'Playlists'
         ),
         _react2.default.createElement(
           'p',
-          { style: { lineHeight: '1.5' } },
+          null,
           'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
         ),
         _react2.default.createElement(
           'h2',
-          { style: { color: '#25baf8', fontWeight: '700' } },
+          null,
           'New Releases'
         ),
         _react2.default.createElement(
           'p',
-          { style: { lineHeight: '1.5' } },
+          null,
+          'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeInLeft' },
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          { className: 'hello' },
+          'What\'s New?'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Category'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Playlists'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'New Releases'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
           'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
         )
       )
     )
   ),
   _react2.default.createElement(
-    _index.HoverGrid,
-    null,
+    _index.Jumbotron,
+    { className: 'jumbo-fadeIn', style: { backgroundColor: 'lightblue' } },
     _react2.default.createElement(
-      _index.HoverCol,
-      { imgSrc: './public/sea-waves.jpg' },
-      'sdgdsgdsgds ',
+      _index.JumbotronCol,
+      { fadeEffect: 'fadeInRight' },
       _react2.default.createElement(
-        'p',
-        { className: 'class', style: { color: 'red' } },
-        'sdgsd'
-      )
-    ),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' })
-  ),
-  _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' }),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' })
-  ),
-  _react2.default.createElement(
-    _index.HoverGrid,
-    null,
-    _react2.default.createElement(
-      _index.HoverCol,
-      { imgSrc: './public/sea-waves.jpg' },
-      'sdgdsgdsgds ',
+        'h1',
+        { className: 'hello' },
+        'What\'s New?'
+      ),
       _react2.default.createElement(
-        'p',
-        { className: 'class', style: { color: 'red' } },
-        'sdgsd'
-      )
-    ),
-    _react2.default.createElement(_index.HoverCol, { imgSrc: './public/sea-waves.jpg' })
-  ),
-  _react2.default.createElement(
-    _index.DrawerContainer,
-    null,
-    _react2.default.createElement(
-      _index.MenuItem,
-      null,
-      'sdgsd'
-    ),
-    _react2.default.createElement(
-      _index.MenuItem,
-      { className: 'bobo',
-        style: { color: 'red' } },
-      _react2.default.createElement(
-        'a',
+        'h2',
         null,
-        'sdgsdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdgsdsdgdssdsdgdsgs'
+        'Category'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'Playlists'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'New Releases'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+      )
+    )
+  ),
+  _react2.default.createElement(
+    'div',
+    { style: { height: '50px' } },
+    _react2.default.createElement(
+      _index.DrawerContainer,
+      null,
+      _react2.default.createElement(
+        _index.MenuItem,
+        null,
+        'sdgsd'
+      ),
+      _react2.default.createElement(
+        _index.MenuItem,
+        { className: 'bobo' },
+        _react2.default.createElement(
+          'a',
+          null,
+          'sdgsdgsdsdgdsss'
+        )
       )
     )
   )
@@ -22763,7 +22901,7 @@ window.onload = function () {
 
   var keyframeDrawerOpen = '@-webkit-keyframes drawerOpen {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
 
-  var keyframeNavbarFadeIn = '@-webkit-keyframes navbarFadeIn {\n    0% {}\n    100% {background-color: rgba(40,202,200,.8)}\n  }';
+  var keyframeNavbarFadeIn = '@-webkit-keyframes navbarFadeIn {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
@@ -22868,11 +23006,15 @@ var JumbotronCol = function (_React$Component) {
           style = _props.style,
           fadeEffect = _props.fadeEffect;
 
-      var childrenArray = !children.length || typeof children === "string" ? [children] : children;
-
-      var mergedColumnStyle = Object.assign(_jumbotron2.default.column.all, _jumbotron2.default.column[fadeEffect], style);
+      var mergedColumnStyle = Object.assign({}, _jumbotron2.default.column.all, _jumbotron2.default.column[fadeEffect], style);
       var fadeStyle = _jumbotron2.default[fadeEffect];
       var fadeClass = fadeEffect ? fadeEffect + " " : "";
+
+      if (!children) {
+        return _react2.default.createElement('div', { style: mergedColumnStyle });
+      }
+
+      var childrenArray = !children.length || typeof children === "string" ? [children] : children;
 
       var styledChildren = childrenArray && childrenArray.map(function (child, i) {
         if (typeof child === "string") {
@@ -22935,8 +23077,7 @@ var jumbotronStyle = {
   column: {
     all: {
       boxSizing: 'border-box',
-      width: '50%',
-      padding: '15px'
+      width: '50%'
     },
     fadeInLeft: {
       width: '40%', padding: '15px 20px'
@@ -25495,12 +25636,13 @@ var navbarStyle = {
     display: 'inline-block',
     padding: '20px',
     fontSize: '1.2em',
-    transition: '0.3s'
+    transition: '0.3s',
+    letterSpacing: '1px'
   }
 
 };
 
-navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', backgroundColor: 'blue' });
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', color: '#FFA566' });
 
 exports.default = navbarStyle;
 

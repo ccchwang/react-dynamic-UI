@@ -35,8 +35,8 @@ window.onload = function() {
   }`;
 
   let keyframeNavbarFadeIn = `@-webkit-keyframes navbarFadeIn {
-    0% {}
-    100% {background-color: rgba(40,202,200,.8)}
+    0% {opacity: 0}
+    100% {opacity: 1}
   }`;
 
 

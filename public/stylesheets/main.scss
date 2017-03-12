@@ -1,19 +1,47 @@
 * {
   box-sizing: border-box;
-  font-family: 'Libre Franklin', sans-serif
+  font-family: 'Helvetica Neue', sans-serif
 }
 
 body {
   margin: 0
 }
 
-.my-jumbo {
+.jumbo-bg, .jumbo-fadeIn {
   font-size: 1.5em;
+}
+
+.jumbo-bg {
+  background-image: url('https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30');
+}
+
+.jumbo-fadeUp {
+  padding: 75px;
+
+  h1, h2 {
+    color: #F25C5E;
+    font-weight: 700
+  }
+
+  p {
+    line-height: 1.5
+  }
+}
+
+.jumbo-fadeUp.left {
+  padding-left: 0
+}
+
+.jumbo-fadeUp.right {
+  padding-right: 0
+}
+
+.waves-graphic {
+  width: 475px;
+  height: 500px;
+  border-radius: 10000px
 }
 
 .nav-item {
   color: white
 }
-
-
-

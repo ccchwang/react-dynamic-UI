@@ -7,11 +7,7 @@ export default class JumbotronCol extends React.Component {
 
   render () {
     const { className, children, style, fadeEffect } = this.props;
-    const childrenArray = !children.length || typeof children === "string"
-                        ? [children]
-                        : children;
-
-    const mergedColumnStyle = Object.assign(
+    const mergedColumnStyle = Object.assign({},
       jumbotronStyle.column.all,
       jumbotronStyle.column[fadeEffect],
       style
@@ -19,6 +15,11 @@ export default class JumbotronCol extends React.Component {
     const fadeStyle = jumbotronStyle[fadeEffect];
     const fadeClass = fadeEffect ? fadeEffect + " " : "";
 
+    if (!children) {return <div style={mergedColumnStyle}/>}
+
+    const childrenArray = !children.length || typeof children === "string"
+                        ? [children]
+                        : children;
 
     const styledChildren = childrenArray && childrenArray.map((child, i) => {
       if (typeof child === "string") {
