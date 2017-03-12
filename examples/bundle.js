@@ -22351,7 +22351,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     ),
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeAppear' },
+      { fadeEffect: 'fadeInRight' },
       _react2.default.createElement(
         'div',
         null,
@@ -22692,9 +22692,9 @@ window.onload = function () {
 
   var keyframeFadeAppear = '@-webkit-keyframes fadeAppear {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
 
-  var keyframeFadeInLeft = '@-webkit-keyframes fadeInLeft {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(40px); opacity: 1}\n  }';
+  var keyframeFadeInRight = '@-webkit-keyframes fadeInRight {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(40px); opacity: 1}\n  }';
 
-  var keyframeFadeInRight = '@-webkit-keyframes fadeInRight {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
+  var keyframeFadeInLeft = '@-webkit-keyframes fadeInLeft {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
 
   ownerStyleSheet.insertRule(keyframeFadeUp, ownerStyleSheet.cssRules.length);
   ownerStyleSheet.insertRule(keyframeFadeAppear, ownerStyleSheet.cssRules.length);
@@ -22703,40 +22703,25 @@ window.onload = function () {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-  //******** FADE IN && APPEAR ********//
-  var elementsToFadeIn = [].concat(_toConsumableArray(document.getElementsByClassName('fadeInLeft')), _toConsumableArray(document.getElementsByClassName('fadeInRight')), _toConsumableArray(document.getElementsByClassName('fadeAppear')));
+  var elementsToFadeIn = [].concat(_toConsumableArray(document.getElementsByClassName('fadeInLeft')), _toConsumableArray(document.getElementsByClassName('fadeInRight')), _toConsumableArray(document.getElementsByClassName('fadeAppear')), _toConsumableArray(document.getElementsByClassName('fadeUp')));
 
-  for (var i = 0; i < elementsToFadeIn.length; i++) {
+  var _loop = function _loop() {
+    var divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 1 : 1.13;
 
     window.addEventListener('scroll', function () {
-      var objectBottom = (this.offsetHeight + this.offsetTop) / 1.13;
+      var objectBottom = (this.offsetHeight + this.offsetTop) / divider;
       var windowBottom = window.innerHeight + window.scrollY;
 
       if (windowBottom > objectBottom) {
         this.style.animationPlayState = 'running';
       }
     }.bind(elementsToFadeIn[i]));
-  }
+  };
 
-  //******** FADE UP ********//
-
-  var elementsToFadeUp = document.getElementsByClassName('fadeUp');
-
-  for (var i = 0; i < elementsToFadeUp.length; i++) {
-
-    window.addEventListener('scroll', function () {
-      var objectBottom = this.offsetHeight + this.offsetTop;
-      var windowBottom = window.innerHeight + window.scrollY;
-
-      if (windowBottom > objectBottom) {
-        this.style.animationPlayState = 'running';
-      }
-    }.bind(elementsToFadeUp[i]));
+  for (var i = 0; i < elementsToFadeIn.length; i++) {
+    _loop();
   }
 };
-
-//console.log(window.innerHeight). INNER HEIGHT
-//window.outerHeight //height of whole browser window
 
 /***/ }),
 /* 200 */
@@ -22789,7 +22774,7 @@ var JumbotronCol = function (_React$Component) {
           fadeEffect = _props.fadeEffect;
 
       var childrenArray = !children.length ? [children] : children;
-      var mergedStyle = Object.assign({}, style, _jumbotron2.default.column);
+      var mergedStyle = Object.assign(_jumbotron2.default.column.all, _jumbotron2.default.column[fadeEffect], style);
 
       var fadeStyle = _jumbotron2.default[fadeEffect];
       var fadeClass = fadeEffect + " ";
@@ -22852,10 +22837,18 @@ var jumbotronStyle = {
     padding: '3%'
   },
   column: {
-    boxSizing: 'border-box',
-    width: '50%',
-    padding: '15px',
-    fontFamily: 'Helvetica'
+    all: {
+      boxSizing: 'border-box',
+      width: '50%',
+      padding: '15px',
+      fontFamily: 'Helvetica'
+    },
+    fadeInLeft: {
+      width: '40%', padding: '15px 20px'
+    },
+    fadeInRight: {
+      width: '40%', padding: '15px 20px'
+    }
   },
   fadeUp: {
     animationName: 'fadeUp',
@@ -22888,7 +22881,6 @@ var jumbotronStyle = {
 
 jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, { animationName: 'fadeInRight' });
 
-console.log(jumbotronStyle);
 exports.default = jumbotronStyle;
 
 /***/ }),

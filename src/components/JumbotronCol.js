@@ -8,7 +8,7 @@ export default class JumbotronCol extends React.Component {
   render () {
     const { className, children, style, fadeEffect } = this.props;
     const childrenArray = !children.length ? [children] : children;
-    const mergedStyle = Object.assign({}, style, jumbotronStyle.column);
+    const mergedStyle = Object.assign(jumbotronStyle.column.all, jumbotronStyle.column[fadeEffect], style);
 
     const fadeStyle = jumbotronStyle[fadeEffect];
     const fadeClass = fadeEffect + " ";

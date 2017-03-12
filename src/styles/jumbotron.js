@@ -10,10 +10,18 @@ const jumbotronStyle = {
     padding: '3%'
   },
   column: {
-    boxSizing: 'border-box',
-    width: '50%',
-    padding: '15px',
-    fontFamily: 'Helvetica',
+    all: {
+      boxSizing: 'border-box',
+      width: '50%',
+      padding: '15px',
+      fontFamily: 'Helvetica'
+    },
+    fadeInLeft: {
+      width: '40%', padding: '15px 20px'
+    },
+    fadeInRight: {
+      width: '40%', padding: '15px 20px'
+    }
   },
   fadeUp: {
     animationName: 'fadeUp',
@@ -46,5 +54,5 @@ const jumbotronStyle = {
 
 jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, {animationName: 'fadeInRight'})
 
-console.log(jumbotronStyle)
+
 export default jumbotronStyle;
