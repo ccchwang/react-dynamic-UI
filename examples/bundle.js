@@ -9762,7 +9762,7 @@ exports = module.exports = __webpack_require__(91)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-fadeUp {\n  font-size: 1.5em;\n  padding-top: 111px;\n  padding-bottom: 131px; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n  color: #F25C5E;\n  font-weight: 700; }\n\n.jumbo-fadeUp p {\n  line-height: 1.5; }\n\n.jumbo-fadeIn {\n  padding-top: 80px;\n  padding-bottom: 111px;\n  margin-bottom: 250px;\n  font-size: 1.5em; }\n  .jumbo-fadeIn h1, .jumbo-fadeIn h2 {\n    color: #ff8733;\n    font-weight: 700; }\n  .jumbo-fadeIn p {\n    line-height: 1.5; }\n\n.jumbo-fadeIn.fade-stagger h1, .jumbo-fadeIn.fade-stagger h2 {\n  color: #437f91; }\n\n.jumbo-fadeUp.right {\n  padding-right: 111px; }\n\n.jumbo-fadeUp.left {\n  padding-left: 111px; }\n\n.jumbo-fadeUp.img {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .jumbo-fadeUp.img .waves-graphic {\n    width: 300px;\n    height: 300px; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: #FFA566;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: white;\n  font-size: 17px !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom;\n  transition: 0.3s;\n  cursor: pointer; }\n\n.btn:hover {\n  background-color: #ff8a38; }\n\n.fade-stagger {\n  background-color: #cbe8ed; }\n\n.btn.drawer-btn {\n  background-color: #F25C5E;\n  margin: 0px auto;\n  display: block; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-fadeUp {\n  font-size: 1.5em;\n  padding-top: 111px;\n  padding-bottom: 131px; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n  color: #F25C5E;\n  font-weight: 700; }\n\n.jumbo-fadeUp p {\n  line-height: 1.5; }\n\n.jumbo-fadeIn {\n  padding-top: 80px;\n  padding-bottom: 111px;\n  margin-bottom: 250px;\n  font-size: 1.5em; }\n  .jumbo-fadeIn h1, .jumbo-fadeIn h2 {\n    color: #ff8733;\n    font-weight: 700; }\n  .jumbo-fadeIn p {\n    line-height: 1.5; }\n\n.jumbo-fadeIn.fade-stagger h1, .jumbo-fadeIn.fade-stagger h2 {\n  color: #437f91; }\n\n.jumbo-fadeUp.right {\n  padding-right: 111px; }\n\n.jumbo-fadeUp.left {\n  padding-left: 111px; }\n\n.jumbo-fadeUp.img {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .jumbo-fadeUp.img .waves-graphic {\n    width: 300px;\n    height: 300px; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: #FFA566;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: white;\n  font-size: 17px !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom;\n  transition: 0.3s;\n  cursor: pointer; }\n\n.btn:hover {\n  background-color: #ff8a38; }\n\n.fade-stagger {\n  background-color: #cbe8ed; }\n\n.btn.drawer-btn {\n  background-color: #F25C5E;\n  margin: 0px auto;\n  display: block; }\n\n.btn.nav-btn {\n  display: block;\n  margin: 50px auto 0; }\n", ""]);
 
 // exports
 
@@ -22353,8 +22353,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     'Sample Heading Goes Here',
     _react2.default.createElement(
       'button',
-      { className: 'btn' },
-      'CLICK ME'
+      { className: 'btn nav-btn' },
+      'LEARN MORE'
     )
   ),
   _react2.default.createElement(
@@ -22384,42 +22384,42 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       _react2.default.createElement(
         'h2',
         null,
-        'Category'
+        'Atlantic'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'Playlists'
+        'Pacific'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+        'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'New Releases'
+        'Indian'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        'Ere. Maecenas sit amet enim ut augue varius ullamcorper ac id ante. Curabitur efficitur.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'New Releases'
+        'Mediterranean'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        'Integer semper, erat in tincidunt fermentum, sem massa cursus elit, sed feugiat nunc nibh ut purus. Curabitur ac pulvinar mauris.'
       )
     )
   ),
@@ -22445,27 +22445,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       _react2.default.createElement(
         'h1',
         null,
-        'What\'s New?'
+        'What\'s Next?'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'Category'
+        'Cirrus'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+        'Donec interdum semper tortor, at pharetra magna. Vivamus dignissim nec erat a semper. Etiam nec porttitor mauris. Aenean in.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'Playlists'
+        'Cumulus'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+        'Integer diam leo, faucibus nec lacus non, suscipit porta ipsum. Mauris elementum est et sapien.'
       ),
       _react2.default.createElement(
         'button',
@@ -22500,37 +22500,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         _react2.default.createElement(
           'h1',
           null,
-          'What\'s New?'
+          'What\'s Now?'
         ),
         _react2.default.createElement(
           'h2',
           null,
-          'Category'
+          'Carribean'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.'
         ),
         _react2.default.createElement(
           'h2',
           null,
-          'Playlists'
+          'Caspian'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+          'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.'
         ),
         _react2.default.createElement(
           'h2',
           null,
-          'New Releases'
+          'Adriatic'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+          'Ere. Maecenas sit amet enim ut augue varius ullamcorper ac id ante. Curabitur efficitur.'
         )
       )
     )
@@ -22540,7 +22540,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     { className: 'jumbo-fadeIn fade-stagger' },
     _react2.default.createElement(
       _index.JumbotronCol,
-      { fadeEffect: 'fadeInRight' },
+      { fadeEffect: 'fadeInRight', style: { width: '50%' } },
       _react2.default.createElement(
         'h1',
         null,
@@ -22549,42 +22549,42 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       _react2.default.createElement(
         'h2',
         null,
-        'Category'
+        'Arabian'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.'
+        'Donec interdum semper tortor, at pharetra magna. Vivamus dignissim nec erat a semper. Etiam nec porttitor mauris. Aenean in.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'Playlists'
+        'Aegean'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'You\u2019ll find readymade playlists to match your mood, put together by music fans and experts.'
+        'Integer diam leo, faucibus nec lacus non, suscipit porta ipsum. Mauris elementum est et sapien.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'New Releases'
+        'Baltic'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.'
       ),
       _react2.default.createElement(
         'h2',
         null,
-        'New Releases'
+        'Ionian'
       ),
       _react2.default.createElement(
         'p',
         null,
-        'Hear this week\u2019s latest singles and albums, and check out what\u2019s hot in the Top 50.'
+        'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.'
       )
     )
   ),

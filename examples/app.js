@@ -15,7 +15,7 @@ render(
     videoSrc="./public/video/ocean-vid.mp4"
     videoType="video/mp4">
     Sample Heading Goes Here
-    <button className="btn">CLICK ME</button>
+    <button className="btn nav-btn">LEARN MORE</button>
   </HeroVideo>
 
   <Jumbotron>
@@ -32,14 +32,14 @@ render(
     </JumbotronCol>
     <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp right">
       <h1>What's New?</h1>
-      <h2>Category</h2>
-      <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
-      <h2>Playlists</h2>
-      <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
-      <h2>New Releases</h2>
-      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
-      <h2>New Releases</h2>
-      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
+      <h2>Atlantic</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.</p>
+      <h2>Pacific</h2>
+      <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.</p>
+      <h2>Indian</h2>
+      <p>Ere. Maecenas sit amet enim ut augue varius ullamcorper ac id ante. Curabitur efficitur.</p>
+      <h2>Mediterranean</h2>
+      <p>Integer semper, erat in tincidunt fermentum, sem massa cursus elit, sed feugiat nunc nibh ut purus. Curabitur ac pulvinar mauris.</p>
     </JumbotronCol>
    </Jumbotron>
 
@@ -57,11 +57,11 @@ render(
 
     <Jumbotron className="jumbo-bg">
     <JumbotronCol fadeEffect="fadeUp" className="jumbo-fadeUp left">
-      <h1>What's New?</h1>
-      <h2>Category</h2>
-      <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
-      <h2>Playlists</h2>
-      <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
+      <h1>What's Next?</h1>
+      <h2>Cirrus</h2>
+      <p>Donec interdum semper tortor, at pharetra magna. Vivamus dignissim nec erat a semper. Etiam nec porttitor mauris. Aenean in.</p>
+      <h2>Cumulus</h2>
+      <p>Integer diam leo, faucibus nec lacus non, suscipit porta ipsum. Mauris elementum est et sapien.</p>
       <button className="btn">CLICK ME</button>
     </JumbotronCol>
 
@@ -80,28 +80,28 @@ render(
 
     <JumbotronCol fadeEffect="fadeInLeft" style={{width: '50%'}}>
       <div style={{height: '650px', paddingTop: '125px'}}>
-        <h1>What's New?</h1>
-        <h2>Category</h2>
-        <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
-        <h2>Playlists</h2>
-        <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
-        <h2>New Releases</h2>
-        <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
+        <h1>What's Now?</h1>
+        <h2>Carribean</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.</p>
+        <h2>Caspian</h2>
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.</p>
+        <h2>Adriatic</h2>
+        <p>Ere. Maecenas sit amet enim ut augue varius ullamcorper ac id ante. Curabitur efficitur.</p>
       </div>
     </JumbotronCol>
    </Jumbotron>
 
    <Jumbotron className="jumbo-fadeIn fade-stagger">
-    <JumbotronCol fadeEffect="fadeInRight">
+    <JumbotronCol fadeEffect="fadeInRight" style={{width: '50%'}}>
       <h1>What's New?</h1>
-      <h2>Category</h2>
-      <p>There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.</p>
-      <h2>Playlists</h2>
-      <p>You’ll find readymade playlists to match your mood, put together by music fans and experts.</p>
-      <h2>New Releases</h2>
-      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
-      <h2>New Releases</h2>
-      <p>Hear this week’s latest singles and albums, and check out what’s hot in the Top 50.</p>
+      <h2>Arabian</h2>
+      <p>Donec interdum semper tortor, at pharetra magna. Vivamus dignissim nec erat a semper. Etiam nec porttitor mauris. Aenean in.</p>
+      <h2>Aegean</h2>
+      <p>Integer diam leo, faucibus nec lacus non, suscipit porta ipsum. Mauris elementum est et sapien.</p>
+      <h2>Baltic</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor vestibulum pharetra.</p>
+      <h2>Ionian</h2>
+      <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus elit, sed feugiat nunc nibh ut purus. Curabitur ac.</p>
     </JumbotronCol>
    </Jumbotron>
 
