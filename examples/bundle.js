@@ -12264,15 +12264,20 @@ var MenuItem = function (_React$Component) {
       var _props = this.props,
           children = _props.children,
           style = _props.style,
-          hoverStyle = _props.hoverStyle;
+          hoverStyle = _props.hoverStyle,
+          className = _props.className;
 
-      var mergedStyle = Object.assign({}, _drawer2.default.menuItem, style);
-      var mergedHoverStyle = Object.assign({}, _drawer2.default.menuItemHover, hoverStyle);
+      var ownStyle = style || {};
+      var ownHoverStyle = hoverStyle || {};
+
+      var mergedStyle = Object.assign({}, _drawer2.default.menuItem, ownStyle);
+      var mergedHoverStyle = Object.assign({}, _drawer2.default.menuItemHover, ownHoverStyle);
 
       return _react2.default.createElement('div', {
         style: this.state.isHover ? mergedHoverStyle : mergedStyle,
         onMouseEnter: this.handleMouseEnter,
-        onMouseLeave: this.handleMouseLeave
+        onMouseLeave: this.handleMouseLeave,
+        className: className
       }, children);
     }
   }]);

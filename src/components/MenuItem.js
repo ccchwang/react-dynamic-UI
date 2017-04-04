@@ -18,15 +18,20 @@ export default class MenuItem extends React.Component {
   }
 
   render () {
-    const { children, style, hoverStyle } = this.props;
-    const mergedStyle = Object.assign({}, drawerStyle.menuItem, style);
-    const mergedHoverStyle = Object.assign({}, drawerStyle.menuItemHover, hoverStyle);
+    const { children, style, hoverStyle, className } = this.props;
+
+    const ownStyle = style || {};
+    const ownHoverStyle = hoverStyle || {};
+
+    const mergedStyle = Object.assign({}, drawerStyle.menuItem, ownStyle);
+    const mergedHoverStyle = Object.assign({}, drawerStyle.menuItemHover, ownHoverStyle);
 
     return (
       <div
         style={this.state.isHover ? mergedHoverStyle : mergedStyle}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
+        className={className}
       >
         {children}
       </div>)
