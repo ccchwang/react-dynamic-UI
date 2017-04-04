@@ -1,14 +1,19 @@
 import '../public/stylesheets/main.scss';
 import React from 'react';
 import {render} from 'react-dom';
-import { HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem, Button } from '../src/index';
+import { HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem, Nav, Button } from '../lib/index';
 
 
 render(
   <div>
-  <Navbar backgroundColor='rgba(135, 205, 218, 0.8)'>
-    <NavItem className="nav-item">ABOUT US</NavItem>
-    <NavItem className="nav-item"><a>OUR BRAND</a></NavItem>
+  <Navbar navColor='rgba(135, 205, 218, 0.8)'>
+    <Nav pullLeft>
+      <NavItem className="nav-item"><a>OUR BRAND</a></NavItem>
+      <NavItem className="nav-item">ABOUT US</NavItem>
+    </Nav>
+    <Nav pullRight>
+      <NavItem className="nav-item">CONTACT</NavItem>
+    </Nav>
   </Navbar>
 
   <HeroVideo
@@ -107,8 +112,8 @@ render(
 
     <div style={{height: '300px'}}>
       <DrawerContainer>
-        <MenuItem>Menu Item 1</MenuItem>
-        <MenuItem className="bobo"><a>Menu Item 2</a></MenuItem>
+        <MenuItem hoverStyle={{backgroundColor: 'lightgray'}}>Menu Item 1</MenuItem>
+        <MenuItem hoverStyle={{backgroundColor: 'lightgray'}}><a>Menu Item 2</a></MenuItem>
       </DrawerContainer>
     </div>
 

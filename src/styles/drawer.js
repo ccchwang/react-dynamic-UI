@@ -7,6 +7,15 @@ const drawerStyle = {
     top: '0',
     left: '0',
     zIndex: '1300'
+  },
+  menuItem: {
+    padding: '20px',
+    transition: '0.3s'
+  },
+  menuItemHover: {
+    padding: '20px',
+    cursor: 'pointer',
+    transition: '0.3s'
   }
 }
 

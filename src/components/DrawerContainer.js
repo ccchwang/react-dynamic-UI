@@ -1,24 +1,19 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import drawerStyle from '../styles/drawer'
-// import animation from '../animations/jumbotronFadeUp'
 
-
-export default class TodoList extends React.Component {
+export default class DrawerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {openDrawer: false};
     this.toggle = this.toggle.bind(this);
-
   }
 
   toggle() {
     this.setState({openDrawer: !this.state.openDrawer});
   }
 
-
   render() {
-    // console.log(this.props.children)
     let drawer;
     let backdrop;
 

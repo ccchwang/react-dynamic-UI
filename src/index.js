@@ -8,9 +8,10 @@ import DrawerContainer from './components/DrawerContainer'
 import MenuItem from './components/MenuItem'
 import Navbar from './components/Navbar'
 import NavItem from './components/NavItem'
+import Nav from './components/Nav'
 import animations from './animations/allAnimations'
 
 
 
 
-module.exports = {Button, HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem}
+module.exports = {Button, HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer, MenuItem, Navbar, NavItem, Nav}

@@ -1,8 +1,5 @@
 import React from 'react';
 import navbarStyle from '../styles/navbar'
-// import buttonStyle from '../styles/button'
-//import Drawer from './Drawer'
-
 
 
 export default class NavItem extends React.Component {
@@ -22,7 +19,6 @@ export default class NavItem extends React.Component {
   }
 
   render () {
-
     const { children, style, className } = this.props;
 
     const mergedStyle = this.state.isHover
@@ -39,5 +35,4 @@ export default class NavItem extends React.Component {
         {children}
       </div>)
   }
-
 }

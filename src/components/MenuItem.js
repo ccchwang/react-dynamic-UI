@@ -1,8 +1,5 @@
 import React from 'react';
-// import buttonStyle from '../styles/button'
-//import Drawer from './Drawer'
-
-
+import drawerStyle from '../styles/drawer';
 
 export default class MenuItem extends React.Component {
   constructor() {
@@ -21,13 +18,13 @@ export default class MenuItem extends React.Component {
   }
 
   render () {
-
-    const { children } = this.props;
-
+    const { children, style, hoverStyle } = this.props;
+    const mergedStyle = Object.assign({}, drawerStyle.menuItem, style);
+    const mergedHoverStyle = Object.assign({}, drawerStyle.menuItemHover, hoverStyle);
 
     return (
       <div
-        style={this.state.isHover ? {padding: '20px', cursor: 'pointer', backgroundColor: 'lightgray', transition: '0.3s'} : {padding: '20px', transition: '0.3s'}}
+        style={this.state.isHover ? mergedHoverStyle : mergedStyle}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >

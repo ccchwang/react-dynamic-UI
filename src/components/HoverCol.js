@@ -1,7 +1,5 @@
 import React from 'react';
 import hoverColStyle from '../styles/hoverCol'
-// import animation from '../animations/jumbotron'
-
 
 export default class HoverCol extends React.Component {
   constructor() {
@@ -20,7 +18,7 @@ export default class HoverCol extends React.Component {
   }
 
   render() {
-    const { className, style, size, imgSrc, children } = this.props;
+    const { className, style, imgSrc, children } = this.props;
     let mergedStyle = Object.assign({}, hoverColStyle.column, style);
     let imgStyle = hoverColStyle.imgStyle
 
