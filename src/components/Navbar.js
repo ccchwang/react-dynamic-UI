@@ -6,13 +6,13 @@ import navbarStyle from '../styles/navbar'
 export default class Navbar extends React.Component {
 
   render () {
-    const { className, children, style } = this.props;
-
+    const { className, children, style, backgroundColor } = this.props;
     const mergedStyle = Object.assign({}, navbarStyle.nav, style);
+    window.navColor = backgroundColor;
 
 
     return (
-      <div className={className} style={mergedStyle} id="navbarFadeIn" >
+      <div className={className} style={mergedStyle} id="navbarFadeIn">
         <div style={navbarStyle.column}>
             { children }
           </div>
@@ -24,10 +24,3 @@ export default class Navbar extends React.Component {
   }
 
 }
-
-
-// <div className="fullscreen-bg">
-//             <video loop muted autoPlay poster="img/videoframe.jpg" className="fullscreen-bg__video">
-//                 <source src="video/big_buck_bunny.mp4" type="video/mp4" />
-//             </video>
-//         </div>

@@ -6,7 +6,7 @@ import { HeroVideo, Jumbotron, JumbotronCol, HoverRow, HoverCol, DrawerContainer
 
 render(
   <div>
-  <Navbar>
+  <Navbar backgroundColor='rgba(135, 205, 218, 0.8)'>
     <NavItem className="nav-item">ABOUT US</NavItem>
     <NavItem className="nav-item"><a>OUR BRAND</a></NavItem>
   </Navbar>

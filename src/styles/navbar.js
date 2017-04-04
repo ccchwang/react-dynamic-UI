@@ -8,13 +8,7 @@ const navbarStyle = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    animationName: 'navbarFadeIn',
-    animationPlayState: 'paused',
-    animationTimingFunction: 'ease-in-out',
-    animationDuration: '0.7s',
-    animationIterationCount: 1,
-    animationDirection: 'normal',
-    animationFillMode: 'forwards'
+    transition: '0.25s'
   },
   column: {
     width: '40%',
