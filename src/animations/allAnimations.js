@@ -2,10 +2,10 @@ window.onload = function() {
 
   var styleEl = document.createElement('style');
 
-  // Append style element to head
+  // append style element to head
   document.head.appendChild(styleEl);
 
-  // Grab style sheet
+  // grab style sheet
   var stylesheet = styleEl.sheet;
 
 
@@ -35,57 +35,55 @@ window.onload = function() {
   }`;
 
 
+  //***** DRAWER ANIMATION *****
+
+  let drawerStyle = `.react-dynamic-drawer {position: fixed;
+  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}`;
+
+  let drawerEnter = `.drawer-enter {left: -256px}`;
+
+  let drawerEnterActive = `.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}`;
+
+  let drawerLeave = `.drawer-leave {-webkit-transform:translate(0px)}`;
+
+  let drawerLeaveActive = `.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}`;
+
+  let backdropEnter = `.backdrop-enter {opacity: 0}`;
+
+  let backdropEnterActive = `.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}`;
+
+  let backdropLeave = `.backdrop-leave {opacity:1}`;
+
+  let backdropLeaveActive = `.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}`;
 
 
-  stylesheet.insertRule(keyframeFadeUp, stylesheet.cssRules.length);
-  stylesheet.insertRule(keyframeFadeAppear, stylesheet.cssRules.length);
-  stylesheet.insertRule(keyframeFadeInLeft, stylesheet.cssRules.length);
-  stylesheet.insertRule(keyframeFadeInRight, stylesheet.cssRules.length);
-  stylesheet.insertRule(keyframeDrawerOpen, stylesheet.cssRules.length);
-
-
-
-  // stylesheet.insertRule(`* {font-family: Helvetica}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.react-dynamic-drawer {position: fixed;
-  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}`, stylesheet.cssRules.length);
-
-
-
-  stylesheet.insertRule(`.drawer-enter {left: -256px}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.drawer-leave {-webkit-transform:translate(0px)}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}`, stylesheet.cssRules.length);
-
-  stylesheet.insertRule(`.backdrop-enter {opacity: 0}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.backdrop-leave {opacity:1}`, stylesheet.cssRules.length);
-  stylesheet.insertRule(`.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}`, stylesheet.cssRules.length);
+  //***** Inject animations into stylesheet ******
+  [keyframeFadeUp, keyframeFadeAppear, keyframeFadeInLeft, keyframeFadeInRight, keyframeDrawerOpen, drawerStyle, drawerEnter, drawerEnterActive, drawerLeave, drawerLeaveActive, backdropEnter, backdropEnterActive, backdropLeave, backdropLeaveActive].map(animation => stylesheet.insertRule(animation, stylesheet.cssRules.length))
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+
+
+  //***** JUMBOTRON ANIMATION *****
 
   let elementsToFadeIn = [
     ...document.getElementsByClassName('fadeInLeft'), ...document.getElementsByClassName('fadeInRight'), ...document.getElementsByClassName('fadeAppear'),
     ...document.getElementsByClassName('fadeUp')
     ];
 
-  for (var i = 0; i < elementsToFadeIn.length; i++) {
-    let divider = elementsToFadeIn[i].className.startsWith('fadeUp') ? 0 : 0;
+  elementsToFadeIn.forEach(element => window.addEventListener('scroll', function(){
+    let objectBottom = this.offsetHeight + this.offsetTop;
+    let windowBottom = window.innerHeight + window.scrollY;
 
-    window.addEventListener('scroll', function(){
-      let objectBottom = (this.offsetHeight + this.offsetTop) - divider;
-      let windowBottom = window.innerHeight + window.scrollY;
-
-
-
-      if (windowBottom > objectBottom) {
-        this.style.animationPlayState = 'running';
-      }
-    }.bind(elementsToFadeIn[i]))
-  }
+    if (windowBottom > objectBottom) {
+      this.style.animationPlayState = 'running';
+    }
+  }.bind(element)
+  ))
 
 
+  //***** NAVBAR ANIMATION *****
 
   window.addEventListener('scroll', function(){
     let navbarToFadeIn = document.getElementById('navbarFadeIn');
