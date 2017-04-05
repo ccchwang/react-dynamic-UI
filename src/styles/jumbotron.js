@@ -23,7 +23,7 @@ const jumbotronStyle = {
     animationName: 'fadeUp',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in-out',
-    animationDuration: '1s',
+    animationDuration: '0.8s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
@@ -32,7 +32,7 @@ const jumbotronStyle = {
     animationName: 'fadeAppear',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-in',
-    animationDuration: '0.8s',
+    animationDuration: '0.7s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'forwards'
@@ -41,7 +41,7 @@ const jumbotronStyle = {
     animationName: 'fadeInLeft',
     animationPlayState: 'paused',
     animationTimingFunction: 'ease-out',
-    animationDuration: '0.8s',
+    animationDuration: '0.7s',
     animationIterationCount: 1,
     animationDirection: 'normal',
     animationFillMode: 'both'

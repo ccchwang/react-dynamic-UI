@@ -135,6 +135,10 @@ p {
   display: block
 }
 
+.btn.drawer-btn:hover {
+  background-color: darken(#F25C5E, 6);
+}
+
 .btn.nav-btn {
   display: block;
   margin: 50px auto 0;
@@ -142,5 +146,5 @@ p {
 }
 
 .btn.nav-btn:hover {
-  background-color: darken(#f77c77,5)
+  background-color: darken(#f77c77,8)
 }

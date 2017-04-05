@@ -8,7 +8,7 @@ const navbarStyle = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    transition: '0.25s'
+    transition: '0.6s'
   },
   column: {
     width: '40%',

@@ -4579,45 +4579,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var navbarStyle = {
-  nav: {
-    width: '100%',
-    height: '70px',
-    position: 'fixed',
-    top: '0',
-    zIndex: '200',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    transition: '0.25s'
-  },
-  column: {
-    width: '40%',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  item: {
-    display: 'inline-block',
-    padding: '20px',
-    transition: '0.3s'
-  }
-
-};
-
-navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', color: '#2d6d73' });
-
-exports.default = navbarStyle;
-
-/***/ }),
+/* 32 */,
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6883,103 +6845,8 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var drawerStyle = {
-  backdrop: {
-    height: '100vh',
-    width: '100vw',
-    backgroundColor: 'rgba(0, 0, 0, 0.541176)',
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    zIndex: '1300'
-  },
-  menuItem: {
-    padding: '20px',
-    transition: '0.3s'
-  },
-  menuItemHover: {
-    padding: '20px',
-    cursor: 'pointer',
-    transition: '0.3s'
-  }
-};
-
-exports.default = drawerStyle;
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var jumbotronStyle = {
-  style: {
-    width: '100%',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  },
-  column: {
-    all: {
-      boxSizing: 'border-box',
-      width: '50%'
-    },
-    fadeInLeft: {
-      width: '40%', padding: '15px 20px'
-    },
-    fadeInRight: {
-      width: '40%', padding: '15px 20px'
-    }
-  },
-  fadeUp: {
-    animationName: 'fadeUp',
-    animationPlayState: 'paused',
-    animationTimingFunction: 'ease-in-out',
-    animationDuration: '1s',
-    animationIterationCount: 1,
-    animationDirection: 'normal',
-    animationFillMode: 'forwards'
-  },
-  fadeAppear: {
-    animationName: 'fadeAppear',
-    animationPlayState: 'paused',
-    animationTimingFunction: 'ease-in',
-    animationDuration: '0.8s',
-    animationIterationCount: 1,
-    animationDirection: 'normal',
-    animationFillMode: 'forwards'
-  },
-  fadeInLeft: {
-    animationName: 'fadeInLeft',
-    animationPlayState: 'paused',
-    animationTimingFunction: 'ease-out',
-    animationDuration: '0.8s',
-    animationIterationCount: 1,
-    animationDirection: 'normal',
-    animationFillMode: 'both'
-  }
-};
-
-jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, { animationName: 'fadeInRight' });
-
-exports.default = jumbotronStyle;
-
-/***/ }),
+/* 55 */,
+/* 56 */,
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11544,67 +11411,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Button = __webpack_require__(97);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _HeroVideo = __webpack_require__(99);
-
-var _HeroVideo2 = _interopRequireDefault(_HeroVideo);
-
-var _Jumbotron = __webpack_require__(102);
-
-var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
-
-var _JumbotronCol = __webpack_require__(103);
-
-var _JumbotronCol2 = _interopRequireDefault(_JumbotronCol);
-
-var _HoverRow = __webpack_require__(101);
-
-var _HoverRow2 = _interopRequireDefault(_HoverRow);
-
-var _HoverCol = __webpack_require__(100);
-
-var _HoverCol2 = _interopRequireDefault(_HoverCol);
-
-var _DrawerContainer = __webpack_require__(98);
-
-var _DrawerContainer2 = _interopRequireDefault(_DrawerContainer);
-
-var _MenuItem = __webpack_require__(104);
-
-var _MenuItem2 = _interopRequireDefault(_MenuItem);
-
-var _Navbar = __webpack_require__(107);
-
-var _Navbar2 = _interopRequireDefault(_Navbar);
-
-var _NavItem = __webpack_require__(106);
-
-var _NavItem2 = _interopRequireDefault(_NavItem);
-
-var _Nav = __webpack_require__(105);
-
-var _Nav2 = _interopRequireDefault(_Nav);
-
-var _allAnimations = __webpack_require__(96);
-
-var _allAnimations2 = _interopRequireDefault(_allAnimations);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverRow: _HoverRow2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default, Navbar: _Navbar2.default, NavItem: _NavItem2.default, Nav: _Nav2.default };
-
-/***/ }),
+/* 93 */,
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11641,947 +11448,22 @@ if(false) {
 }
 
 /***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _toConsumableArray(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }return arr2;
-  } else {
-    return Array.from(arr);
-  }
-}
-
-window.onload = function () {
-
-  var styleEl = document.createElement('style');
-
-  // append style element to head
-  document.head.appendChild(styleEl);
-
-  // grab style sheet
-  var stylesheet = styleEl.sheet;
-
-  var keyframeFadeUp = '@-webkit-keyframes fadeUp {\n    0% {-webkit-transform:translate3d(0,40px,0); opacity: 0 }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
-
-  var keyframeFadeAppear = '@-webkit-keyframes fadeAppear {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
-
-  var keyframeFadeInRight = '@-webkit-keyframes fadeInRight {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(40px); opacity: 1}\n  }';
-
-  var keyframeFadeInLeft = '@-webkit-keyframes fadeInLeft {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
-
-  var keyframeDrawerOpen = '@-webkit-keyframes drawerOpen {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
-
-  //***** DRAWER ANIMATION *****
-
-  var drawerStyle = '.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}';
-
-  var drawerEnter = '.drawer-enter {left: -256px}';
-
-  var drawerEnterActive = '.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}';
-
-  var drawerLeave = '.drawer-leave {-webkit-transform:translate(0px)}';
-
-  var drawerLeaveActive = '.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}';
-
-  var backdropEnter = '.backdrop-enter {opacity: 0}';
-
-  var backdropEnterActive = '.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}';
-
-  var backdropLeave = '.backdrop-leave {opacity:1}';
-
-  var backdropLeaveActive = '.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}';
-
-  //***** Inject animations into stylesheet ******
-  [keyframeFadeUp, keyframeFadeAppear, keyframeFadeInLeft, keyframeFadeInRight, keyframeDrawerOpen, drawerStyle, drawerEnter, drawerEnterActive, drawerLeave, drawerLeaveActive, backdropEnter, backdropEnterActive, backdropLeave, backdropLeaveActive].map(function (animation) {
-    return stylesheet.insertRule(animation, stylesheet.cssRules.length);
-  });
-
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
-
-  //***** JUMBOTRON ANIMATION *****
-
-  var elementsToFadeIn = [].concat(_toConsumableArray(document.getElementsByClassName('fadeInLeft')), _toConsumableArray(document.getElementsByClassName('fadeInRight')), _toConsumableArray(document.getElementsByClassName('fadeAppear')), _toConsumableArray(document.getElementsByClassName('fadeUp')));
-
-  elementsToFadeIn.forEach(function (element) {
-    return window.addEventListener('scroll', function () {
-      var objectBottom = this.offsetHeight + this.offsetTop;
-      var windowBottom = window.innerHeight + window.scrollY;
-
-      if (windowBottom > objectBottom) {
-        this.style.animationPlayState = 'running';
-      }
-    }.bind(element));
-  });
-
-  //***** NAVBAR ANIMATION *****
-
-  window.addEventListener('scroll', function () {
-    var navbarToFadeIn = document.getElementById('navbarFadeIn');
-    var scrollPos = window.scrollY;
-
-    if (scrollPos > 40) {
-      navbarToFadeIn.style.backgroundColor = window.navColor;
-    }
-  });
-};
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _button = __webpack_require__(108);
-
-var _button2 = _interopRequireDefault(_button);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Button = function (_React$Component) {
-  _inherits(Button, _React$Component);
-
-  function Button() {
-    _classCallCheck(this, Button);
-
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
-  }
-
-  _createClass(Button, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          style = _props.style,
-          className = _props.className;
-
-      var ownStyle = style || {};
-      var ownClassName = className;
-      var mergedStyle = Object.assign({}, _button2.default, ownStyle);
-
-      return _react2.default.createElement('button', { style: _button2.default }, this.props.children);
-    }
-  }]);
-
-  return Button;
-}(_react2.default.Component);
-
-exports.default = Button;
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactAddonsCssTransitionGroup = __webpack_require__(129);
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _drawer = __webpack_require__(55);
-
-var _drawer2 = _interopRequireDefault(_drawer);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var DrawerContainer = function (_React$Component) {
-  _inherits(DrawerContainer, _React$Component);
-
-  function DrawerContainer(props) {
-    _classCallCheck(this, DrawerContainer);
-
-    var _this = _possibleConstructorReturn(this, (DrawerContainer.__proto__ || Object.getPrototypeOf(DrawerContainer)).call(this, props));
-
-    _this.state = { openDrawer: false };
-    _this.toggle = _this.toggle.bind(_this);
-    return _this;
-  }
-
-  _createClass(DrawerContainer, [{
-    key: 'toggle',
-    value: function toggle() {
-      this.setState({ openDrawer: !this.state.openDrawer });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var drawer = void 0;
-      var backdrop = void 0;
-
-      if (this.state.openDrawer) {
-        drawer = _react2.default.createElement('div', { key: 'toggle-drawer', className: 'react-dynamic-drawer' }, this.props.children);
-
-        backdrop = _react2.default.createElement('div', { style: _drawer2.default.backdrop, onClick: this.toggle });
-      }
-
-      return _react2.default.createElement('div', null, _react2.default.createElement('button', { className: 'btn drawer-btn', onClick: this.toggle }, 'Open Drawer'), _react2.default.createElement(_reactAddonsCssTransitionGroup2.default, {
-        transitionName: 'drawer',
-        transitionEnterTimeout: 450,
-        transitionLeaveTimeout: 450 }, drawer), _react2.default.createElement(_reactAddonsCssTransitionGroup2.default, {
-        transitionName: 'backdrop',
-        transitionEnterTimeout: 300,
-        transitionLeaveTimeout: 300 }, backdrop));
-    }
-  }]);
-
-  return DrawerContainer;
-}(_react2.default.Component);
-
-exports.default = DrawerContainer;
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = HeroVideo;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _heroVideo = __webpack_require__(109);
-
-var _heroVideo2 = _interopRequireDefault(_heroVideo);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function HeroVideo(_ref) {
-  var videoSrc = _ref.videoSrc,
-      videoType = _ref.videoType,
-      className = _ref.className,
-      children = _ref.children;
-
-  return _react2.default.createElement('div', { className: className, style: _heroVideo2.default.style }, _react2.default.createElement('div', { style: _heroVideo2.default.headingStyle }, _react2.default.createElement('h1', null, children)), _react2.default.createElement('video', { loop: true, muted: true, autoPlay: true, style: _heroVideo2.default.video }, _react2.default.createElement('source', { src: videoSrc, type: videoType })));
-}
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _hoverCol = __webpack_require__(110);
-
-var _hoverCol2 = _interopRequireDefault(_hoverCol);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var HoverCol = function (_React$Component) {
-  _inherits(HoverCol, _React$Component);
-
-  function HoverCol() {
-    _classCallCheck(this, HoverCol);
-
-    var _this = _possibleConstructorReturn(this, (HoverCol.__proto__ || Object.getPrototypeOf(HoverCol)).call(this));
-
-    _this.state = { isHover: false };
-    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
-    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
-    return _this;
-  }
-
-  _createClass(HoverCol, [{
-    key: 'handleMouseEnter',
-    value: function handleMouseEnter() {
-      this.setState({ isHover: true });
-    }
-  }, {
-    key: 'handleMouseLeave',
-    value: function handleMouseLeave() {
-      this.setState({ isHover: false });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          className = _props.className,
-          style = _props.style,
-          imgSrc = _props.imgSrc,
-          children = _props.children;
-
-      var mergedStyle = Object.assign({}, _hoverCol2.default.column, style);
-      var imgStyle = _hoverCol2.default.imgStyle;
-
-      if (this.state.isHover) {
-        imgStyle = Object.assign({}, imgStyle, _hoverCol2.default.hoverStyle);
-      }
-
-      return _react2.default.createElement('div', {
-        className: className,
-        style: mergedStyle,
-        onMouseEnter: this.handleMouseEnter,
-        onMouseLeave: this.handleMouseLeave
-      }, _react2.default.createElement('img', { src: imgSrc, style: imgStyle }), _react2.default.createElement('div', { style: { position: 'absolute', top: '0' } }, children));
-    }
-  }]);
-
-  return HoverCol;
-}(_react2.default.Component);
-
-exports.default = HoverCol;
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = HoverRow;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _hoverRow = __webpack_require__(111);
-
-var _hoverRow2 = _interopRequireDefault(_hoverRow);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function HoverRow(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      style = _ref.style;
-
-  var mergedStyle = Object.assign({}, _hoverRow2.default.style, style);
-
-  return _react2.default.createElement('div', { className: className, style: mergedStyle }, children);
-}
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Jumbotron;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _jumbotron = __webpack_require__(56);
-
-var _jumbotron2 = _interopRequireDefault(_jumbotron);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function Jumbotron(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      style = _ref.style;
-
-  var mergedStyle = Object.assign({}, _jumbotron2.default.style, style);
-
-  return _react2.default.createElement('div', { className: className, style: mergedStyle }, children);
-}
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = JumbotronCol;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _jumbotron = __webpack_require__(56);
-
-var _jumbotron2 = _interopRequireDefault(_jumbotron);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function JumbotronCol(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      style = _ref.style,
-      fadeEffect = _ref.fadeEffect;
-
-  var mergedColumnStyle = Object.assign({}, _jumbotron2.default.column.all, _jumbotron2.default.column[fadeEffect], style);
-  var fadeStyle = _jumbotron2.default[fadeEffect];
-  var fadeClass = fadeEffect ? fadeEffect + " " : "";
-
-  if (!children) {
-    return _react2.default.createElement('div', { style: mergedColumnStyle });
-  }
-
-  var childrenArray = !children.length || typeof children === "string" ? [children] : children;
-
-  var styledChildren = childrenArray && childrenArray.map(function (child, i) {
-    if (typeof child === "string") {
-      return _react2.default.cloneElement(_react2.default.createElement('p', null, child), { style: fadeStyle, className: fadeClass, key: 'strChild' });
-    }
-
-    var ownStyle = child.props.style || {};
-    var ownClassName = child.props.className || "";
-
-    var mergedStyle = Object.assign({}, fadeStyle, ownStyle);
-    var mergedClassName = fadeClass + ownClassName;
-
-    return _react2.default.cloneElement(child, { style: mergedStyle, className: mergedClassName, key: i });
-  });
-
-  return _react2.default.createElement('div', { className: className, style: mergedColumnStyle }, styledChildren);
-}
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _drawer = __webpack_require__(55);
-
-var _drawer2 = _interopRequireDefault(_drawer);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var MenuItem = function (_React$Component) {
-  _inherits(MenuItem, _React$Component);
-
-  function MenuItem() {
-    _classCallCheck(this, MenuItem);
-
-    var _this = _possibleConstructorReturn(this, (MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call(this));
-
-    _this.state = { isHover: false };
-    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
-    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
-    return _this;
-  }
-
-  _createClass(MenuItem, [{
-    key: 'handleMouseEnter',
-    value: function handleMouseEnter() {
-      this.setState({ isHover: true });
-    }
-  }, {
-    key: 'handleMouseLeave',
-    value: function handleMouseLeave() {
-      this.setState({ isHover: false });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          children = _props.children,
-          style = _props.style,
-          hoverStyle = _props.hoverStyle,
-          className = _props.className;
-
-      var ownStyle = style || {};
-      var ownHoverStyle = hoverStyle || {};
-
-      var mergedStyle = Object.assign({}, _drawer2.default.menuItem, ownStyle);
-      var mergedHoverStyle = Object.assign({}, _drawer2.default.menuItemHover, ownHoverStyle);
-
-      return _react2.default.createElement('div', {
-        style: this.state.isHover ? mergedHoverStyle : mergedStyle,
-        onMouseEnter: this.handleMouseEnter,
-        onMouseLeave: this.handleMouseLeave,
-        className: className
-      }, children);
-    }
-  }]);
-
-  return MenuItem;
-}(_react2.default.Component);
-
-exports.default = MenuItem;
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Nav;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _navbar = __webpack_require__(32);
-
-var _navbar2 = _interopRequireDefault(_navbar);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function Nav(_ref) {
-  var children = _ref.children,
-      style = _ref.style,
-      className = _ref.className,
-      pullRight = _ref.pullRight;
-
-  var mergedStyle = pullRight ? Object.assign({ justifyContent: 'flex-end' }, _navbar2.default.column, style) : Object.assign({}, _navbar2.default.column, style);
-
-  return _react2.default.createElement('div', { className: className, style: mergedStyle }, children);
-}
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _navbar = __webpack_require__(32);
-
-var _navbar2 = _interopRequireDefault(_navbar);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var NavItem = function (_React$Component) {
-  _inherits(NavItem, _React$Component);
-
-  function NavItem() {
-    _classCallCheck(this, NavItem);
-
-    var _this = _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).call(this));
-
-    _this.state = { isHover: false };
-    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
-    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
-    return _this;
-  }
-
-  _createClass(NavItem, [{
-    key: 'handleMouseEnter',
-    value: function handleMouseEnter() {
-      this.setState({ isHover: true });
-    }
-  }, {
-    key: 'handleMouseLeave',
-    value: function handleMouseLeave() {
-      this.setState({ isHover: false });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          children = _props.children,
-          style = _props.style,
-          className = _props.className;
-
-      var mergedStyle = this.state.isHover ? Object.assign({}, _navbar2.default.itemHover, style) : Object.assign({}, _navbar2.default.item, style);
-
-      return _react2.default.createElement('div', {
-        style: mergedStyle,
-        className: className,
-        onMouseEnter: this.handleMouseEnter,
-        onMouseLeave: this.handleMouseLeave
-      }, children);
-    }
-  }]);
-
-  return NavItem;
-}(_react2.default.Component);
-
-exports.default = NavItem;
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Navbar;
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _navbar = __webpack_require__(32);
-
-var _navbar2 = _interopRequireDefault(_navbar);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// import animation from '../animations/jumbotronFadeUp'
-
-
-function Navbar(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      style = _ref.style,
-      navColor = _ref.navColor;
-
-  var mergedStyle = Object.assign({}, _navbar2.default.nav, style);
-  window.navColor = navColor;
-
-  return _react2.default.createElement('div', { className: className, style: mergedStyle, id: 'navbarFadeIn' }, children);
-}
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var buttonStyle = {
-  background: 'red',
-  letterSpacing: '1px',
-  fontWeight: '600',
-  width: '250px',
-  borderRadius: '24px',
-  border: 'none',
-  boxSizing: 'border-box',
-  color: '#616161',
-  cursor: 'pointer',
-  display: 'inline-block',
-  fontSize: 17,
-  lineHeight: '26px',
-  padding: '10px 14px',
-  textAlign: 'center',
-  textDecoration: 'none',
-  verticalAlign: 'bottom'
-};
-
-exports.default = buttonStyle;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var heroVideoStyle = {
-  style: {
-    position: 'relative',
-    width: '100%',
-    boxSizing: 'border-box',
-    minHeight: '680px',
-    overflow: 'hidden'
-  },
-  headingStyle: {
-    position: 'absolute',
-    width: '40%',
-    color: 'white',
-    zIndex: '2',
-    top: '250px',
-    right: '8%',
-    fontSize: '2em',
-    textAlign: 'center'
-  },
-  video: {
-    objectFit: "cover",
-    width: '100%',
-    minHeight: '680px'
-  }
-};
-
-//make top go from -290 to -270 has user makes height taller
-
-exports.default = heroVideoStyle;
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var hoverColStyle = {
-  column: {
-    position: 'relative',
-    boxSizing: 'border-box',
-    padding: '9px 10px'
-  },
-  hoverStyle: {
-    transform: 'scale(1.05)',
-    boxShadow: 'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px'
-  },
-  imgStyle: {
-    width: '100%', transition: '0.2s ease-out'
-  }
-};
-
-exports.default = hoverColStyle;
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var hoverRowStyle = {
-  style: {
-    margin: '0 auto',
-    content: "",
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center'
-  }
-};
-
-exports.default = hoverRowStyle;
-
-/***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
 /* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12590,7 +11472,7 @@ exports = module.exports = __webpack_require__(113)();
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-fadeUp {\n  font-size: 1.5em;\n  padding-top: 111px;\n  padding-bottom: 131px; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n  color: #F25C5E;\n  font-weight: 700; }\n\n.jumbo-fadeUp p {\n  line-height: 1.5; }\n\n.jumbo-fadeIn {\n  padding-top: 80px;\n  padding-bottom: 111px;\n  margin-bottom: 250px;\n  font-size: 1.5em; }\n  .jumbo-fadeIn h1, .jumbo-fadeIn h2 {\n    color: #ff8733;\n    font-weight: 700; }\n  .jumbo-fadeIn p {\n    line-height: 1.5; }\n\n.jumbo-fadeIn.fade-stagger h1, .jumbo-fadeIn.fade-stagger h2 {\n  color: #437f91; }\n\n.jumbo-fadeUp.right {\n  padding-right: 111px; }\n\n.jumbo-fadeUp.left {\n  padding-left: 111px; }\n\n.jumbo-fadeUp.img {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .jumbo-fadeUp.img .waves-graphic {\n    width: 300px;\n    height: 300px; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: #FFA566;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: white;\n  font-size: 17px !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom;\n  transition: 0.3s;\n  cursor: pointer; }\n\n.btn:hover {\n  background-color: #ff8a38; }\n\n.fade-stagger {\n  background-color: #cbe8ed; }\n\n.btn.drawer-btn {\n  background-color: #F25C5E;\n  margin: 0px auto;\n  display: block; }\n\n.btn.nav-btn {\n  display: block;\n  margin: 50px auto 0;\n  background-color: #f77c77; }\n\n.btn.nav-btn:hover {\n  background-color: #f6655f; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box;\n  font-family: 'Helvetica Neue', sans-serif; }\n\nbody {\n  margin: 0; }\n\n.jumbo-fadeUp {\n  font-size: 1.5em;\n  padding-top: 111px;\n  padding-bottom: 131px; }\n\n.jumbo-bg {\n  background-image: url(\"https://picjumbo.imgix.net/HNCK3916.jpg?q=40&w=1650&sharp=30\"); }\n\n.jumbo-fadeUp h1, .jumbo-fadeUp h2 {\n  color: #F25C5E;\n  font-weight: 700; }\n\n.jumbo-fadeUp p {\n  line-height: 1.5; }\n\n.jumbo-fadeIn {\n  padding-top: 80px;\n  padding-bottom: 111px;\n  margin-bottom: 250px;\n  font-size: 1.5em; }\n  .jumbo-fadeIn h1, .jumbo-fadeIn h2 {\n    color: #ff8733;\n    font-weight: 700; }\n  .jumbo-fadeIn p {\n    line-height: 1.5; }\n\n.jumbo-fadeIn.fade-stagger h1, .jumbo-fadeIn.fade-stagger h2 {\n  color: #437f91; }\n\n.jumbo-fadeUp.right {\n  padding-right: 111px; }\n\n.jumbo-fadeUp.left {\n  padding-left: 111px; }\n\n.jumbo-fadeUp.img {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .jumbo-fadeUp.img .waves-graphic {\n    width: 300px;\n    height: 300px; }\n\n.waves-graphic {\n  width: 475px;\n  height: 500px;\n  border-radius: 10000px; }\n\n.nav-item {\n  color: white;\n  font-size: 1em;\n  letter-spacing: 2px;\n  font-weight: 500; }\n\n.hover-row1 {\n  width: 65%;\n  padding-top: 180px; }\n\n.hover-row2 {\n  width: 65%;\n  padding-bottom: 180px; }\n\np {\n  font-family: 'Lato', sans-serif;\n  font-size: 0.9em; }\n\n.btn {\n  background-color: #FFA566;\n  letter-spacing: 1px;\n  font-weight: 600;\n  width: 250px;\n  border-radius: 24px;\n  border: none;\n  color: white;\n  font-size: 17px !important;\n  line-height: 26px;\n  padding: 10px 14px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: bottom;\n  transition: 0.3s;\n  cursor: pointer; }\n\n.btn:hover {\n  background-color: #ff8a38; }\n\n.fade-stagger {\n  background-color: #cbe8ed; }\n\n.btn.drawer-btn {\n  background-color: #F25C5E;\n  margin: 0px auto;\n  display: block; }\n\n.btn.drawer-btn:hover {\n  background-color: #f04042; }\n\n.btn.nav-btn {\n  display: block;\n  margin: 50px auto 0;\n  background-color: #f77c77; }\n\n.btn.nav-btn:hover {\n  background-color: #f55750; }\n", ""]);
 
 // exports
 
@@ -25302,7 +24184,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(94);
 
-var _index = __webpack_require__(93);
+var _index = __webpack_require__(218);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25606,6 +24488,1094 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     )
   )
 ), document.getElementById('app'));
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var navbarStyle = {
+  nav: {
+    width: '100%',
+    height: '70px',
+    position: 'fixed',
+    top: '0',
+    zIndex: '200',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    transition: '0.6s'
+  },
+  column: {
+    width: '40%',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  item: {
+    display: 'inline-block',
+    padding: '20px',
+    transition: '0.3s'
+  }
+
+};
+
+navbarStyle.itemHover = Object.assign({}, navbarStyle.item, { cursor: 'pointer', color: '#2d6d73' });
+
+exports.default = navbarStyle;
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var drawerStyle = {
+  backdrop: {
+    height: '100vh',
+    width: '100vw',
+    backgroundColor: 'rgba(0, 0, 0, 0.541176)',
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    zIndex: '1300'
+  },
+  menuItem: {
+    padding: '20px',
+    transition: '0.3s'
+  },
+  menuItemHover: {
+    padding: '20px',
+    cursor: 'pointer',
+    transition: '0.3s'
+  }
+};
+
+exports.default = drawerStyle;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var jumbotronStyle = {
+  style: {
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  column: {
+    all: {
+      boxSizing: 'border-box',
+      width: '50%'
+    },
+    fadeInLeft: {
+      width: '40%', padding: '15px 20px'
+    },
+    fadeInRight: {
+      width: '40%', padding: '15px 20px'
+    }
+  },
+  fadeUp: {
+    animationName: 'fadeUp',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-in-out',
+    animationDuration: '0.8s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'forwards'
+  },
+  fadeAppear: {
+    animationName: 'fadeAppear',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-in',
+    animationDuration: '0.7s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'forwards'
+  },
+  fadeInLeft: {
+    animationName: 'fadeInLeft',
+    animationPlayState: 'paused',
+    animationTimingFunction: 'ease-out',
+    animationDuration: '0.7s',
+    animationIterationCount: 1,
+    animationDirection: 'normal',
+    animationFillMode: 'both'
+  }
+};
+
+jumbotronStyle.fadeInRight = Object.assign({}, jumbotronStyle.fadeInLeft, { animationName: 'fadeInRight' });
+
+exports.default = jumbotronStyle;
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Button = __webpack_require__(220);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _HeroVideo = __webpack_require__(222);
+
+var _HeroVideo2 = _interopRequireDefault(_HeroVideo);
+
+var _Jumbotron = __webpack_require__(225);
+
+var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
+
+var _JumbotronCol = __webpack_require__(226);
+
+var _JumbotronCol2 = _interopRequireDefault(_JumbotronCol);
+
+var _HoverRow = __webpack_require__(224);
+
+var _HoverRow2 = _interopRequireDefault(_HoverRow);
+
+var _HoverCol = __webpack_require__(223);
+
+var _HoverCol2 = _interopRequireDefault(_HoverCol);
+
+var _DrawerContainer = __webpack_require__(221);
+
+var _DrawerContainer2 = _interopRequireDefault(_DrawerContainer);
+
+var _MenuItem = __webpack_require__(227);
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _Navbar = __webpack_require__(230);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _NavItem = __webpack_require__(229);
+
+var _NavItem2 = _interopRequireDefault(_NavItem);
+
+var _Nav = __webpack_require__(228);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+var _allAnimations = __webpack_require__(219);
+
+var _allAnimations2 = _interopRequireDefault(_allAnimations);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = { Button: _Button2.default, HeroVideo: _HeroVideo2.default, Jumbotron: _Jumbotron2.default, JumbotronCol: _JumbotronCol2.default, HoverRow: _HoverRow2.default, HoverCol: _HoverCol2.default, DrawerContainer: _DrawerContainer2.default, MenuItem: _MenuItem2.default, Navbar: _Navbar2.default, NavItem: _NavItem2.default, Nav: _Nav2.default };
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+window.onload = function () {
+
+  var styleEl = document.createElement('style');
+
+  // append style element to head
+  document.head.appendChild(styleEl);
+
+  // grab style sheet
+  var stylesheet = styleEl.sheet;
+
+  var keyframeFadeUp = '@-webkit-keyframes fadeUp {\n    0% {-webkit-transform:translate3d(0,40px,0); opacity: 0 }\n    100% {-webkit-transform:translate3d(0,0,0); opacity: 1}\n  }';
+
+  var keyframeFadeAppear = '@-webkit-keyframes fadeAppear {\n    0% {opacity: 0}\n    100% {opacity: 1}\n  }';
+
+  var keyframeFadeInRight = '@-webkit-keyframes fadeInRight {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(40px); opacity: 1}\n  }';
+
+  var keyframeFadeInLeft = '@-webkit-keyframes fadeInLeft {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
+
+  var keyframeDrawerOpen = '@-webkit-keyframes drawerOpen {\n    0% {-webkit-transform:translate(0px); opacity: 0}\n    100% {-webkit-transform:translate(-40px); opacity: 1}\n  }';
+
+  //***** DRAWER ANIMATION *****
+
+  var drawerStyle = '.react-dynamic-drawer {position: fixed;\n  width: 256px; height: 100vh; background-color: white; top: 0; left: 0; box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; z-index: 2000; display: flex; flex-direction: column; word-wrap: break-word}';
+
+  var drawerEnter = '.drawer-enter {left: -256px}';
+
+  var drawerEnterActive = '.drawer-enter.drawer-enter-active {left: 0px; transition: 450ms cubic-bezier(0.23, 1, 0.32, 1) ;}';
+
+  var drawerLeave = '.drawer-leave {-webkit-transform:translate(0px)}';
+
+  var drawerLeaveActive = '.drawer-leave.drawer-leave-active {-webkit-transform:translate(-256px);transition: 450ms cubic-bezier(0.23, 1, 0.32, 1);}';
+
+  var backdropEnter = '.backdrop-enter {opacity: 0}';
+
+  var backdropEnterActive = '.backdrop-enter.backdrop-enter-active {opacity: 1; transition: 300ms cubic-bezier(0.23, 1, 0.32, 1) ;}';
+
+  var backdropLeave = '.backdrop-leave {opacity:1}';
+
+  var backdropLeaveActive = '.backdrop-leave.backdrop-leave-active {opacity: 0;transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);}';
+
+  //***** Inject animations into stylesheet ******
+  [keyframeFadeUp, keyframeFadeAppear, keyframeFadeInLeft, keyframeFadeInRight, keyframeDrawerOpen, drawerStyle, drawerEnter, drawerEnterActive, drawerLeave, drawerLeaveActive, backdropEnter, backdropEnterActive, backdropLeave, backdropLeaveActive].map(function (animation) {
+    return stylesheet.insertRule(animation, stylesheet.cssRules.length);
+  });
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+  //***** JUMBOTRON ANIMATION *****
+
+  var elementsToFadeIn = [].concat(_toConsumableArray(document.getElementsByClassName('fadeInLeft')), _toConsumableArray(document.getElementsByClassName('fadeInRight')), _toConsumableArray(document.getElementsByClassName('fadeAppear')), _toConsumableArray(document.getElementsByClassName('fadeUp')));
+
+  elementsToFadeIn.forEach(function (element) {
+    return window.addEventListener('scroll', function () {
+      var objectBottom = this.offsetHeight + this.offsetTop;
+      var windowBottom = window.innerHeight + window.scrollY;
+
+      if (windowBottom > objectBottom) {
+        this.style.animationPlayState = 'running';
+      }
+    }.bind(element));
+  });
+
+  //***** NAVBAR ANIMATION *****
+
+  window.addEventListener('scroll', function () {
+    var navbarToFadeIn = document.getElementById('navbarFadeIn');
+    var scrollPos = window.scrollY;
+
+    if (scrollPos > 40) {
+      navbarToFadeIn.style.backgroundColor = window.navColor;
+    }
+  });
+};
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _button = __webpack_require__(231);
+
+var _button2 = _interopRequireDefault(_button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Button = function (_React$Component) {
+  _inherits(Button, _React$Component);
+
+  function Button() {
+    _classCallCheck(this, Button);
+
+    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+  }
+
+  _createClass(Button, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          style = _props.style,
+          className = _props.className;
+
+
+      var ownStyle = style || {};
+      var ownClassName = className;
+      var mergedStyle = Object.assign({}, _button2.default, ownStyle);
+
+      return _react2.default.createElement(
+        'button',
+        { style: _button2.default },
+        this.props.children
+      );
+    }
+  }]);
+
+  return Button;
+}(_react2.default.Component);
+
+exports.default = Button;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactAddonsCssTransitionGroup = __webpack_require__(129);
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+var _drawer = __webpack_require__(216);
+
+var _drawer2 = _interopRequireDefault(_drawer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DrawerContainer = function (_React$Component) {
+  _inherits(DrawerContainer, _React$Component);
+
+  function DrawerContainer(props) {
+    _classCallCheck(this, DrawerContainer);
+
+    var _this = _possibleConstructorReturn(this, (DrawerContainer.__proto__ || Object.getPrototypeOf(DrawerContainer)).call(this, props));
+
+    _this.state = { openDrawer: false };
+    _this.toggle = _this.toggle.bind(_this);
+    return _this;
+  }
+
+  _createClass(DrawerContainer, [{
+    key: 'toggle',
+    value: function toggle() {
+      this.setState({ openDrawer: !this.state.openDrawer });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var drawer = void 0;
+      var backdrop = void 0;
+
+      if (this.state.openDrawer) {
+        drawer = _react2.default.createElement(
+          'div',
+          { key: 'toggle-drawer', className: 'react-dynamic-drawer' },
+          this.props.children
+        );
+
+        backdrop = _react2.default.createElement('div', { style: _drawer2.default.backdrop, onClick: this.toggle });
+      }
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'button',
+          { className: 'btn drawer-btn', onClick: this.toggle },
+          'Open Drawer'
+        ),
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'drawer',
+            transitionEnterTimeout: 450,
+            transitionLeaveTimeout: 450 },
+          drawer
+        ),
+        _react2.default.createElement(
+          _reactAddonsCssTransitionGroup2.default,
+          {
+            transitionName: 'backdrop',
+            transitionEnterTimeout: 300,
+            transitionLeaveTimeout: 300 },
+          backdrop
+        )
+      );
+    }
+  }]);
+
+  return DrawerContainer;
+}(_react2.default.Component);
+
+exports.default = DrawerContainer;
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = HeroVideo;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _heroVideo = __webpack_require__(232);
+
+var _heroVideo2 = _interopRequireDefault(_heroVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function HeroVideo(_ref) {
+  var videoSrc = _ref.videoSrc,
+      videoType = _ref.videoType,
+      className = _ref.className,
+      children = _ref.children;
+
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: _heroVideo2.default.style },
+    _react2.default.createElement(
+      'div',
+      { style: _heroVideo2.default.headingStyle },
+      _react2.default.createElement(
+        'h1',
+        null,
+        children
+      )
+    ),
+    _react2.default.createElement(
+      'video',
+      { loop: true, muted: true, autoPlay: true, style: _heroVideo2.default.video },
+      _react2.default.createElement('source', { src: videoSrc, type: videoType })
+    )
+  );
+}
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hoverCol = __webpack_require__(233);
+
+var _hoverCol2 = _interopRequireDefault(_hoverCol);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HoverCol = function (_React$Component) {
+  _inherits(HoverCol, _React$Component);
+
+  function HoverCol() {
+    _classCallCheck(this, HoverCol);
+
+    var _this = _possibleConstructorReturn(this, (HoverCol.__proto__ || Object.getPrototypeOf(HoverCol)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(HoverCol, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          className = _props.className,
+          style = _props.style,
+          imgSrc = _props.imgSrc,
+          children = _props.children;
+
+      var mergedStyle = Object.assign({}, _hoverCol2.default.column, style);
+      var imgStyle = _hoverCol2.default.imgStyle;
+
+      if (this.state.isHover) {
+        imgStyle = Object.assign({}, imgStyle, _hoverCol2.default.hoverStyle);
+      }
+
+      return _react2.default.createElement(
+        'div',
+        {
+          className: className,
+          style: mergedStyle,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
+        _react2.default.createElement('img', { src: imgSrc, style: imgStyle }),
+        _react2.default.createElement(
+          'div',
+          { style: { position: 'absolute', top: '0' } },
+          children
+        )
+      );
+    }
+  }]);
+
+  return HoverCol;
+}(_react2.default.Component);
+
+exports.default = HoverCol;
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = HoverRow;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hoverRow = __webpack_require__(234);
+
+var _hoverRow2 = _interopRequireDefault(_hoverRow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function HoverRow(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      style = _ref.style;
+
+
+  var mergedStyle = Object.assign({}, _hoverRow2.default.style, style);
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: mergedStyle },
+    children
+  );
+}
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Jumbotron;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _jumbotron = __webpack_require__(217);
+
+var _jumbotron2 = _interopRequireDefault(_jumbotron);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Jumbotron(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      style = _ref.style;
+
+
+  var mergedStyle = Object.assign({}, _jumbotron2.default.style, style);
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: mergedStyle },
+    children
+  );
+}
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = JumbotronCol;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _jumbotron = __webpack_require__(217);
+
+var _jumbotron2 = _interopRequireDefault(_jumbotron);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function JumbotronCol(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      style = _ref.style,
+      fadeEffect = _ref.fadeEffect;
+
+  var mergedColumnStyle = Object.assign({}, _jumbotron2.default.column.all, _jumbotron2.default.column[fadeEffect], style);
+  var fadeStyle = _jumbotron2.default[fadeEffect];
+  var fadeClass = fadeEffect ? fadeEffect + " " : "";
+
+  if (!children) {
+    return _react2.default.createElement('div', { style: mergedColumnStyle });
+  }
+
+  var childrenArray = !children.length || typeof children === "string" ? [children] : children;
+
+  var styledChildren = childrenArray && childrenArray.map(function (child, i) {
+    if (typeof child === "string") {
+      return _react2.default.cloneElement(_react2.default.createElement(
+        'p',
+        null,
+        child
+      ), { style: fadeStyle, className: fadeClass, key: 'strChild' });
+    }
+
+    var ownStyle = child.props.style || {};
+    var ownClassName = child.props.className || "";
+
+    var mergedStyle = Object.assign({}, fadeStyle, ownStyle);
+    var mergedClassName = fadeClass + ownClassName;
+
+    return _react2.default.cloneElement(child, { style: mergedStyle, className: mergedClassName, key: i });
+  });
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: mergedColumnStyle },
+    styledChildren
+  );
+}
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _drawer = __webpack_require__(216);
+
+var _drawer2 = _interopRequireDefault(_drawer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MenuItem = function (_React$Component) {
+  _inherits(MenuItem, _React$Component);
+
+  function MenuItem() {
+    _classCallCheck(this, MenuItem);
+
+    var _this = _possibleConstructorReturn(this, (MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(MenuItem, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          style = _props.style,
+          hoverStyle = _props.hoverStyle,
+          className = _props.className;
+
+
+      var ownStyle = style || {};
+      var ownHoverStyle = hoverStyle || {};
+
+      var mergedStyle = Object.assign({}, _drawer2.default.menuItem, ownStyle);
+      var mergedHoverStyle = Object.assign({}, _drawer2.default.menuItemHover, ownHoverStyle);
+
+      return _react2.default.createElement(
+        'div',
+        {
+          style: this.state.isHover ? mergedHoverStyle : mergedStyle,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave,
+          className: className
+        },
+        children
+      );
+    }
+  }]);
+
+  return MenuItem;
+}(_react2.default.Component);
+
+exports.default = MenuItem;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Nav;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _navbar = __webpack_require__(215);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Nav(_ref) {
+  var children = _ref.children,
+      style = _ref.style,
+      className = _ref.className,
+      pullRight = _ref.pullRight;
+
+
+  var mergedStyle = pullRight ? Object.assign({ justifyContent: 'flex-end' }, _navbar2.default.column, style) : Object.assign({}, _navbar2.default.column, style);
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: mergedStyle },
+    children
+  );
+}
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _navbar = __webpack_require__(215);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NavItem = function (_React$Component) {
+  _inherits(NavItem, _React$Component);
+
+  function NavItem() {
+    _classCallCheck(this, NavItem);
+
+    var _this = _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).call(this));
+
+    _this.state = { isHover: false };
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+    return _this;
+  }
+
+  _createClass(NavItem, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          style = _props.style,
+          className = _props.className;
+
+
+      var mergedStyle = this.state.isHover ? Object.assign({}, _navbar2.default.itemHover, style) : Object.assign({}, _navbar2.default.item, style);
+
+      return _react2.default.createElement(
+        'div',
+        {
+          style: mergedStyle,
+          className: className,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
+        },
+        children
+      );
+    }
+  }]);
+
+  return NavItem;
+}(_react2.default.Component);
+
+exports.default = NavItem;
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Navbar;
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _navbar = __webpack_require__(215);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import animation from '../animations/jumbotronFadeUp'
+
+
+function Navbar(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      style = _ref.style,
+      navColor = _ref.navColor;
+
+
+  var mergedStyle = Object.assign({}, _navbar2.default.nav, style);
+  window.navColor = navColor;
+
+  return _react2.default.createElement(
+    'div',
+    { className: className, style: mergedStyle, id: 'navbarFadeIn' },
+    children
+  );
+}
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var buttonStyle = {
+  background: 'red',
+  letterSpacing: '1px',
+  fontWeight: '600',
+  width: '250px',
+  borderRadius: '24px',
+  border: 'none',
+  boxSizing: 'border-box',
+  color: '#616161',
+  cursor: 'pointer',
+  display: 'inline-block',
+  fontSize: 17,
+  lineHeight: '26px',
+  padding: '10px 14px',
+  textAlign: 'center',
+  textDecoration: 'none',
+  verticalAlign: 'bottom'
+};
+
+exports.default = buttonStyle;
+
+/***/ }),
+/* 232 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var heroVideoStyle = {
+  style: {
+    position: 'relative',
+    width: '100%',
+    boxSizing: 'border-box',
+    minHeight: '680px',
+    overflow: 'hidden'
+  },
+  headingStyle: {
+    position: 'absolute',
+    width: '40%',
+    color: 'white',
+    zIndex: '2',
+    top: '250px',
+    right: '8%',
+    fontSize: '2em',
+    textAlign: 'center'
+  },
+  video: {
+    objectFit: "cover",
+    width: '100%',
+    minHeight: '680px'
+  }
+};
+
+//make top go from -290 to -270 has user makes height taller
+
+exports.default = heroVideoStyle;
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var hoverColStyle = {
+  column: {
+    position: 'relative',
+    boxSizing: 'border-box',
+    padding: '9px 10px'
+  },
+  hoverStyle: {
+    transform: 'scale(1.05)',
+    boxShadow: 'rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px'
+  },
+  imgStyle: {
+    width: '100%', transition: '0.2s ease-out'
+  }
+};
+
+exports.default = hoverColStyle;
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var hoverRowStyle = {
+  style: {
+    margin: '0 auto',
+    content: "",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  }
+};
+
+exports.default = hoverRowStyle;
 
 /***/ })
 /******/ ]);
