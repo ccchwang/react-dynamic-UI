@@ -11,10 +11,13 @@ const heroVideoStyle = {
     width: '40%',
     color: 'white',
     zIndex: '2',
-    top: '250px',
+    top: '35%',
     right: '8%',
     fontSize: '2em',
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center',
+    display: 'flex',
+    maxWidth: '500px'
   },
   video: {
     objectFit: "cover",

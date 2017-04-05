@@ -7,7 +7,9 @@ export default function Jumbotron ({ className, children, style }) {
 
   return (
     <div className={className} style={mergedStyle}>
+      <div style={jumbotronStyle.row}>
       { children }
+      </div>
     </div>
   )
 }

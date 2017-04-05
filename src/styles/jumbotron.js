@@ -2,10 +2,14 @@ const jumbotronStyle = {
   style: {
     width: '100%',
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
+    backgroundAttachment: 'fixed'
+  },
+  row: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    maxWidth: '1275px',
+    margin: '0 auto'
   },
   column: {
     all: {

@@ -4,7 +4,8 @@ const hoverRowStyle = {
     content: "",
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    maxWidth: '1275px'
   }
 }
 
