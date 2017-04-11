@@ -5,7 +5,7 @@ A UI toolkit for React.js featuring components with built-in animation.
 Demo site [here](https://rdi-demo.herokuapp.com/).
 
 ## About
-react-dynamic-UI aims to make it easy to build React websites that come alive. This library offers a set of UI components native to React.js that animate based on user interaction, such as scroll and hover.
+This library aims to make it easy to build React websites that come alive. It offers a set of UI components native to React.js that animate based on user interaction, such as scroll and hover.
 
 The components are designed to be modular and unopinionated, with flexible styling capabilities. Components can be configured with various effects, such as fading in as the user scrolls. The animations are available out of the box - all you have to do is pick one, and the library will inject the proper styles into your code.
 
