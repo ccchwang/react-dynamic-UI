@@ -32,7 +32,7 @@ import { HeroVideo, Jumbotron, JumbotronCol } from 'react-dynamic-ui'
 ```
 ## Usage
 
-The Jumbotron can take in any number of JumbotronCol children components. Each JumbotronCol can be configured with one of four animations - fadeUp, fadeAppear, fadeInLeft, and fadeInRight. These animations are passed to the component as the fadeEffect prop.
+The Jumbotron can take in any number of JumbotronCol children components. Each JumbotronCol can be configured with one of four animations - fadeUp, fadeAppear, fadeInLeft, and fadeInRight. These animations are passed to the component via the fadeEffect prop.
 
 ```javascript
 import React from 'react';
